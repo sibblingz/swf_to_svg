@@ -1,7 +1,7 @@
 class EndShapeRecord
   
   
-  def to_s
-    "z"
+  def to_svg( shape )
+    "z' />"
   end
 end

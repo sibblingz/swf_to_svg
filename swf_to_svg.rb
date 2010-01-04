@@ -319,6 +319,7 @@ def get_shape_with_style( f )
   s = Shape.new
   
   fill_styles, bytes_read = get_fill_style_array( f ) 
+  puts "HERE: #{fill_styles.inspect}, #{fill_styles.is_a? Array}"
   s.fill_styles = fill_styles
    
   line_styles, bytes_read = get_line_style_array( f )

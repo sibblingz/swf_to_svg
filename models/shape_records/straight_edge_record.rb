@@ -4,7 +4,7 @@ class StraightEdgeRecord
   attr_accessor :delta_x
   attr_accessor :delta_y
   
-  def to_s
+  def to_svg( shape )
     if general_line
       "l#{delta_x/20.0},#{delta_y/20.0}"
     else
