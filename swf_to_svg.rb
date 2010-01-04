@@ -511,7 +511,7 @@ def handle_tag( tag_code, tag_length, f )
   end
 end
 
-f = File.open("/Users/btsavage/Desktop/swf_to_svg/test.swf", "r")
+f = File.open(ARGV[0], "r")
 
 signature_1 = f.getc
 signature_2 = f.getc
