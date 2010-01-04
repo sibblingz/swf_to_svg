@@ -569,7 +569,9 @@ d = get_dictionary
 d.each do |key, value|
   puts "Key: #{key}"
   if value.is_a? Shape
-    puts "Value: #{value.to_svg}"
+    output = File.open("output/#{key}.svg", "w")
+    output.write value.to_svg
+    output.close
   end
 end
 
