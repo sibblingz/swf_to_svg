@@ -30,7 +30,8 @@ class StyleChangeRecord
       end
       return return_val
     else
-      raise "BAH humbug"
+      return ""
+      # raise "BAH humbug"
     end
   end
 end

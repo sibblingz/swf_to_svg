@@ -61,6 +61,8 @@ def get_fill_style( f )
   fs = FillStyle.new
   fs.fill_style_type = fill_style_type
   
+  # puts "Fill Style Type: #{fill_style_type}"
+  
   case fill_style_type
   when 0
     # puts "Solid Fill"
@@ -102,7 +104,7 @@ def get_fill_style_array( f )
     fill_style_count_extended_2 = f.getc
     fill_style_count = fill_style_count_extended_1 + 256*fill_style_count_extended_2
   end
-  # puts "Num Fill Styles: #{fill_style_count}"
+  #puts "Num Fill Styles: #{fill_style_count}"
   
   fill_styles = []
   fill_style_count.times do
@@ -140,7 +142,7 @@ def get_line_style_array( f )
     line_style_count = line_style_count_extended_1 + 256*line_style_count_extended_2
   end
   
-  # puts "Num Line Styles: #{line_style_count}"
+  puts "Num Line Styles: #{line_style_count}"
   
   line_styles = []
   line_style_count.times do
@@ -207,10 +209,13 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
       end
   
       if state_line_style_flag == '1'
+        puts "STATE LINE STYLE FLAG is TRUE"
         shape_record.state_line_style = true
         line_style_bit_string = f.next_n_bits(num_line_bits)
-        # puts "Line Style Bit String: #{line_style_bit_string}"
+        puts "num line bits: #{num_line_bits}"
+        puts "Line Style Bit String: #{line_style_bit_string}"
         shape_record.line_style = line_style_bit_string.to_i(2)
+        puts "END STATE LINE STYLE SECTION"
       end
   
       if state_new_styles_flag == '1'
@@ -221,9 +226,9 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
         # puts "NEW LINE STYLES: #{line_styles.inspect}"
         
         num_fill_bits = f.next_n_bits(4).to_i(2)
-        # puts "num fill bits: #{num_fill_bits}"
+        puts "num fill bits: #{num_fill_bits}"
         num_line_bits = f.next_n_bits(4).to_i(2)
-        # puts "num line bits: #{num_line_bits}"
+        puts "num line bits: #{num_line_bits}"
       end
     end
   else
@@ -295,13 +300,11 @@ def get_shape_with_style( f )
 
   num_fill_bits = f.next_n_bits(4).to_i(2)
   num_line_bits = f.next_n_bits(4).to_i(2)
-  
   # bit_string = bit_string( f.getc )
   # num_fill_bits = bit_string.slice(0,4).to_i(2)
   # num_line_bits = bit_string.slice(4,4).to_i(2)
   
   # puts "num fill bits: #{num_fill_bits}"
-  # puts "num line_bits: #{num_line_bits}"
   
   shape_records = []
   while true
@@ -369,10 +372,10 @@ def define_shape( tag_length, f, version )
     shape_id_1 = f.getc
     shape_id_2 = f.getc
     shape_id = shape_id_1 + 256*shape_id_2
-    # puts "Shape id: #{shape_id}"
+    puts "Shape id: #{shape_id}"
     
     shape_bounds = get_rect( f )
-    # puts "Shape Bounds: (#{shape_bounds[0]}, #{shape_bounds[2]}), (#{shape_bounds[1]}, #{shape_bounds[3]})"
+    puts "Shape Bounds: (#{shape_bounds[0]}, #{shape_bounds[2]}), (#{shape_bounds[1]}, #{shape_bounds[3]})"
   
     shape = get_shape_with_style( f )
     shape.bounds = shape_bounds
@@ -380,6 +383,12 @@ def define_shape( tag_length, f, version )
   
     d = get_dictionary
     d[ shape_id ] = shape
+    
+    filename = "output/#{shape_id}.svg"
+    puts "writing file #{filename}"
+    output = File.open(filename, "w")
+    output.write shape.to_svg
+    output.close
   else
     tag_length.times do
       f.getc
@@ -550,7 +559,7 @@ end
 
 version = f.getc
 
-# puts "Flash Version: #{version}"
+puts "Flash Version: #{version}"
 
 file_size_1 = f.getc
 file_size_2 = f.getc
