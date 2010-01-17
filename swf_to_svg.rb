@@ -43,6 +43,9 @@ def get_rect( f )
   xmax = int_from_twips( f.next_n_bits( num_bits ) )
   ymin = int_from_twips( f.next_n_bits( num_bits ) )
   ymax = int_from_twips( f.next_n_bits( num_bits ) )
+  
+  f.skip_to_next_byte
+  
   return [xmin, xmax, ymin, ymax]
 end
 
@@ -54,7 +57,7 @@ def get_rgb( f )
   return [r,g,b]
 end
 
-def get_fill_style( f )
+def get_fill_style( f ) 
   # puts "getting fill style"
   fill_style_type = f.getc
   
@@ -96,15 +99,16 @@ def get_fill_style( f )
 end
 
 def get_fill_style_array( f )
-  # puts "getting fill style array"
+  puts "getting fill style array"
   fill_style_count = f.getc
   
   if fill_style_count == 255
+    puts "extended fill style"
     fill_style_count_extended_1 = f.getc
     fill_style_count_extended_2 = f.getc
     fill_style_count = fill_style_count_extended_1 + 256*fill_style_count_extended_2
   end
-  #puts "Num Fill Styles: #{fill_style_count}"
+  puts "Num Fill Styles: #{fill_style_count}"
   
   fill_styles = []
   fill_style_count.times do
@@ -112,6 +116,7 @@ def get_fill_style_array( f )
     fill_styles.push( fill_style )
   end
   # puts "fill styles array: #{fill_styles.inspect}"
+  f.skip_to_next_byte
   return fill_styles
 end
 
@@ -133,10 +138,11 @@ def get_line_style( f )
 end
 
 def get_line_style_array( f )
-  # puts "getting line style array"
+  puts "getting line style array"
   line_style_count = f.getc
   
   if line_style_count == 255
+    puts "extended line style count"
     line_style_count_extended_1 = f.getc
     line_style_count_extended_2 = f.getc
     line_style_count = line_style_count_extended_1 + 256*line_style_count_extended_2
@@ -220,10 +226,10 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
   
       if state_new_styles_flag == '1'
         fill_styles = get_fill_style_array(f)
-        # puts "NEW FILL STYLES: #{fill_styles.inspect}"
+        puts "NEW FILL STYLES: #{fill_styles.inspect}"
         
         line_styles = get_line_style_array( f )
-        # puts "NEW LINE STYLES: #{line_styles.inspect}"
+        puts "NEW LINE STYLES: #{line_styles.inspect}"
         
         num_fill_bits = f.next_n_bits(4).to_i(2)
         puts "num fill bits: #{num_fill_bits}"
@@ -376,7 +382,7 @@ def define_shape( tag_length, f, version )
     
     shape_bounds = get_rect( f )
     puts "Shape Bounds: (#{shape_bounds[0]}, #{shape_bounds[2]}), (#{shape_bounds[1]}, #{shape_bounds[3]})"
-  
+        
     shape = get_shape_with_style( f )
     shape.bounds = shape_bounds
     shape.id = shape_id
@@ -568,21 +574,21 @@ file_size_4 = f.getc
 
 num_bytes_total = (file_size_1 + 256*file_size_2 + 65536*file_size_3 + 16777216*file_size_4)
 
-# puts "Num Bytes total: #{num_bytes_total}"
+puts "Num Bytes total: #{num_bytes_total}"
 
 frame = get_rect(f)
 
-# puts "Frame Size: #{frame[1]/20} x #{frame[3]/20}"
+puts "Frame Size: #{frame[1]/20} x #{frame[3]/20}"
 
 frame_rate_1 = f.getc
 frame_rate_2 = f.getc
 frame_rate = 0.1*frame_rate_1 + frame_rate_2
-# puts "Frame Rate: #{frame_rate}"
+puts "Frame Rate: #{frame_rate}"
 
 frame_count_1 = f.getc
 frame_count_2 = f.getc
 frame_count = frame_count_1 + 256*frame_count_2
-# puts "Frame Count: #{frame_count}"
+puts "Frame Count: #{frame_count}"
 
 
 while !f.eof?
