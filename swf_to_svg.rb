@@ -313,10 +313,29 @@ def get_shape_with_style( f )
   # puts "num fill bits: #{num_fill_bits}"
   
   shape_records = []
+  #while true
+  #  shape_record = get_shape_record( f, num_fill_bits, num_line_bits )
+  #  shape_records.push shape_record
+  #  break if shape_record.is_a? EndShapeRecord
+  #end
+  tmp = []
   while true
     shape_record = get_shape_record( f, num_fill_bits, num_line_bits )
-    shape_records.push shape_record
-    break if shape_record.is_a? EndShapeRecord
+    
+    if shape_record.is_a? StyleChangeRecord
+      shape_records.push tmp if !tmp.empty?
+      tmp = []
+    end
+
+    if shape_record.is_a? EndShapeRecord
+      shape_records.push tmp if !tmp.empty? # add the last element
+      shape_records = shape_records.reverse # reverse it
+      shape_records.push shape_record       # add EndShapeRecord
+      shape_records = shape_records.flatten # flatten
+      break
+    end
+    
+    tmp.push shape_record
   end
   
   f.skip_to_next_byte

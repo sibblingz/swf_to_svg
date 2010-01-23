@@ -12,8 +12,10 @@ class StyleChangeRecord
   attr_accessor :state_line_style
   attr_accessor :line_style
   
-  
+  # the important question is: when do we have a path? and when do we just have a movement?
   def to_svg( shape )
+    #puts "BLAH! 1.#{state_move_to} 2.#{state_fill_style_0} 3.#{state_fill_style_1} 4.#{state_line_style}"
+    # there isn't always a "path" when we move...
     if state_move_to
       return_val = "<path "
       if state_fill_style_0
