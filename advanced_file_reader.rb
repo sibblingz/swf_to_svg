@@ -18,7 +18,7 @@ class AdvancedFileReader
       @buffer += @file_stream.getc.chr.unpack("B8")[0]
       @total_bytes_read = @total_bytes_read + 1
     end
-    
+    #puts "#{buffer}"
     @buffer.slice!(0, num_bits)
   end
   
@@ -28,7 +28,7 @@ class AdvancedFileReader
   
   def skip_to_next_byte
     raise "You are probably making a mistake" unless @buffer.size < 8
-    puts "Skipping to next byte.  Buffer size: #{buffer.size}"
+    puts "Skipping to next byte.  Buffer size: #{buffer.size} #{buffer}"
     @buffer = ''
   end
   

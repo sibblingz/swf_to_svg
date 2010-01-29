@@ -38,6 +38,8 @@ def get_string( f )
 end
 
 def get_rect( f )
+  f.skip_to_next_byte
+  
   num_bits = f.next_n_bits( 5 ).to_i(2)
   xmin = int_from_twips( f.next_n_bits( num_bits ) )
   xmax = int_from_twips( f.next_n_bits( num_bits ) )
@@ -64,7 +66,7 @@ def get_fill_style( f )
   fs = FillStyle.new
   fs.fill_style_type = fill_style_type
   
-  # puts "Fill Style Type: #{fill_style_type}"
+  #puts "Fill Style Type: #{fill_style_type}"
   
   case fill_style_type
   when 0
@@ -99,14 +101,15 @@ def get_fill_style( f )
 end
 
 def get_fill_style_array( f )
+  f.skip_to_next_byte
   puts "getting fill style array"
   fill_style_count = f.getc
   
   if fill_style_count == 255
     puts "extended fill style"
     fill_style_count_extended_1 = f.getc
-    fill_style_count_extended_2 = f.getc
-    fill_style_count = fill_style_count_extended_1 + 256*fill_style_count_extended_2
+    #fill_style_count_extended_2 = f.getc
+    fill_style_count = fill_style_count + 256*fill_style_count_extended_1
   end
   puts "Num Fill Styles: #{fill_style_count}"
   
@@ -138,6 +141,8 @@ def get_line_style( f )
 end
 
 def get_line_style_array( f )
+  f.skip_to_next_byte
+  
   puts "getting line style array"
   line_style_count = f.getc
   
@@ -156,6 +161,7 @@ def get_line_style_array( f )
     line_styles.push( line_style )
   end
   # puts "line styles array: #{line_styles.inspect}"
+  f.skip_to_next_byte
   return line_styles
 end
 
@@ -165,6 +171,7 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
     
   if type_flag == '0'    
     state_new_styles_flag = f.next_n_bits(1)
+    # only effective in version 2 and 3
     # puts "State New Styles Flag: #{state_new_styles_flag}"
     
     state_line_style_flag = f.next_n_bits(1)
@@ -203,25 +210,25 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
       if state_fill_style_0_flag == '1'
         shape_record.state_fill_style_0 = true
         fill_style_0_bit_string = f.next_n_bits(num_fill_bits)
-        # puts "Fill Style 0 Bit String: #{fill_style_0_bit_string}"
+        puts "Fill Style 0 Bit String: #{fill_style_0_bit_string}"
         shape_record.fill_style_0 = fill_style_0_bit_string.to_i(2)
       end
   
       if state_fill_style_1_flag == '1'
         shape_record.state_fill_style_1 = true
         fill_style_1_bit_string = f.next_n_bits(num_fill_bits)
-        # puts "Fill Style 1 Bit String: #{fill_style_1_bit_string}"
+        puts "Fill Style 1 Bit String: #{fill_style_1_bit_string}"
         shape_record.fill_style_1 = fill_style_1_bit_string.to_i(2)
       end
   
       if state_line_style_flag == '1'
-        puts "STATE LINE STYLE FLAG is TRUE"
+        #puts "STATE LINE STYLE FLAG is TRUE"
         shape_record.state_line_style = true
         line_style_bit_string = f.next_n_bits(num_line_bits)
-        puts "num line bits: #{num_line_bits}"
-        puts "Line Style Bit String: #{line_style_bit_string}"
+        #puts "num line bits: #{num_line_bits}"
+        #puts "Line Style Bit String: #{line_style_bit_string}"
         shape_record.line_style = line_style_bit_string.to_i(2)
-        puts "END STATE LINE STYLE SECTION"
+        #puts "END STATE LINE STYLE SECTION"
       end
   
       if state_new_styles_flag == '1'
@@ -235,6 +242,7 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
         puts "num fill bits: #{num_fill_bits}"
         num_line_bits = f.next_n_bits(4).to_i(2)
         puts "num line bits: #{num_line_bits}"
+
       end
     end
   else
@@ -296,6 +304,8 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
 end
 
 def get_shape_with_style( f )
+  #f.skip_to_next_byte
+  
   s = Shape.new
   
   fill_styles = get_fill_style_array( f ) 
@@ -305,7 +315,12 @@ def get_shape_with_style( f )
   s.line_styles = line_styles
 
   num_fill_bits = f.next_n_bits(4).to_i(2)
+  puts "  NUM FILL BITS #{num_fill_bits}"
   num_line_bits = f.next_n_bits(4).to_i(2)
+  puts "  NUM LINE BITS #{num_line_bits}"
+  
+    
+  #f.skip_to_next_byte
   # bit_string = bit_string( f.getc )
   # num_fill_bits = bit_string.slice(0,4).to_i(2)
   # num_line_bits = bit_string.slice(4,4).to_i(2)
@@ -375,10 +390,13 @@ def get_tag( f )
   tag_length = tag_bit_string.slice(10,6).to_i(2)
 
   if tag_length >= 63
+    #puts "long tag!"
     tag_length_1 = f.getc
     tag_length_2 = f.getc
     tag_length_3 = f.getc
     tag_length_4 = f.getc
+    #sign = f.next_n_bits( 1 )
+    # this should be signed.
     tag_length = tag_length_1 + 256*tag_length_2 + 65536*tag_length_3 + 16777216*tag_length_4
   end
   
@@ -496,6 +514,7 @@ def file_attributes( tag_length, f )
 end
 
 def set_background_color( tag_length, f )
+  puts "Set Background Color"
   color = get_rgb(f)
   #puts "Set Background Color to: (#{color[0]}, #{color[1]}, #{color[2]})"
 end
@@ -611,8 +630,13 @@ puts "Frame Count: #{frame_count}"
 
 
 while !f.eof?
+  puts "  BEGIN TAG"
   tag_code, tag_length = get_tag(f)
+  puts "tag_len: #{tag_length}, tag code: #{tag_code}"
   handle_tag( tag_code, tag_length, f )
+  #f.skip_to_next_byte
+  puts "  END TAG"
+  puts ""
 end
 
 f.close
