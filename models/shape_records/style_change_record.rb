@@ -36,4 +36,8 @@ class StyleChangeRecord
       # raise "BAH humbug"
     end
   end
+  
+  def to_txt
+    path = "STYLE CHANGE RECORD"
+  end
 end

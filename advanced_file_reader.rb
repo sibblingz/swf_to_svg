@@ -13,6 +13,16 @@ class AdvancedFileReader
     return ret_val
   end
   
+  def get_u16()
+    skip_to_next_byte
+    byte1 = getc
+    byte2 = getc
+    #puts "byte1: #{byte1}"
+    #puts "byte2: #{byte2}"
+    u16 = byte1 + 256*byte2
+    #@total_bytes_read = @total_bytes_read + 2
+  end
+  
   def next_n_bits( num_bits )
     while @buffer.size < num_bits
       @buffer += @file_stream.getc.chr.unpack("B8")[0]
@@ -27,8 +37,8 @@ class AdvancedFileReader
   end
   
   def skip_to_next_byte
-    raise "You are probably making a mistake" unless @buffer.size < 8
-    puts "Skipping to next byte.  Buffer size: #{buffer.size} #{buffer}"
+    raise "Skipping more than a byte (#{buffer.size}) or buffer is nonzero (#{buffer}). " unless (@buffer.size < 8 && @buffer.to_i(2)  == 0)
+    #puts "Skipping to next byte.  Buffer size: #{buffer.size} #{buffer}"
     @buffer = ''
   end
   

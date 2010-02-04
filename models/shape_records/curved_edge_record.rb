@@ -8,4 +8,8 @@ class CurvedEdgeRecord
     "q#{control_delta_x/20.0},#{control_delta_y/20.0},#{(control_delta_x+anchor_delta_x)/20.0},#{(control_delta_y+anchor_delta_y)/20.0}"
 #    "l#{(control_delta_x+anchor_delta_x)/20.0},#{(control_delta_y+anchor_delta_y)/20.0}"
   end
+  
+  def to_txt
+    path = "CURVED EDGE RECORD"
+  end
 end

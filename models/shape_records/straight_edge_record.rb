@@ -15,4 +15,8 @@ class StraightEdgeRecord
       end
     end
   end
+  
+  def to_txt
+    path = "STRAIGHT EDGE RECORD"
+  end
 end

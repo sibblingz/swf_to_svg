@@ -12,23 +12,41 @@ class SwfMath
   end
   
   def self.parse_signed_float( bitstring )
+    # unless prec == 16 || prec == 8
+    #   raise "invalid precision for parsing to float" 
+    # end
+    prec = 16
     bs = bitstring.reverse
-    decimal16 = bs.slice(0,16).reverse
+    decimal = bs.slice(0,prec).reverse
     
     number = 0
     #puts("#{decimal16}")
     val = 0.5
-    decimal16.size.times do |i|
-      number = number + decimal16.to_i[i]*val
+    decimal.size.times do |i|
+      number = number + decimal.to_i[i]*val
       val = val*0.5
     end
-    if (bitstring.size > 16)
-      integer16 = bs.slice(16,16).reverse.to_i(2)
+    if (bitstring.size > prec)
+      integer = bs.slice(prec,prec).reverse.to_i(2)
     else
-      integer16 = 0
+      integer = 0
     end
     #puts integer16
-    number = number + integer16
+    number = number + integer
     #return number
+  end
+  
+  def self.parse_ASCII_string( f )
+    # i assume this works, but i'm not sure!
+    s = ""
+    while true
+      char = f.getc
+      if(char == 0)
+        break
+      end
+      s = s + char.chr
+    end
+    puts s
+    return s
   end
 end
