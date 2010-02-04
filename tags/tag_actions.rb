@@ -1,5 +1,9 @@
 require 'advanced_file_reader.rb'
 require 'tags/tag_helpers.rb'
+require 'tags/tag.rb'
+
+class Tag
+private
 
 # UNKNOWN TAG CODE
 def skip_tag( tag_length, f, tag_code )
@@ -66,6 +70,8 @@ def define_shape( tag_length, f, version )
   
   after = f.total_bytes_read
   puts "ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
+  
+  @tag_data.push( shape )
 end
 
 # Tag code = 4
@@ -119,10 +125,32 @@ def place_object_2( tag_length, f )
   if(place_flag_has_matrix == "1")
      obj2.matrix = Matrix.new(f)
   end
+  
+  if(place_flag_has_color_transform == "1")
+    obj2.color_transform = C_XFORM_WITH_ALPHA.new(f)
+  end
+  
+  if(place_flag_has_ratio == "1")
+    obj2.ratio = f.get_u16
+  end
+  
+  if(place_flag_has_name == "1")
+    # parse as ASCII name
+    # spec has UTF-8 encoding....
+    obj2.name = SwfMath.parse_ASCII_string( f )
+  end
+  
+  if(place_flag_has_clip_depth == "1")
+    obj2.clip_depth = f.get_u16
+  end
+  
+  if(place_flag_has_clip_actions=="1")
+    # not implemented
+  end
   e = f.total_bytes_read
   read = e-before
   remaining = tag_length - read
-  puts "#{remaining}, #{tag_length}"
+  #puts "#{remaining}, #{tag_length}"
   remaining.times do
     f.getc
   end
@@ -132,6 +160,8 @@ def place_object_2( tag_length, f )
   
   after = f.total_bytes_read
   puts "PLACE OBJECT 2 ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
+  
+  @tag_data.push( obj2 )
 end
 
 # Tag code = 32
@@ -167,18 +197,15 @@ def define_sprite( tag_length, f )
   sprite.control_tags = []
   
   begin 
-    f.skip_to_next_byte
+#    f.skip_to_next_byte
     tag_code, tag_length = get_tag(f)
-    sprite.control_tags.push(tag_code)
-    if(tag_code == 26)
-      place_object_2(tag_length, f)
-    else
-      tag_length.times do
-        f.getc
-      end
-    end
+    
+    tag = Tag.new(tag_code, tag_length, f)
+    
+    sprite.control_tags.push( tag )
+    
   end while tag_code != 0 
-puts sprite.control_tags
+#puts sprite.control_tags
   #num_bytes_remaining = tag_length - 4
   
   #num_bytes_remaining.times do
@@ -187,6 +214,8 @@ puts sprite.control_tags
   #end
   after = f.total_bytes_read
   puts "DEFINE SPRITE ERROR! difference is: #{after - before}, it should be #{my_tag_length}" unless (after-before) == my_tag_length
+
+  @tag_data.push( sprite )
 end
 
 # Tag code = 46
@@ -258,4 +287,6 @@ def define_scene_and_frame_label_data( tag_length, f )
   tag_length.times do
     f.getc
   end
+end
+
 end

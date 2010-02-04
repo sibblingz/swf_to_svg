@@ -319,30 +319,30 @@ def get_shape_with_style( f )
   # puts "num fill bits: #{num_fill_bits}"
   
   shape_records = []
-  #while true
-  #  shape_record = get_shape_record( f, num_fill_bits, num_line_bits )
-  #  shape_records.push shape_record
-  #  break if shape_record.is_a? EndShapeRecord
-  #end
-  tmp = []
   while true
     shape_record = get_shape_record( f, num_fill_bits, num_line_bits )
-    
-    if shape_record.is_a? StyleChangeRecord
-      shape_records.push tmp if !tmp.empty?
-      tmp = []
-    end
-
-    if shape_record.is_a? EndShapeRecord
-      shape_records.push tmp if !tmp.empty? # add the last element
-      shape_records = shape_records.reverse # reverse it
-      shape_records.push shape_record       # add EndShapeRecord
-      shape_records = shape_records.flatten # flatten
-      break
-    end
-    
-    tmp.push shape_record
+    shape_records.push shape_record
+    break if shape_record.is_a? EndShapeRecord
   end
+  # tmp = []
+  # while true
+  #   shape_record = get_shape_record( f, num_fill_bits, num_line_bits )
+  #   
+  #   if shape_record.is_a? StyleChangeRecord
+  #     shape_records.push tmp if !tmp.empty?
+  #     tmp = []
+  #   end
+  # 
+  #   if shape_record.is_a? EndShapeRecord
+  #     shape_records.push tmp if !tmp.empty? # add the last element
+  #     shape_records = shape_records.reverse # reverse it
+  #     shape_records.push shape_record       # add EndShapeRecord
+  #     shape_records = shape_records.flatten # flatten
+  #     break
+  #   end
+  #   
+  #   tmp.push shape_record
+  # end
   
   f.skip_to_next_byte
     
@@ -351,19 +351,4 @@ def get_shape_with_style( f )
   s.shape_records = shape_records
   
   return s
-end
-
-def handle_sprite_control_tag( tag_code, tag_length, f )
-  case tag_code
-  when 0
-    end_tag( tag_length, f )
-  when 1
-    show_frame( tag_length, f )
-  when 4
-    place_object( tag_length, f )
-  when 26
-    place_object_2( tag_length, f )
-  else
-    skip_tag( tag_length, f, tag_code )
-  end
 end
