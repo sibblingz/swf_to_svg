@@ -21,7 +21,7 @@ class StyleChangeRecord
       if state_fill_style_0
         fill_style = shape.fill_styles[fill_style_0 - 1]
         color = fill_style.color
-        return_val += "fill='rgb(#{color[0]}, #{color[1]}, #{color[2]})' "
+        return_val += "fill='rgb(#{color.r}, #{color.g}, #{color.b})' "
       end
       
       return_val += "stroke='red' stroke-width='0' d='
