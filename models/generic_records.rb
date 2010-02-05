@@ -33,6 +33,13 @@ class C_XFORM
     
     f.skip_to_next_byte
   end
+  
+  def to_txt
+    path="COLOR TRANSFORM MATRIX\n"
+    path+="multiply (#{red_mult_term},#{green_mult_term},#{blue_mult_term})\n"
+    path+="add (#{red_add_term},#{green_add_term},#{blue_add_term})\n"
+  end
+    
 end
 
 class C_XFORM_WITH_ALPHA
@@ -72,6 +79,12 @@ class C_XFORM_WITH_ALPHA
     
     f.skip_to_next_byte
   end
+  
+  def to_txt
+    path="COLOR TRANSFORM MATRIX WITH ALPHA\n"
+    path+="multiply (#{red_mult_term},#{green_mult_term},#{blue_mult_term},#{alpha_mult_term})\n"
+    path+="add (#{red_add_term},#{green_add_term},#{blue_add_term},#{alpha_add_term})\n"
+  end
 end
 
 class Matrix
@@ -95,15 +108,15 @@ class Matrix
     has_scale = f.next_n_bits(1)
     if(has_scale == "1")
       n_scale_bits = f.next_n_bits(5).to_i(2)
-      @scale_x = SwfMath.parse_signed_float( f.next_n_bits(n_scale_bits) )
-      @scale_y = SwfMath.parse_signed_float( f.next_n_bits(n_scale_bits) )
+      @scale_x = SwfMath.parse_fixed_point( f.next_n_bits(n_scale_bits) )
+      @scale_y = SwfMath.parse_fixed_point( f.next_n_bits(n_scale_bits) )
     end
     
     has_rotate = f.next_n_bits(1)
     if(has_rotate == "1")
       n_rotate_bits = f.next_n_bits(5).to_i(2)
-      @rotate_skew_0 = SwfMath.parse_signed_float( f.next_n_bits(n_rotate_bits) )
-      @rotate_skew_1 = SwfMath.parse_signed_float( f.next_n_bits(n_rotate_bits) )
+      @rotate_skew_0 = SwfMath.parse_fixed_point( f.next_n_bits(n_rotate_bits) )
+      @rotate_skew_1 = SwfMath.parse_fixed_point( f.next_n_bits(n_rotate_bits) )
     end
     
     n_translate_bits = f.next_n_bits(5).to_i(2)
@@ -113,6 +126,11 @@ class Matrix
     end
 
     f.skip_to_next_byte
+  end
+  
+  def to_txt
+    path="2x3 TRANSFORM MATRIX\n"
+    path+="\t#{scale_x}\t#{rotate_skew_0}\n\t#{rotate_skew_1}\t#{scale_y}\n\t#{translate_x/20.0}\t#{translate_y/20.0}\n"
   end
 end
 
@@ -141,9 +159,9 @@ class RGB
   
   def initialize( f )
     f.skip_to_next_byte
-    @r = f.getc
-    @g = f.getc
-    @b = f.getc
+    @r = f.get_u8
+    @g = f.get_u8
+    @b = f.get_u8
     # puts "RGB: (#{r}, #{g}, #{b})"
     
     f.skip_to_next_byte  

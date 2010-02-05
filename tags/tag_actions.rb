@@ -54,14 +54,14 @@ def define_shape( tag_length, f, version )
     shape.bounds = shape_bounds
     shape.id = shape_id
   
-    d = get_dictionary
-    d[ shape_id ] = shape
-    
-    filename = "output/#{shape_id}.svg"
-    puts "writing file #{filename}"
-    output = File.open(filename, "w")
-    output.write shape.to_svg
-    output.close
+    # d = get_dictionary
+    #     d[ shape_id ] = shape
+    #     
+    #     filename = "output/#{shape_id}.svg"
+    #     puts "writing file #{filename}"
+    #     output = File.open(filename, "w")
+    #     output.write shape.to_svg
+    #     output.close
   else
     tag_length.times do
       f.getc

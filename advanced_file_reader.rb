@@ -13,6 +13,11 @@ class AdvancedFileReader
     return ret_val
   end
   
+  def get_u8()
+    skip_to_next_byte
+    u8 = getc
+  end
+  
   def get_u16()
     skip_to_next_byte
     byte1 = getc
@@ -21,6 +26,16 @@ class AdvancedFileReader
     #puts "byte2: #{byte2}"
     u16 = byte1 + 256*byte2
     #@total_bytes_read = @total_bytes_read + 2
+  end
+  
+  def get_u32()
+    skip_to_next_byte
+    byte1 = getc
+    byte2 = getc
+    byte3 = getc
+    byte4 = getc
+
+    u32 = (byte1 + 256*byte2 + 65536*byte3 + 16777216*byte4)
   end
   
   def next_n_bits( num_bits )

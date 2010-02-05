@@ -19,9 +19,9 @@ end
 file_stream = File.open(ARGV[0], "r")
 f = AdvancedFileReader.new( file_stream )
 
-signature_1 = f.getc
-signature_2 = f.getc
-signature_3 = f.getc
+signature_1 = f.get_u8
+signature_2 = f.get_u8
+signature_3 = f.get_u8
 
 if signature_1 != 'F'[0]
   raise "Please Export an Uncompressed SWF file"
@@ -35,16 +35,11 @@ if signature_3 != 'S'[0]
   raise "Expected third byte to be 'S'"
 end
 
-version = f.getc
+version = f.get_u8
 
 puts "Flash Version: #{version}"
 
-file_size_1 = f.getc
-file_size_2 = f.getc
-file_size_3 = f.getc
-file_size_4 = f.getc
-
-num_bytes_total = (file_size_1 + 256*file_size_2 + 65536*file_size_3 + 16777216*file_size_4)
+num_bytes_total = f.get_u32 
 
 puts "Num Bytes total: #{num_bytes_total}"
 
@@ -52,8 +47,8 @@ frame = Rect.new(f)
 
 puts "Frame Size: #{frame.xmax/20} x #{frame.ymax/20}"
 
-frame_rate_1 = f.getc
-frame_rate_2 = f.getc
+frame_rate_1 = f.get_u8
+frame_rate_2 = f.get_u8
 frame_rate = 0.1*frame_rate_1 + frame_rate_2
 puts "Frame Rate: #{frame_rate}"
 
@@ -72,7 +67,7 @@ while !f.eof?
   tag = Tag.new(tag_code, tag_length, f)
   #tag.tag_code = tag_code
   #tag.tag_length = tag_length
-  output.write tag.to_txt
+  output.write tag.to_txt_all
   #handle_tag( tag_code, tag_length, f )
   #f.skip_to_next_byte
   puts "  END TAG"

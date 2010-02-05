@@ -37,7 +37,31 @@ class StyleChangeRecord
     end
   end
   
-  def to_txt
-    path = "STYLE CHANGE RECORD"
+  def to_txt( shape )
+    
+    if state_move_to
+      #puts "#{move_delta_x/20.0}, #{move_delta_y/20.0}"
+      path = "STYLE CHANGE RECORD :: move to (#{move_delta_x/20.0}, #{move_delta_y/20.0})"
+      puts "#{path}"
+      if state_fill_style_0
+        puts "#{shape}"
+        fill_style = shape.fill_styles[fill_style_0 - 1]
+        color = fill_style.color
+        path += " ; fill0[#{fill_style_0-1}] (#{color.r}, #{color.g}, #{color.b})"
+      end
+      
+      if state_fill_style_1
+        path += " ; fill1[#{fill_style_1-1}]"
+      end
+      
+      if state_line_style
+        path += " ; line[#{line_style-1}]"
+      end
+ 
+    else
+      path = "STYLE CHANGE RECORD :: unknown style change"
+    end
+    
+    return path
   end
 end

@@ -11,7 +11,7 @@ class SwfMath
       end
   end
   
-  def self.parse_signed_float( bitstring )
+  def self.parse_fixed_point( bitstring )
     # unless prec == 16 || prec == 8
     #   raise "invalid precision for parsing to float" 
     # end

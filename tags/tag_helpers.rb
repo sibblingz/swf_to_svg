@@ -8,6 +8,7 @@ require 'swf_math.rb'
 
 
 def get_tag( f )
+  f.skip_to_next_byte # manual byte alignment here
   tag_1 = f.next_n_bits( 8 )
   tag_2 = f.next_n_bits( 8 )
   tag_bit_string = tag_2 + tag_1
@@ -18,14 +19,14 @@ def get_tag( f )
   tag_length = tag_bit_string.slice(10,6).to_i(2)
 
   if tag_length >= 63
-    #puts "long tag!"
-    tag_length_1 = f.getc
-    tag_length_2 = f.getc
-    tag_length_3 = f.getc
-    tag_length_4 = f.getc
+    puts "long tag!"
+    # tag_length_1 = f.getc
+    # tag_length_2 = f.getc
+    # tag_length_3 = f.getc
+    # tag_length_4 = f.getc
     #sign = f.next_n_bits( 1 )
     # this should be signed.
-    tag_length = tag_length_1 + 256*tag_length_2 + 65536*tag_length_3 + 16777216*tag_length_4
+    tag_length = f.get_u32 #tag_length_1 + 256*tag_length_2 + 65536*tag_length_3 + 16777216*tag_length_4
   end
   
   return [tag_code, tag_length]
@@ -37,7 +38,7 @@ def get_string( f )
   string = ''
   bytes_read = 0
   while true
-    next_char = f.getc
+    next_char = f.get_u8
     bytes_read += 1
     
     break if next_char == 0
@@ -52,12 +53,12 @@ end
 
 def get_fill_style( f ) 
   # puts "getting fill style"
-  fill_style_type = f.getc
+  fill_style_type = f.get_u8
   
   fs = FillStyle.new
   fs.fill_style_type = fill_style_type
   
-  #puts "Fill Style Type: #{fill_style_type}"
+  puts "Fill Style Type: #{fill_style_type}"
   
   case fill_style_type
   when 0
@@ -94,7 +95,7 @@ end
 def get_fill_style_array( f )
   #f.skip_to_next_byte
   puts "getting fill style array"
-  fill_style_count = f.getc
+  fill_style_count = f.get_u8
   
   if fill_style_count == 255
     puts "extended fill style"
@@ -116,7 +117,6 @@ end
 
 def get_line_style( f )
   # puts "getting line style"
-  
   ls = LineStyle.new
   
   #width_1 = f.getc
@@ -135,7 +135,7 @@ def get_line_style_array( f )
   #f.skip_to_next_byte
   
   puts "getting line style array"
-  line_style_count = f.getc
+  line_style_count = f.get_u8
   
   if line_style_count == 255
     puts "extended line style count"
@@ -190,11 +190,11 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
         num_move_bits = move_bits.to_i(2)
       
         move_delta_x_bit_string = f.next_n_bits(num_move_bits)
-        # puts "Move Delta X: #{parse_signed_int(move_delta_x_bit_string)}"
+        #puts "Move Delta X: #{SwfMath.parse_signed_int(move_delta_x_bit_string)}"
         shape_record.move_delta_x = SwfMath.parse_signed_int( move_delta_x_bit_string )
     
         move_delta_y_bit_string = f.next_n_bits(num_move_bits)
-        # puts "Move Delta Y: #{parse_signed_int(move_delta_y_bit_string)}"
+        #puts "Move Delta Y: #{SwfMath.parse_signed_int(move_delta_y_bit_string)}"
         shape_record.move_delta_y = SwfMath.parse_signed_int( move_delta_y_bit_string )
       end
   
@@ -224,15 +224,15 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
   
       if state_new_styles_flag == '1'
         fill_styles = get_fill_style_array(f)
-        puts "NEW FILL STYLES: #{fill_styles.inspect}"
+        #puts "NEW FILL STYLES: #{fill_styles.inspect}"
         
         line_styles = get_line_style_array( f )
-        puts "NEW LINE STYLES: #{line_styles.inspect}"
+        #puts "NEW LINE STYLES: #{line_styles.inspect}"
         
-        num_fill_bits = f.next_n_bits(4).to_i(2)
-        puts "num fill bits: #{num_fill_bits}"
-        num_line_bits = f.next_n_bits(4).to_i(2)
-        puts "num line bits: #{num_line_bits}"
+        new_style_num_fill_bits = f.next_n_bits(4).to_i(2)
+        puts "num fill bits: #{new_style_num_fill_bits}"
+        new_style_num_line_bits = f.next_n_bits(4).to_i(2)
+        puts "num line bits: #{new_style_num_line_bits}"
 
       end
     end

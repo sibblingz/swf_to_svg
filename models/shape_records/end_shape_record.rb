@@ -5,7 +5,7 @@ class EndShapeRecord
     "z' />"
   end
   
-  def to_txt
+  def to_txt ( shape )
     path = "END SHAPE RECORD"
   end
 end

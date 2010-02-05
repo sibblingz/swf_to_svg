@@ -11,12 +11,16 @@ class Shape
   end
   
   def to_txt
-    path = "SHAPE_ID: #{id} | BOUNDS: (#{bounds.xmin}, #{bounds.ymin}), (#{bounds.xmax}, #{bounds.ymax})
-      "
-    path += "FILL_STYLES
-            LINE_STYLES
-      "
-    path += shape_records.map{|record| "    " + record.to_txt }.join('
-      ')
+    path = "SHAPE_ID: #{id} | BOUNDS: (#{bounds.xmin}, #{bounds.ymin}), (#{bounds.xmax}, #{bounds.ymax})\n"
+    if(fill_styles.length > 0)
+      path += fill_styles.each_with_index.map{|fs, i| "\t[#{i}]" + fs.to_txt}.join("\n")
+      path += "\n"
+    end
+    if(line_styles.length > 0)
+      path += line_styles.each_with_index.map{|ls, i| "\t[#{i}]" + ls.to_txt}.join("\n")
+      path += "\n"
+    end
+    path += shape_records.map{|record| "\t" + record.to_txt(self)}.join("\n")
+    path += "\n"
   end
 end
