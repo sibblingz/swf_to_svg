@@ -64,4 +64,14 @@ class StyleChangeRecord
     
     return path
   end
+  
+  def to_xml
+    "<style_change_record state_move_to='#{state_move_to}' state_fill_style_0='#{state_fill_style_0}' state_fill_style_1='#{state_fill_style_1}' state_line_style='#{state_line_style}'>
+      <move_to delta_x='#{move_delta_x}' delta_y='#{move_delta_y}'/>
+      <fill_style_0 index='#{fill_style_0}'/>
+      <fill_style_1 index='#{fill_style_1}'/>
+      <line_style index='#{line_style}'/>
+     </style_change_record>"
+  end
+  
 end

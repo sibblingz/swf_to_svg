@@ -132,6 +132,14 @@ class Matrix
     path="2x3 TRANSFORM MATRIX\n"
     path+="\t#{scale_x}\t#{rotate_skew_0}\n\t#{rotate_skew_1}\t#{scale_y}\n\t#{translate_x/20.0}\t#{translate_y/20.0}\n"
   end
+  
+  def to_xml
+    "<matrix>
+      <row1 col1='#{scale_x}' col2='#{rotate_skew_0}'/>
+      <row2 col1='#{rotate_skew_1}' col2='#{scale_y}'/>
+      <row3 col1='#{translate_x}' col2='#{translate_y}'/>
+     </matrix>"
+  end
 end
 
 class Rect
@@ -153,7 +161,7 @@ class Rect
   end
   
   def to_xml
-    "<rect xmin=#{xmin}, xmax=#{xmax}, ymin=#{ymin}, ymax=#{ymax}></rect>"
+    "<rect xmin=#{xmin}, xmax=#{xmax}, ymin=#{ymin}, ymax=#{ymax}/>"
   end
   
 end
@@ -169,5 +177,9 @@ class RGB
     # puts "RGB: (#{r}, #{g}, #{b})"
     
     f.skip_to_next_byte  
+  end
+  
+  def to_xml
+    "<RGB r=#{r}, g=#{g}, b=#{b}/>"
   end
 end
