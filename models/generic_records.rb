@@ -152,6 +152,10 @@ class Rect
     f.skip_to_next_byte
   end
   
+  def to_xml
+    "<rect xmin=#{xmin}, xmax=#{xmax}, ymin=#{ymin}, ymax=#{ymax}></rect>"
+  end
+  
 end
 
 class RGB

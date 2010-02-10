@@ -67,7 +67,7 @@ while !f.eof?
   tag = Tag.new(tag_code, tag_length, f)
   #tag.tag_code = tag_code
   #tag.tag_length = tag_length
-  output.write tag.to_txt_all
+  output.write tag.to_xml
   #handle_tag( tag_code, tag_length, f )
   #f.skip_to_next_byte
   puts "  END TAG"
