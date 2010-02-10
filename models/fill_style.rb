@@ -7,6 +7,10 @@ class FillStyle
     path ="FILL STYLE :: #{fill_style_type_txt} (#{fill_style_type}) -> color (#{color.r}, #{color.g}, #{color.b})"
   end
   
+  def to_xml
+    "<fill_style type='#{self.fill_style_type}' ></fill_style>"
+  end
+  
   private
     def what_fill_style
       case @fill_style_type

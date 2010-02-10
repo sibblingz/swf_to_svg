@@ -23,4 +23,31 @@ class Shape
     path += shape_records.map{|record| "\t" + record.to_txt(self)}.join("\n")
     path += "\n"
   end
+  
+  def to_xml
+    "<shape id='#{self.id}'>
+      <bounds>#{self.bounds.to_xml}</bounds>
+      #{self.line_styles_xml}
+      #{self.fill_styles_xml}
+      #{self.shape_records_xml}
+    </shape>"
+  end
+  
+  def line_styles_xml
+    return_val = "<line_styles>"
+    return_val += line_styles.map{ |line_style| line_style.to_xml }.join('')
+    return_val += "</line_style>"
+  end
+  
+  def fill_styles_xml
+    return_val = "<fill_styles>"
+    return_val += self.fill_styles.map{ |fill_style| fill_style.to_xml }.join('')
+    return_val += "</fill_styles>"
+  end
+  
+  def shape_records_xml
+    return_val = "<shape_records>"
+    return_val += self.shape_records.map{ |shape_record| shape_record.to_xml }.join('')
+    return_val += "</shape_records>"
+  end
 end
