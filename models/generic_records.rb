@@ -34,6 +34,13 @@ class C_XFORM
     f.skip_to_next_byte
   end
   
+  def to_xml
+    "<color_transform>
+      <mult red='#{self.red_mult_term}' green='#{self.green_mult_term}' blue='#{self.blue_mult_term}' />
+      <add red='#{self.red_add_term}' green='#{self.green_add_term}' blue='#{self.blue_add_term}' />
+    </color_transform>"
+  end
+  
   def to_txt
     path="COLOR TRANSFORM MATRIX\n"
     path+="multiply (#{red_mult_term},#{green_mult_term},#{blue_mult_term})\n"
@@ -75,6 +82,14 @@ class C_XFORM_WITH_ALPHA
       @green_add_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
       @blue_add_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
       @alpha_add_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
+    end
+    
+      
+    def to_xml
+      "<color_transform>
+        <mult red='#{self.red_mult_term}' green='#{self.green_mult_term}' blue='#{self.blue_mult_term}' alpha='#{self.alpha_mult_term}' />
+        <add red='#{self.red_add_term}' green='#{self.green_add_term}' blue='#{self.blue_add_term}' alpha='#{self.alpha_add_term}' />
+      </color_transform>"
     end
     
     f.skip_to_next_byte
