@@ -8,9 +8,9 @@ class Sprite
   end
   
   def to_xml
-    "<sprite id='#{self.id}' frame_count='#{self.frame_count}'>
-      #{control_tags_xml}
-     </sprite>"
+"<sprite id='#{self.id}' frame_count='#{self.frame_count}'>
+  #{control_tags_xml}
+ </sprite>"
   end
   
   def control_tags_xml
