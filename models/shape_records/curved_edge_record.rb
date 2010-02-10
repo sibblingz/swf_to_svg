@@ -14,9 +14,9 @@ class CurvedEdgeRecord
   end
   
   def to_xml
-    "<curved_edge_record>
-      <control_point delta_x='#{self.control_delta_x}' delta_y='#{self.control_delta_y}' />
-      <anchor_point delta_x='#{self.anchor_delta_x}' delta_y='#{self.anchor_delta_y}' />
-    </curved_edge_record>"
+"<curved_edge_record>
+  <control_point delta_x='#{self.control_delta_x}' delta_y='#{self.control_delta_y}' />
+  <anchor_point delta_x='#{self.anchor_delta_x}' delta_y='#{self.anchor_delta_y}' />
+</curved_edge_record>"
   end
 end

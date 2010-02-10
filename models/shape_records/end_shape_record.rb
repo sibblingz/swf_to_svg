@@ -10,6 +10,6 @@ class EndShapeRecord
   end
   
   def to_xml
-    "<end_shape_record></end_shape_record>"
+"<end_shape_record></end_shape_record>"
   end
 end
