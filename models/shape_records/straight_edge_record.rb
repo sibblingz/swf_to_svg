@@ -30,8 +30,8 @@ class StraightEdgeRecord
   end
   
   def to_xml
-"<straight_edge_record general_line='#{self.general_line}' vert_line='#{self.vert_line}'>
-  <anchor_point delta_x='#{self.delta_x}' delta_y='#{self.delta_y}' />
+"<straight_edge_record>
+  <anchor_point delta_x='#{self.delta_x.nil? ? 0 : self.delta_x}' delta_y='#{self.delta_y.nil? ? 0 : self.delta_y}' />
 </straight_edge_record>"
   end
 end

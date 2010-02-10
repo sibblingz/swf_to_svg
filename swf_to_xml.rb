@@ -58,6 +58,8 @@ frame_count = f.get_u16#frame_count_1 + 256*frame_count_2
 puts "Frame Count: #{frame_count}"
 
 output = File.open("output/unpacked.xml", "w")
+output.write("<?xml version='1.0'?>")
+output.write("<tags>")
 while !f.eof?
   puts "  BEGIN TAG"
   tag_code, tag_length = get_tag(f)
@@ -73,6 +75,7 @@ while !f.eof?
   puts "  END TAG"
   puts ""
 end
+output.write("</tags>")
 
 f.close
 output.close

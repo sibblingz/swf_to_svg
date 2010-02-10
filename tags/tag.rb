@@ -24,7 +24,7 @@ class Tag
   end
   
   def to_xml
-"<tag id='#{tag_code}' length='#{tag_length}' name='#{tag_string}'>
+"<tag code='#{tag_code}' name='#{tag_string}'>
   <tag_data>
     #{ tag_data.map{ |data| data.to_xml }.join("\n") }
   </tag_data>

@@ -36,7 +36,7 @@ class Shape
   def line_styles_xml
     return_val = "<line_styles>"
     return_val += line_styles.map{ |line_style| line_style.to_xml }.join('')
-    return_val += "</line_style>"
+    return_val += "</line_styles>"
   end
   
   def fill_styles_xml

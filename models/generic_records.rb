@@ -176,7 +176,7 @@ class Rect
   end
   
   def to_xml
-    "<rect xmin=#{xmin}, xmax=#{xmax}, ymin=#{ymin}, ymax=#{ymax}/>"
+    "<rect xmin='#{xmin}' xmax='#{xmax}' ymin='#{ymin}' ymax='#{ymax}'/>"
   end
   
 end
@@ -195,7 +195,7 @@ class RGB
   end
   
   def to_xml
-    "<RGB r=#{r}, g=#{g}, b=#{b}/>"
+    "<RGB r='#{r}' g='#{g}' b='#{b}'/>"
   end
 end
 

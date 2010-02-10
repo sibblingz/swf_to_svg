@@ -66,12 +66,12 @@ class StyleChangeRecord
   end
   
   def to_xml
-    "<style_change_record state_move_to='#{state_move_to}' state_fill_style_0='#{state_fill_style_0}' state_fill_style_1='#{state_fill_style_1}' state_line_style='#{state_line_style}'>
-      <move_to delta_x='#{move_delta_x}' delta_y='#{move_delta_y}'/>
-      <fill_style_0 index='#{fill_style_0}'/>
-      <fill_style_1 index='#{fill_style_1}'/>
-      <line_style index='#{line_style}'/>
-     </style_change_record>"
+"<style_change_record state_move_to='#{!state_move_to.nil?}' state_fill_style_0='#{!state_fill_style_0.nil?}' state_fill_style_1='#{!state_fill_style_1.nil?}' state_line_style='#{!state_line_style.nil?}'>
+  <move_to delta_x='#{move_delta_x.nil? ? 0 : self.move_delta_x}' delta_y='#{move_delta_y.nil? ? 0 : self.move_delta_y}'/>
+  <fill_style_0 index='#{fill_style_0.nil? ? "null" : (self.fill_style_0 - 1)}'/>
+  <fill_style_1 index='#{fill_style_1.nil? ? "null" : (self.fill_style_1 - 1)}'/>
+  <line_style index='#{line_style.nil? ? "null" : (self.line_style - 1)}'/>
+</style_change_record>"
   end
   
 end
