@@ -38,4 +38,11 @@ class PlaceObject2Tag
     return path
   end
   
+  def to_xml
+    "<place_object_2 id = '#{character_id}' depth=#{depth} ratio=#{ratio} name='#{name}' clip_depth='#{clip_depth}'>
+      <matrix> #{matrix.to_xml} </matrix>
+      <color_transform> #{color_transform.to_xml} </matrix>
+     </place_object_2>"
+  end
+  
 end
