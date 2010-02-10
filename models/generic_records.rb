@@ -183,3 +183,9 @@ class RGB
     "<RGB r=#{r}, g=#{g}, b=#{b}/>"
   end
 end
+
+class NilClass
+  def to_xml
+    ""
+  end
+end
