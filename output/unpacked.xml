@@ -1,0 +1,1915 @@
+<?xml version='1.0'?><tags><tag code='69' name='FILE ATTRIBUTES'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+<tag code='77' name='METADATA'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+<tag code='9' name='SET BACKGROUND COLOR'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+<tag code='86' name='DEFINE SCENE AND FRAME LABEL DATA'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+<tag code='2' name='DEFINE SHAPE'>
+  <tag_data>
+    <shape id='1'>
+      <bounds><rect xmin='0' xmax='337' ymin='0' ymax='408'/></bounds>
+      <line_styles></line_styles>
+      <fill_styles><fill_style type='0' name='solid fill'>
+  <RGB r='94' g='89' b='23'/>
+</fill_style><fill_style type='0' name='solid fill'>
+  <RGB r='40' g='38' b='10'/>
+</fill_style><fill_style type='0' name='solid fill'>
+  <RGB r='207' g='197' b='10'/>
+</fill_style><fill_style type='0' name='solid fill'>
+  <RGB r='137' g='130' b='8'/>
+</fill_style><fill_style type='0' name='solid fill'>
+  <RGB r='137' g='127' b='38'/>
+</fill_style></fill_styles>
+      <shape_records><style_change_record state_move_to='true' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='179' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='4'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='28' delta_y='3' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='53' delta_y='12' />
+  <anchor_point delta_x='0' delta_y='27' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='0' delta_y='10' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='35' delta_y='17' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='12' delta_y='9' />
+  <anchor_point delta_x='0' delta_y='15' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='0' delta_y='9' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-5' delta_y='9' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='17' delta_y='13' />
+  <anchor_point delta_x='6' delta_y='12' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='6' delta_y='25' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='14' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-8' delta_y='18' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='4' delta_y='2' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='14' delta_y='28' />
+  <anchor_point delta_x='-9' delta_y='34' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-16' delta_y='18' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='3' delta_y='10' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='11' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='0' delta_y='19' />
+  <anchor_point delta_x='-13' delta_y='10' />
+</curved_edge_record><curved_edge_record>
+  <control_point delta_x='-13' delta_y='11' />
+  <anchor_point delta_x='0' delta_y='15' />
+</curved_edge_record><curved_edge_record>
+  <control_point delta_x='0' delta_y='18' />
+  <anchor_point delta_x='-27' delta_y='17' />
+</curved_edge_record><curved_edge_record>
+  <control_point delta_x='-35' delta_y='21' />
+  <anchor_point delta_x='-62' delta_y='0' />
+</curved_edge_record><curved_edge_record>
+  <control_point delta_x='-45' delta_y='0' />
+  <anchor_point delta_x='-29' delta_y='-13' />
+</curved_edge_record><curved_edge_record>
+  <control_point delta_x='-32' delta_y='-3' />
+  <anchor_point delta_x='-15' delta_y='-17' />
+</curved_edge_record><curved_edge_record>
+  <control_point delta_x='-13' delta_y='-16' />
+  <anchor_point delta_x='6' delta_y='-15' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='-15' delta_y='-9' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-4' delta_y='-4' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='-5' delta_y='-6' />
+  <anchor_point delta_x='-2' delta_y='-15' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='0' delta_y='-4' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='-3' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='0' delta_y='-12' />
+  <anchor_point delta_x='7' delta_y='-2' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='0' delta_y='-1' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='-19' delta_y='-20' />
+  <anchor_point delta_x='0' delta_y='-23' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='1' delta_y='-11' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='10' delta_y='-14' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-10' delta_y='-20' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-5' delta_y='-21' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='4' delta_y='-14' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='9' delta_y='-12' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-8' delta_y='-10' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='-10' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='0' delta_y='-30' />
+  <anchor_point delta_x='36' delta_y='-21' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='2' delta_y='-2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-7' delta_y='-17' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='0' delta_y='-21' />
+  <anchor_point delta_x='39' delta_y='-23' />
+</curved_edge_record><curved_edge_record>
+  <control_point delta_x='25' delta_y='-15' />
+  <anchor_point delta_x='8' delta_y='4' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='15' delta_y='-4' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='45' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='5' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='8' delta_y='-1' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='true' state_fill_style_1='false' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='4'/>
+  <fill_style_1 index='null'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='31' delta_y='13' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='25' delta_y='9' />
+  <anchor_point delta_x='8' delta_y='12' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='3' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='5' delta_y='6' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-23' delta_y='31' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='19' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='8' delta_y='4' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='12' delta_y='7' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='9' delta_y='12' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='3' delta_y='7' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='4' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-2' delta_y='7' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='4' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-2' delta_y='5' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-2' delta_y='3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-9' delta_y='11' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='4' delta_y='0' />
+  <anchor_point delta_x='5' delta_y='5' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='14' delta_y='-4' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='10' delta_y='13' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='8' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='3' delta_y='12' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='4' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='10' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-10' delta_y='25' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-15' delta_y='17' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='13' delta_y='-4' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='4' delta_y='6' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='3' delta_y='14' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-10' delta_y='33' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-15' delta_y='13' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-13' delta_y='12' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='9' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='7' delta_y='2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='5' delta_y='10' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-6' delta_y='22' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-17' delta_y='13' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='6' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-15' delta_y='18' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='-18' delta_y='12' />
+  <anchor_point delta_x='-27' delta_y='0' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='-4' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-7' delta_y='0' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='-28' delta_y='0' />
+  <anchor_point delta_x='-8' delta_y='-14' />
+</curved_edge_record><curved_edge_record>
+  <control_point delta_x='-10' delta_y='-7' />
+  <anchor_point delta_x='0' delta_y='-9' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='1' delta_y='-3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='34' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='7' delta_y='-2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='-3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-2' delta_y='0' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='-37' delta_y='0' />
+  <anchor_point delta_x='-23' delta_y='-13' />
+</curved_edge_record><curved_edge_record>
+  <control_point delta_x='-16' delta_y='-9' />
+  <anchor_point delta_x='-2' delta_y='-8' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='-3' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='0' delta_y='-5' />
+  <anchor_point delta_x='6' delta_y='-4' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='2' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='5' delta_y='-2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='10' delta_y='1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='15' delta_y='-3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='4' delta_y='-4' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='-58' delta_y='-2' />
+  <anchor_point delta_x='-1' delta_y='-41' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='-7' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='4' delta_y='-8' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='-3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='-3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='3' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='35' delta_y='-6' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-5' delta_y='-5' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-38' delta_y='-9' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='-11' delta_y='-7' />
+  <anchor_point delta_x='0' delta_y='-10' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='1' delta_y='-4' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='-1' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='0' delta_y='-12' />
+  <anchor_point delta_x='12' delta_y='-12' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='15' delta_y='-14' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='23' delta_y='1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='25' delta_y='-3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='5' delta_y='-4' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-5' delta_y='0' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='-58' delta_y='-2' />
+  <anchor_point delta_x='0' delta_y='-29' />
+</curved_edge_record><curved_edge_record>
+  <control_point delta_x='0' delta_y='-18' />
+  <anchor_point delta_x='9' delta_y='-6' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='2' delta_y='-5' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='37' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='18' delta_y='-5' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='10' delta_y='-7' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-35' delta_y='2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-36' delta_y='-6' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='-32' delta_y='-7' />
+  <anchor_point delta_x='-3' delta_y='-13' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='-3' delta_y='-7' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='0' delta_y='-21' />
+  <anchor_point delta_x='40' delta_y='-13' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='16' delta_y='-3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-3' delta_y='-4' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='true' state_fill_style_1='false' state_line_style='false'>
+  <move_to delta_x='246' delta_y='141'/>
+  <fill_style_0 index='3'/>
+  <fill_style_1 index='null'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='4' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-2' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-2' delta_y='1' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='true' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='214' delta_y='273'/>
+  <fill_style_0 index='1'/>
+  <fill_style_1 index='0'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='-6' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='9' delta_y='-27' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='0' delta_y='-17' />
+  <anchor_point delta_x='-13' delta_y='-19' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='-13' delta_y='-20' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='-3' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-11' delta_y='9' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='-10' delta_y='13' />
+  <anchor_point delta_x='0' delta_y='23' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='3' delta_y='22' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='7' delta_y='25' />
+  <anchor_point delta_x='23' delta_y='0' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='3' delta_y='0' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='true' state_fill_style_1='false' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='0'/>
+  <fill_style_1 index='null'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='14' delta_y='-6' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='-2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='3' delta_y='-2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='-3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='6' delta_y='-17' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='0' delta_y='-59' />
+  <anchor_point delta_x='-31' delta_y='-4' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='-11' delta_y='1' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='true' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='183' delta_y='35'/>
+  <fill_style_0 index='2'/>
+  <fill_style_1 index='1'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-5' delta_y='3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-32' delta_y='6' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-20' delta_y='-5' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='22' delta_y='-9' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='32' delta_y='3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='3' delta_y='2' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='true' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='256' delta_y='358'/>
+  <fill_style_0 index='3'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='-2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='1' />
+</straight_edge_record>
+<end_shape_record></end_shape_record></shape_records>
+    </shape>
+  </tag_data>
+</tag>
+<tag code='2' name='DEFINE SHAPE'>
+  <tag_data>
+    <shape id='2'>
+      <bounds><rect xmin='-13' xmax='42' ymin='-13' ymax='44'/></bounds>
+      <line_styles></line_styles>
+      <fill_styles><fill_style type='0' name='solid fill'>
+  <RGB r='255' g='255' b='0'/>
+</fill_style><fill_style type='0' name='solid fill'>
+  <RGB r='0' g='0' b='0'/>
+</fill_style><fill_style type='0' name='solid fill'>
+  <RGB r='255' g='255' b='255'/>
+</fill_style></fill_styles>
+      <shape_records><style_change_record state_move_to='true' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='-1' delta_y='5'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='1'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='-5' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='-4' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-3' delta_y='-2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='-2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='3' delta_y='2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='4' delta_y='-2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='3' delta_y='1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='6' delta_y='-6' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-2' delta_y='7' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='6' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='0'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='3' delta_y='1' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='16' delta_y='4' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='9' delta_y='4' />
+  <anchor_point delta_x='0' delta_y='7' />
+</curved_edge_record><curved_edge_record>
+  <control_point delta_x='0' delta_y='11' />
+  <anchor_point delta_x='-12' delta_y='0' />
+</curved_edge_record><style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='0'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='4' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='1'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-4' delta_y='6' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-6' delta_y='-3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-4' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-3' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-3' delta_y='-1' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='0'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-5' delta_y='-3' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-8' delta_y='2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-9' delta_y='-6' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='0' delta_y='-9' />
+  <anchor_point delta_x='10' delta_y='-10' />
+</curved_edge_record><style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='0'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='-8' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='true' state_fill_style_1='false' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='1'/>
+  <fill_style_1 index='null'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='4' delta_y='3' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='4' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='0' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='0'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='-1' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='-5' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='4' delta_y='0' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='0'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='-1' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='true' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='27' delta_y='11'/>
+  <fill_style_0 index='0'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-16' delta_y='-3' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='false' state_fill_style_1='false' state_line_style='false'>
+  <move_to delta_x='9' delta_y='8'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='null'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='8' delta_y='7' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='7' delta_y='6' />
+  <anchor_point delta_x='5' delta_y='0' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='1' delta_y='0' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='-1'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-3' delta_y='-10' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='true' state_fill_style_1='false' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='2'/>
+  <fill_style_1 index='null'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='9' delta_y='5' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-6' delta_y='5' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='true' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='30' delta_y='27'/>
+  <fill_style_0 index='0'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-6' delta_y='0' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='1'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-5' delta_y='4' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-2' delta_y='0' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-5' delta_y='1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-2' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-2' delta_y='0' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-3' delta_y='5' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='false' state_fill_style_1='false' state_line_style='false'>
+  <move_to delta_x='13' delta_y='1'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='null'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='4' delta_y='0' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='7' delta_y='31'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='1'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='-2' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='3' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='false' state_fill_style_1='false' state_line_style='false'>
+  <move_to delta_x='16' delta_y='23'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='null'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-3' delta_y='-3' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-4' delta_y='-6' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='5' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='9' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='1'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='8' delta_y='-5' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='true' state_fill_style_1='false' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='2'/>
+  <fill_style_1 index='null'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='7' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='3' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='true' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='30'/>
+  <fill_style_0 index='0'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='4' delta_y='-11' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-2' delta_y='-7' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-4' delta_y='7' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='-1'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='11' />
+</straight_edge_record>
+<style_change_record state_move_to='false' state_fill_style_0='true' state_fill_style_1='false' state_line_style='false'>
+  <move_to delta_x='0' delta_y='0'/>
+  <fill_style_0 index='2'/>
+  <fill_style_1 index='null'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='-7' delta_y='4' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='-1' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='0' delta_y='-2' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='6' delta_y='-12' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='true' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='9' delta_y='39'/>
+  <fill_style_0 index='0'/>
+  <fill_style_1 index='1'/>
+  <line_style index='null'/>
+</style_change_record>
+<curved_edge_record>
+  <control_point delta_x='1' delta_y='-4' />
+  <anchor_point delta_x='6' delta_y='0' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='7' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='2' delta_y='-4' />
+</straight_edge_record>
+<curved_edge_record>
+  <control_point delta_x='1' delta_y='-2' />
+  <anchor_point delta_x='2' delta_y='0' />
+</curved_edge_record><straight_edge_record>
+  <anchor_point delta_x='1' delta_y='3' />
+</straight_edge_record>
+<style_change_record state_move_to='true' state_fill_style_0='false' state_fill_style_1='true' state_line_style='false'>
+  <move_to delta_x='-3' delta_y='13'/>
+  <fill_style_0 index='null'/>
+  <fill_style_1 index='2'/>
+  <line_style index='null'/>
+</style_change_record>
+<straight_edge_record>
+  <anchor_point delta_x='1' delta_y='-1' />
+</straight_edge_record>
+<straight_edge_record>
+  <anchor_point delta_x='5' delta_y='-4' />
+</straight_edge_record>
+<end_shape_record></end_shape_record></shape_records>
+    </shape>
+  </tag_data>
+</tag>
+<tag code='39' name='DEFINE SPRITE'>
+  <tag_data>
+    <sprite id='3' frame_count='1'>
+  <control_tag><tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '2' depth='1' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='0' col2='0'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='0' name='END TAG'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+</control_tag>
+ </sprite>
+  </tag_data>
+</tag>
+<tag code='39' name='DEFINE SPRITE'>
+  <tag_data>
+    <sprite id='4' frame_count='40'>
+  <control_tag><tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '1' depth='1' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='0' col2='0'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '3' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='-65' col2='171'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='-28' col2='139'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='17' col2='120'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='66' col2='111'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='115' col2='110'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='164' col2='115'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='214' col2='122'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='264' col2='126'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='313' col2='124'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='364' col2='110'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='347' col2='84'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='297' col2='80'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='252' col2='100'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='212' col2='129'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='174' col2='162'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='139' col2='195'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='104' col2='230'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='67' col2='264'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='28' col2='295'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='-15' col2='318'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='-55' col2='299'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='-19' col2='271'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='29' col2='273'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='77' col2='284'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='124' col2='302'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='172' col2='316'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='222' col2='320'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='271' col2='320'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='320' col2='313'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='365' col2='294'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='386' col2='250'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='352' col2='216'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='305' col2='201'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='256' col2='192'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='206' col2='186'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='157' col2='182'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='108' col2='181'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='59' col2='182'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='13' col2='185'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '' depth='2' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='-40' col2='181'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+
+<tag code='0' name='END TAG'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+</control_tag>
+ </sprite>
+  </tag_data>
+</tag>
+<tag code='26' name='PLACE OBJECT 2'>
+  <tag_data>
+    <place_object_2 id = '4' depth='1' ratio='' name='' clip_depth=''>
+      <matrix>
+      <row1 col1='1' col2='0'/>
+      <row2 col1='0' col2='1'/>
+      <row3 col1='5531' col2='3856'/>
+     </matrix>
+      
+     </place_object_2>
+  </tag_data>
+</tag>
+<tag code='1' name='SHOW FRAME'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+<tag code='0' name='END TAG'>
+  <tag_data>
+    
+  </tag_data>
+</tag>
+</tags>
