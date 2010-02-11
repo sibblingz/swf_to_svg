@@ -1,0 +1,456 @@
+Attemping to launch and connect to Player using URL /Users/btsavage/Desktop/beehive_project/beehive.swf
+[SWF] Users:btsavage:Desktop:beehive_project:beehive.swf - 279300 bytes after decompression
+[SWF]
+  Header:
+    Version: 10
+    FileLength: 279300
+    FileLengthCompressed: 279300
+    FrameSize: (550,400)
+    FrameRate: 30
+    FrameCount: 1
+  Tags:
+    [69:FileAttributes] AS3: true, HasMetadata: true, UseDirectBlit: false, UseGPU: false, UseNetwork: false
+    [77:Metadata]  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+    <xmp:CreatorTool>Adobe Flash CS4 Professional</xmp:CreatorTool>
+    <xmp:CreateDate>2010-02-02T14:35:40-08:00</xmp:CreateDate>
+    <xmp:MetadataDate>2010-02-10T19:03:47-08:00</xmp:MetadataDate>
+    <xmp:ModifyDate>2010-02-10T19:03:47-08:00</xmp:ModifyDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#">
+    <xmpMM:InstanceID>xmp.iid:05801174072068119109B6AB0622A53D</xmpMM:InstanceID>
+    <xmpMM:DocumentID>xmp.did:05801174072068119109B6AB0622A53D</xmpMM:DocumentID>
+    <xmpMM:OriginalDocumentID>xmp.did:FE7F11740720681192B0853D5529E782</xmpMM:OriginalDocumentID>
+    <xmpMM:DerivedFrom rdf:parseType="Resource">
+      <stRef:instanceID>xmp.iid:D0C7F4180820681192B0853D5529E782</stRef:instanceID>
+      <stRef:documentID>xmp.did:D0C7F4180820681192B0853D5529E782</stRef:documentID>
+      <stRef:originalDocumentID>xmp.did:FE7F11740720681192B0853D5529E782</stRef:originalDocumentID>
+    </xmpMM:DerivedFrom>
+  </rdf:Description>
+  <rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:format>application/x-shockwave-flash</dc:format>
+  </rdf:Description>
+</rdf:RDF>
+    [09:SetBackgroundColor] Color: #FFFFFF
+    [64:EnableDebugger2] Password: null, Reserved: 0x1975
+    [86:DefineSceneAndFrameLabelData] 
+      Scenes:
+        [0] Frame: 0, Name: Scene 1
+    [02:DefineShape] ID: 1, Bounds: (0,337,0,408)
+      FillStyles:
+        [1] [SWFFillStyle] Type: 0 (solid), Color: ff5e5917
+        [2] [SWFFillStyle] Type: 0 (solid), Color: ff28260a
+        [3] [SWFFillStyle] Type: 0 (solid), Color: ffcfc50a
+        [4] [SWFFillStyle] Type: 0 (solid), Color: ff898208
+        [5] [SWFFillStyle] Type: 0 (solid), Color: ff897f26
+      ShapeRecords:
+        [SWFShapeRecordStyleChange] MoveTo: 179,0, FillStyle1: 5
+        [SWFShapeRecordStraightEdge] General: 28,3
+        [SWFShapeRecordCurvedEdge] ControlDelta: 53,12, AnchorDelta: 0,27
+        [SWFShapeRecordStraightEdge] Vertical: 10
+        [SWFShapeRecordStraightEdge] General: 2,1
+        [SWFShapeRecordStraightEdge] General: 35,17
+        [SWFShapeRecordCurvedEdge] ControlDelta: 12,9, AnchorDelta: 0,15
+        [SWFShapeRecordStraightEdge] Vertical: 9
+        [SWFShapeRecordStraightEdge] General: -5,9
+        [SWFShapeRecordCurvedEdge] ControlDelta: 17,13, AnchorDelta: 6,12
+        [SWFShapeRecordStraightEdge] General: 6,25
+        [SWFShapeRecordStraightEdge] General: -1,14
+        [SWFShapeRecordStraightEdge] General: -8,18
+        [SWFShapeRecordStraightEdge] General: 4,2
+        [SWFShapeRecordCurvedEdge] ControlDelta: 14,28, AnchorDelta: -9,34
+        [SWFShapeRecordStraightEdge] Horizontal: -1
+        [SWFShapeRecordStraightEdge] General: -16,18
+        [SWFShapeRecordStraightEdge] General: 3,10
+        [SWFShapeRecordStraightEdge] General: 2,11
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,19, AnchorDelta: -13,10
+        [SWFShapeRecordCurvedEdge] ControlDelta: -13,11, AnchorDelta: 0,15
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,18, AnchorDelta: -27,17
+        [SWFShapeRecordCurvedEdge] ControlDelta: -35,21, AnchorDelta: -62,0
+        [SWFShapeRecordCurvedEdge] ControlDelta: -45,0, AnchorDelta: -29,-13
+        [SWFShapeRecordCurvedEdge] ControlDelta: -32,-3, AnchorDelta: -15,-17
+        [SWFShapeRecordCurvedEdge] ControlDelta: -13,-16, AnchorDelta: 6,-15
+        [SWFShapeRecordStraightEdge] General: -15,-9
+        [SWFShapeRecordStraightEdge] Horizontal: -1
+        [SWFShapeRecordStraightEdge] General: -4,-4
+        [SWFShapeRecordCurvedEdge] ControlDelta: -5,-6, AnchorDelta: -2,-15
+        [SWFShapeRecordStraightEdge] Vertical: -4
+        [SWFShapeRecordStraightEdge] Vertical: -3
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,-12, AnchorDelta: 7,-2
+        [SWFShapeRecordStraightEdge] Vertical: -1
+        [SWFShapeRecordCurvedEdge] ControlDelta: -19,-20, AnchorDelta: 0,-23
+        [SWFShapeRecordStraightEdge] General: 1,-11
+        [SWFShapeRecordStraightEdge] General: 10,-14
+        [SWFShapeRecordStraightEdge] General: -10,-20
+        [SWFShapeRecordStraightEdge] General: -5,-21
+        [SWFShapeRecordStraightEdge] General: 4,-14
+        [SWFShapeRecordStraightEdge] General: 9,-12
+        [SWFShapeRecordStraightEdge] General: -8,-10
+        [SWFShapeRecordStraightEdge] General: -1,-10
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,-30, AnchorDelta: 36,-21
+        [SWFShapeRecordStraightEdge] General: 2,-2
+        [SWFShapeRecordStraightEdge] General: -1,-1
+        [SWFShapeRecordStraightEdge] General: -7,-17
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,-21, AnchorDelta: 39,-23
+        [SWFShapeRecordCurvedEdge] ControlDelta: 25,-15, AnchorDelta: 8,4
+        [SWFShapeRecordStraightEdge] General: 15,-4
+        [SWFShapeRecordStyleChange] FillStyle1: 3
+        [SWFShapeRecordStraightEdge] General: 45,-1
+        [SWFShapeRecordStraightEdge] General: 5,-1
+        [SWFShapeRecordStraightEdge] General: 8,-1
+        [SWFShapeRecordStyleChange] FillStyle0: 5
+        [SWFShapeRecordStraightEdge] General: 31,13
+        [SWFShapeRecordCurvedEdge] ControlDelta: 25,9, AnchorDelta: 8,12
+        [SWFShapeRecordStraightEdge] General: 3,-1
+        [SWFShapeRecordStraightEdge] General: 5,6
+        [SWFShapeRecordStraightEdge] General: -23,31
+        [SWFShapeRecordStraightEdge] General: 19,-1
+        [SWFShapeRecordStraightEdge] General: 8,4
+        [SWFShapeRecordStraightEdge] General: 12,7
+        [SWFShapeRecordStraightEdge] General: 9,12
+        [SWFShapeRecordStraightEdge] General: 3,7
+        [SWFShapeRecordStraightEdge] General: -1,4
+        [SWFShapeRecordStraightEdge] General: -2,7
+        [SWFShapeRecordStraightEdge] General: -1,4
+        [SWFShapeRecordStraightEdge] General: -2,5
+        [SWFShapeRecordStraightEdge] General: -1,2
+        [SWFShapeRecordStraightEdge] General: -2,3
+        [SWFShapeRecordStraightEdge] General: -9,11
+        [SWFShapeRecordCurvedEdge] ControlDelta: 4,0, AnchorDelta: 5,5
+        [SWFShapeRecordStraightEdge] General: 14,-4
+        [SWFShapeRecordStraightEdge] Horizontal: 2
+        [SWFShapeRecordStraightEdge] General: 10,13
+        [SWFShapeRecordStraightEdge] General: 2,8
+        [SWFShapeRecordStraightEdge] General: 3,12
+        [SWFShapeRecordStraightEdge] Vertical: 4
+        [SWFShapeRecordStraightEdge] General: 1,10
+        [SWFShapeRecordStraightEdge] General: -10,25
+        [SWFShapeRecordStraightEdge] General: -15,17
+        [SWFShapeRecordStraightEdge] General: 2,2
+        [SWFShapeRecordStraightEdge] General: 13,-4
+        [SWFShapeRecordStraightEdge] General: 1,2
+        [SWFShapeRecordStraightEdge] General: 4,6
+        [SWFShapeRecordStraightEdge] General: 3,14
+        [SWFShapeRecordStraightEdge] General: -10,33
+        [SWFShapeRecordStraightEdge] General: -15,13
+        [SWFShapeRecordStraightEdge] General: -13,12
+        [SWFShapeRecordStraightEdge] Horizontal: 9
+        [SWFShapeRecordStraightEdge] Horizontal: 2
+        [SWFShapeRecordStraightEdge] General: 7,2
+        [SWFShapeRecordStraightEdge] General: 5,10
+        [SWFShapeRecordStraightEdge] General: -6,22
+        [SWFShapeRecordStraightEdge] General: -17,13
+        [SWFShapeRecordStraightEdge] General: 2,6
+        [SWFShapeRecordStraightEdge] General: -15,18
+        [SWFShapeRecordCurvedEdge] ControlDelta: -18,12, AnchorDelta: -27,0
+        [SWFShapeRecordStraightEdge] Horizontal: -4
+        [SWFShapeRecordStraightEdge] Horizontal: -7
+        [SWFShapeRecordCurvedEdge] ControlDelta: -28,0, AnchorDelta: -8,-14
+        [SWFShapeRecordCurvedEdge] ControlDelta: -10,-7, AnchorDelta: 0,-9
+        [SWFShapeRecordStraightEdge] General: 1,-3
+        [SWFShapeRecordStraightEdge] Horizontal: 34
+        [SWFShapeRecordStraightEdge] General: 7,-2
+        [SWFShapeRecordStraightEdge] General: 2,-3
+        [SWFShapeRecordStraightEdge] Horizontal: -2
+        [SWFShapeRecordCurvedEdge] ControlDelta: -37,0, AnchorDelta: -23,-13
+        [SWFShapeRecordCurvedEdge] ControlDelta: -16,-9, AnchorDelta: -2,-8
+        [SWFShapeRecordStraightEdge] General: -1,-3
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,-5, AnchorDelta: 6,-4
+        [SWFShapeRecordStraightEdge] Horizontal: 2
+        [SWFShapeRecordStraightEdge] General: 5,-2
+        [SWFShapeRecordStraightEdge] General: 10,1
+        [SWFShapeRecordStraightEdge] General: 15,-3
+        [SWFShapeRecordStraightEdge] General: 4,-4
+        [SWFShapeRecordCurvedEdge] ControlDelta: -58,-2, AnchorDelta: -1,-41
+        [SWFShapeRecordStraightEdge] General: -1,-7
+        [SWFShapeRecordStraightEdge] General: 4,-8
+        [SWFShapeRecordStraightEdge] General: 2,-3
+        [SWFShapeRecordStraightEdge] General: 1,-3
+        [SWFShapeRecordStraightEdge] Horizontal: 3
+        [SWFShapeRecordStraightEdge] General: 35,-6
+        [SWFShapeRecordStraightEdge] Vertical: -1
+        [SWFShapeRecordStraightEdge] General: -5,-5
+        [SWFShapeRecordStraightEdge] General: -38,-9
+        [SWFShapeRecordCurvedEdge] ControlDelta: -11,-7, AnchorDelta: 0,-10
+        [SWFShapeRecordStraightEdge] General: 1,-4
+        [SWFShapeRecordStraightEdge] Vertical: -1
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,-12, AnchorDelta: 12,-12
+        [SWFShapeRecordStraightEdge] General: 15,-14
+        [SWFShapeRecordStraightEdge] General: 23,1
+        [SWFShapeRecordStraightEdge] General: 25,-3
+        [SWFShapeRecordStraightEdge] General: 5,-4
+        [SWFShapeRecordStraightEdge] Horizontal: -5
+        [SWFShapeRecordCurvedEdge] ControlDelta: -58,-2, AnchorDelta: 0,-29
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,-18, AnchorDelta: 9,-6
+        [SWFShapeRecordStraightEdge] General: 2,-5
+        [SWFShapeRecordStraightEdge] Horizontal: 37
+        [SWFShapeRecordStraightEdge] General: 18,-5
+        [SWFShapeRecordStraightEdge] General: 10,-7
+        [SWFShapeRecordStraightEdge] General: -35,2
+        [SWFShapeRecordStraightEdge] General: -36,-6
+        [SWFShapeRecordCurvedEdge] ControlDelta: -32,-7, AnchorDelta: -3,-13
+        [SWFShapeRecordStraightEdge] General: -3,-7
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,-21, AnchorDelta: 40,-13
+        [SWFShapeRecordStraightEdge] General: 16,-3
+        [SWFShapeRecordStraightEdge] General: -3,-4
+        [SWFShapeRecordStyleChange] MoveTo: 246,141, FillStyle0: 4
+        [SWFShapeRecordStraightEdge] Horizontal: 4
+        [SWFShapeRecordStraightEdge] General: -2,-1
+        [SWFShapeRecordStraightEdge] General: -2,1
+        [SWFShapeRecordStyleChange] MoveTo: 214,273, FillStyle0: 2, FillStyle1: 1
+        [SWFShapeRecordStraightEdge] General: 2,-6
+        [SWFShapeRecordStraightEdge] General: 9,-27
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,-17, AnchorDelta: -13,-19
+        [SWFShapeRecordStraightEdge] General: -13,-20
+        [SWFShapeRecordStraightEdge] Vertical: -3
+        [SWFShapeRecordStyleChange] FillStyle1: 3
+        [SWFShapeRecordStraightEdge] General: -11,9
+        [SWFShapeRecordCurvedEdge] ControlDelta: -10,13, AnchorDelta: 0,23
+        [SWFShapeRecordStraightEdge] General: 3,22
+        [SWFShapeRecordCurvedEdge] ControlDelta: 7,25, AnchorDelta: 23,0
+        [SWFShapeRecordStraightEdge] Horizontal: 3
+        [SWFShapeRecordStyleChange] FillStyle0: 1
+        [SWFShapeRecordStraightEdge] General: 14,-6
+        [SWFShapeRecordStraightEdge] General: 2,-2
+        [SWFShapeRecordStraightEdge] General: 3,-2
+        [SWFShapeRecordStraightEdge] General: 2,-3
+        [SWFShapeRecordStraightEdge] General: 6,-17
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,-59, AnchorDelta: -31,-4
+        [SWFShapeRecordStraightEdge] General: -11,1
+        [SWFShapeRecordStyleChange] MoveTo: 183,35, FillStyle0: 3, FillStyle1: 2
+        [SWFShapeRecordStraightEdge] General: -5,3
+        [SWFShapeRecordStraightEdge] General: -32,6
+        [SWFShapeRecordStraightEdge] General: -20,-5
+        [SWFShapeRecordStraightEdge] General: 22,-9
+        [SWFShapeRecordStraightEdge] General: 32,3
+        [SWFShapeRecordStraightEdge] General: 3,2
+        [SWFShapeRecordStyleChange] MoveTo: 256,358, FillStyle0: 4, FillStyle1: 3
+        [SWFShapeRecordStraightEdge] General: 1,-2
+        [SWFShapeRecordStraightEdge] General: -1,1
+        [SWFShapeRecordStraightEdge] Vertical: 1
+        [SWFShapeRecordEnd]
+    [02:DefineShape] ID: 2, Bounds: (-13,42,-13,44)
+      FillStyles:
+        [1] [SWFFillStyle] Type: 0 (solid), Color: ffffff00
+        [2] [SWFFillStyle] Type: 0 (solid), Color: ff000000
+        [3] [SWFFillStyle] Type: 0 (solid), Color: ffffffff
+      ShapeRecords:
+        [SWFShapeRecordStyleChange] MoveTo: -1,5, FillStyle1: 2
+        [SWFShapeRecordStraightEdge] General: -1,-5
+        [SWFShapeRecordStraightEdge] General: 1,-4
+        [SWFShapeRecordStraightEdge] General: -3,-2
+        [SWFShapeRecordStraightEdge] Vertical: -2
+        [SWFShapeRecordStraightEdge] Horizontal: 1
+        [SWFShapeRecordStraightEdge] General: 3,2
+        [SWFShapeRecordStraightEdge] General: 4,-2
+        [SWFShapeRecordStraightEdge] General: 3,1
+        [SWFShapeRecordStraightEdge] General: 6,-6
+        [SWFShapeRecordStraightEdge] General: -2,7
+        [SWFShapeRecordStraightEdge] General: 2,6
+        [SWFShapeRecordStyleChange] FillStyle1: 1
+        [SWFShapeRecordStraightEdge] Horizontal: 1
+        [SWFShapeRecordStraightEdge] General: 3,1
+        [SWFShapeRecordStyleChange] FillStyle1: 3
+        [SWFShapeRecordStraightEdge] General: 16,4
+        [SWFShapeRecordCurvedEdge] ControlDelta: 9,4, AnchorDelta: 0,7
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,11, AnchorDelta: -12,0
+        [SWFShapeRecordStyleChange] FillStyle1: 1
+        [SWFShapeRecordStraightEdge] General: -1,4
+        [SWFShapeRecordStyleChange] FillStyle1: 2
+        [SWFShapeRecordStraightEdge] Vertical: 1
+        [SWFShapeRecordStraightEdge] General: -4,6
+        [SWFShapeRecordStraightEdge] General: 1,3
+        [SWFShapeRecordStraightEdge] General: -1,3
+        [SWFShapeRecordStraightEdge] General: -6,-3
+        [SWFShapeRecordStraightEdge] General: 1,-1
+        [SWFShapeRecordStraightEdge] Horizontal: -4
+        [SWFShapeRecordStraightEdge] Horizontal: -1
+        [SWFShapeRecordStraightEdge] Horizontal: -3
+        [SWFShapeRecordStraightEdge] General: -3,-1
+        [SWFShapeRecordStyleChange] FillStyle1: 1
+        [SWFShapeRecordStraightEdge] General: -5,-3
+        [SWFShapeRecordStyleChange] FillStyle1: 3
+        [SWFShapeRecordStraightEdge] General: -8,2
+        [SWFShapeRecordStraightEdge] General: -9,-6
+        [SWFShapeRecordCurvedEdge] ControlDelta: 0,-9, AnchorDelta: 10,-10
+        [SWFShapeRecordStyleChange] FillStyle1: 1
+        [SWFShapeRecordStraightEdge] General: 2,-8
+        [SWFShapeRecordStyleChange] FillStyle0: 2
+        [SWFShapeRecordStraightEdge] General: 4,3
+        [SWFShapeRecordStyleChange] FillStyle1: 3
+        [SWFShapeRecordStraightEdge] Horizontal: 4
+        [SWFShapeRecordStraightEdge] Horizontal: 1
+        [SWFShapeRecordStraightEdge] Horizontal: 1
+        [SWFShapeRecordStyleChange] FillStyle1: 1
+        [SWFShapeRecordStraightEdge] General: 1,-1
+        [SWFShapeRecordStyleChange] FillStyle1: 3
+        [SWFShapeRecordStraightEdge] General: -1,-1
+        [SWFShapeRecordStraightEdge] Vertical: -5
+        [SWFShapeRecordStraightEdge] Horizontal: 4
+        [SWFShapeRecordStyleChange] FillStyle1: 1
+        [SWFShapeRecordStraightEdge] Vertical: -1
+        [SWFShapeRecordStyleChange] MoveTo: 30,21, FillStyle0: 0, FillStyle1: 3
+        [SWFShapeRecordStraightEdge] General: 6,-5
+        [SWFShapeRecordStraightEdge] General: -9,-5
+        [SWFShapeRecordStyleChange] FillStyle1: 1
+        [SWFShapeRecordStraightEdge] General: 3,10
+        [SWFShapeRecordStyleChange] FillStyle0: 3
+        [SWFShapeRecordStraightEdge] Horizontal: -1
+        [SWFShapeRecordCurvedEdge] ControlDelta: -5,0, AnchorDelta: -7,-6
+        [SWFShapeRecordStraightEdge] General: -8,-7
+        [SWFShapeRecordStyleChange] MoveTo: 30,27, FillStyle0: 1, FillStyle1: 3
+        [SWFShapeRecordStraightEdge] Horizontal: -1
+        [SWFShapeRecordStraightEdge] Horizontal: -6
+        [SWFShapeRecordStyleChange] FillStyle1: 2
+        [SWFShapeRecordStraightEdge] General: -5,4
+        [SWFShapeRecordStraightEdge] Horizontal: -2
+        [SWFShapeRecordStraightEdge] General: -5,1
+        [SWFShapeRecordStraightEdge] General: -2,-1
+        [SWFShapeRecordStraightEdge] Horizontal: -2
+        [SWFShapeRecordStyleChange] FillStyle1: 3
+        [SWFShapeRecordStraightEdge] General: -3,5
+        [SWFShapeRecordStyleChange] MoveTo: 27,11
+        [SWFShapeRecordStraightEdge] General: -1,-1
+        [SWFShapeRecordStraightEdge] General: -16,-3
+        [SWFShapeRecordStyleChange] MoveTo: 13,1
+        [SWFShapeRecordStraightEdge] Horizontal: 4
+        [SWFShapeRecordStyleChange] MoveTo: 0,30
+        [SWFShapeRecordStraightEdge] General: 4,-11
+        [SWFShapeRecordStraightEdge] General: -2,-7
+        [SWFShapeRecordStraightEdge] General: -4,7
+        [SWFShapeRecordStyleChange] FillStyle1: 0
+        [SWFShapeRecordStraightEdge] General: 2,11
+        [SWFShapeRecordStyleChange] FillStyle0: 3
+        [SWFShapeRecordStraightEdge] General: -7,4
+        [SWFShapeRecordStraightEdge] General: -1,-1
+        [SWFShapeRecordStraightEdge] Vertical: -2
+        [SWFShapeRecordStraightEdge] General: 6,-12
+        [SWFShapeRecordStyleChange] MoveTo: 16,23, FillStyle0: 1, FillStyle1: 3
+        [SWFShapeRecordStraightEdge] General: -3,-3
+        [SWFShapeRecordStraightEdge] General: -4,-6
+        [SWFShapeRecordStraightEdge] Vertical: 5
+        [SWFShapeRecordStraightEdge] General: -1,9
+        [SWFShapeRecordStyleChange] FillStyle1: 2
+        [SWFShapeRecordStraightEdge] General: 8,-5
+        [SWFShapeRecordStyleChange] FillStyle0: 3
+        [SWFShapeRecordStraightEdge] General: 7,-1
+        [SWFShapeRecordStraightEdge] General: 1,1
+        [SWFShapeRecordStraightEdge] Vertical: 1
+        [SWFShapeRecordStraightEdge] General: -1,3
+        [SWFShapeRecordStyleChange] MoveTo: 7,31, FillStyle0: 1
+        [SWFShapeRecordStraightEdge] General: 1,-1
+        [SWFShapeRecordStraightEdge] Vertical: -2
+        [SWFShapeRecordStyleChange] FillStyle1: 3
+        [SWFShapeRecordStraightEdge] General: -1,3
+        [SWFShapeRecordStyleChange] MoveTo: 9,39, FillStyle1: 2
+        [SWFShapeRecordCurvedEdge] ControlDelta: 1,-4, AnchorDelta: 6,0
+        [SWFShapeRecordStraightEdge] General: 7,-1
+        [SWFShapeRecordStraightEdge] General: 2,-4
+        [SWFShapeRecordCurvedEdge] ControlDelta: 1,-2, AnchorDelta: 2,0
+        [SWFShapeRecordStraightEdge] General: 1,3
+        [SWFShapeRecordStyleChange] MoveTo: -3,13, FillStyle1: 3
+        [SWFShapeRecordStraightEdge] General: 1,-1
+        [SWFShapeRecordStraightEdge] General: 5,-4
+        [SWFShapeRecordEnd]
+    [39:DefineSprite] ID: 3, FrameCount: 1, Tags: 3
+      ControlTags:
+        [26:PlaceObject2] Depth: 1, CharacterID: 2, Matrix: (1,1,0,0,0,0)
+        [01:ShowFrame] 
+        [00:End] 
+    [39:DefineSprite] ID: 4, FrameCount: 40, Tags: 82
+      ControlTags:
+        [26:PlaceObject2] Depth: 1, CharacterID: 1, Matrix: (1,1,0,0,0,0)
+        [26:PlaceObject2] Depth: 2, CharacterID: 3, Matrix: (1,1,0,0,-65,171)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,-28,139)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,17,120)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,66,111)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,115,110)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,164,115)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,214,122)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,264,126)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,313,124)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,364,110)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,347,84)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,297,80)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,252,100)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,212,129)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,174,162)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,139,195)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,104,230)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,67,264)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,28,295)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,-15,318)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,-55,299)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,-19,271)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,29,273)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,77,284)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,124,302)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,172,316)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,222,320)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,271,320)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,320,313)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,365,294)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,386,250)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,352,216)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,305,201)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,256,192)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,206,186)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,157,182)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,108,181)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,59,182)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,13,185)
+        [01:ShowFrame] 
+        [26:PlaceObject2] Depth: 2, Matrix: (1,1,0,0,-40,181)
+        [01:ShowFrame] 
+        [00:End] 
+    [26:PlaceObject2] Depth: 1, CharacterID: 4, Matrix: (1,1,0,0,5531,3856)
+    [82:DoABC] Lazy: true, Length: 276682
+    [76:SymbolClass] 
+      Symbols:
+        [0] TagID: 0, Name: beehive_fla.MainTimeline
+    [01:ShowFrame] 
+    [00:End] 
+  Frames:
+    [0] Start: 0, Length: 13
+      Depth: 1, CharacterId: 4, PlacedAt: 9, Keyframe
+  Layers:
+    [0] Frames 0
+
