@@ -71,7 +71,7 @@ class StyleChangeRecord
   <fill_style_0 index='#{fill_style_0.nil? ? "null" : (self.fill_style_0 - 1)}'/>
   <fill_style_1 index='#{fill_style_1.nil? ? "null" : (self.fill_style_1 - 1)}'/>
   <line_style index='#{line_style.nil? ? "null" : (self.line_style - 1)}'/>
-</style_change_record>"
+</style_change_record>\n"
   end
   
 end
