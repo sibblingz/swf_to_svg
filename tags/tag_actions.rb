@@ -46,11 +46,22 @@ def define_shape( tag_length, f, version )
   if true
     shape_id = f.get_u16
     puts "Shape id: #{shape_id}"
-    
+    puts "getting a rect!"
+    puts "buffer: #{f.buffer}"
     shape_bounds = Rect.new( f )
     puts "Shape Bounds: (#{shape_bounds.xmin}, #{shape_bounds.ymin}), (#{shape_bounds.xmax}, #{shape_bounds.ymax})"
-        
-    shape = get_shape_with_style( f )
+     
+    now = f.total_bytes_read
+    remaining = tag_length - (now-before)
+
+    # remaining.times do
+    #       f.getc
+    #     end    
+    
+    # THE BIT ALIGN BUG IS IN GET SHAPE WITH STYLE
+    
+    shape = get_shape_with_style( f, remaining )
+    #shape = Shape.new
     shape.bounds = shape_bounds
     shape.id = shape_id
   
@@ -164,6 +175,15 @@ def place_object_2( tag_length, f )
   @tag_data.push( obj2 )
 end
 
+# Tag code 28
+def remove_object_2( tag_length, f )
+  puts "Remove Object 2"
+
+  tag_length.times do
+    f.getc
+  end
+end
+
 # Tag code = 32
 def define_shape_3( tag_length, f )
   puts "Define Shape 3"
@@ -212,6 +232,8 @@ def define_sprite( tag_length, f )
     # puts "what belongs here??"
   #  f.getc
   #end
+  f.skip_to_next_byte
+  
   after = f.total_bytes_read
   puts "DEFINE SPRITE ERROR! difference is: #{after - before}, it should be #{my_tag_length}" unless (after-before) == my_tag_length
 
@@ -239,21 +261,38 @@ end
 # Tag code = 76
 def symbol_class( tag_length, f )
   puts "Symbol Class Tag"
+  
+  symbol = SymbolClassTag.new
+  
   num_symbols = f.get_u16
-  # puts "Num Symbols: #{num_symbols}"
+  symbol.num_symbols = num_symbols
+  #puts "Num Symbols: #{num_symbols}"
   
-  tag_1 = f.get_u16
-  # puts "Tag1: #{tag_1}"
-  total_bytes_remaining = tag_length - 4
+  tag_ids = []
+  tag_names = []
+  num_symbols.times do
+    tag_id = f.get_u16
+    #puts "Tag1: #{tag_1}"
+    #total_bytes_remaining = tag_length - 4
   
-  name1, bytes_read = get_string( f )
-  # puts "Name1: #{name1}"
-  total_bytes_remaining -= bytes_read
-  
-  total_bytes_remaining.times do
-    f.getc
-    # puts "lalalalala!"
+    name, bytes_read = SwfMath.parse_ASCII_string( f )
+    puts "#{name}"
+    tag_ids.push( tag_id )
+    tag_names.push( name )
+    #get_string( f )
   end
+  
+  symbol.tag_ids = tag_ids
+  symbol.tag_names = tag_names
+  
+  #puts "Name1: #{name1}"
+  #total_bytes_remaining -= bytes_read
+  
+  #total_bytes_remaining.times do
+  #  f.getc
+    # puts "lalalalala!"
+  #end
+  @tag_data.push( symbol )
 end
 
 # Tag code = 77

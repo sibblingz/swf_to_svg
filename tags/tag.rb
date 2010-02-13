@@ -6,7 +6,9 @@ class Tag
     @tag_length = tag_length
     @tag_data = []
     
+    puts "tag starts on #{f.total_bytes_read}, buffer is #{f.buffer}"
     handle_tag( f )
+    #skip_all_tag_data( f )
   end
   
   def to_txt_all
@@ -56,6 +58,9 @@ class Tag
       when 26
         @tag_string = "PLACE OBJECT 2"
         place_object_2( @tag_length, f )
+      when 28
+        @tag_string = "REMOVE OBJECT 2"
+        remove_object_2( @tag_length, f )
       when 32
         @tag_string = "DEFINE SHAPE 3"
         define_shape_3( @tag_length, f )
@@ -86,6 +91,51 @@ class Tag
       else
         @tag_string = ">> ERROR! UNKNOWN TAG! <<"
         skip_tag( @tag_length, f, @tag_code )
+      end
+    end
+    
+    def skip_all_tag_data( f )
+      @tag_string = case @tag_code
+      when 0
+        "END TAG"
+      when 1
+        "SHOW FRAME"
+      when 2
+        "DEFINE SHAPE"
+      when 4
+        "PLACE OBJECT"
+      when 9
+        "SET BACKGROUND COLOR"
+      when 22
+        "DEFINE SHAPE 2"
+      when 26
+        "PLACE OBJECT 2"
+      when 28
+        "REMOVE OBJECT 2"
+      when 32
+        "DEFINE SHAPE 3"
+      when 39
+        "DEFINE SPRITE"
+      when 46
+        "DEFINE MORPH SHAPE"
+      when 69
+        "FILE ATTRIBUTES"
+      when 76
+        "SYMBOL CLASS"
+      when 77
+        "METADATA"
+      when 82
+       "DO ABC"
+      when 83
+        "DEFINE SHAPE 4"
+      when 86
+        "DEFINE SCENE AND FRAME LABEL DATA"
+      else
+        ">> ERROR! UNKNOWN TAG! <<"
+      end
+      
+      @tag_length.times do
+        f.getc
       end
     end
   

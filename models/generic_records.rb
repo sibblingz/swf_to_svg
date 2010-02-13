@@ -31,7 +31,7 @@ class C_XFORM
       @blue_add_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
     end
     
-    f.skip_to_next_byte
+    #f.skip_to_next_byte
   end
   
   def to_xml
@@ -92,7 +92,7 @@ class C_XFORM_WITH_ALPHA
       </color_transform>"
     end
     
-    f.skip_to_next_byte
+    #f.skip_to_next_byte
   end
   
   def to_txt
@@ -140,7 +140,7 @@ class Matrix
       @translate_y = SwfMath.parse_signed_int( f.next_n_bits(n_translate_bits) )
     end
 
-    f.skip_to_next_byte
+    #f.skip_to_next_byte
   end
   
   def to_txt
@@ -172,7 +172,7 @@ class Rect
     @ymax = SwfMath.parse_signed_int( f.next_n_bits( num_bits ) )
 
     # byte alignment
-    f.skip_to_next_byte
+    #f.skip_to_next_byte
   end
   
   def to_xml

@@ -38,15 +38,16 @@ class SwfMath
   
   def self.parse_ASCII_string( f )
     # i assume this works, but i'm not sure!
-    s = ""
+    string = ''
+    bytes_read = 0
     while true
-      char = f.getc
-      if(char == 0)
-        break
-      end
-      s = s + char.chr
+      next_char = f.get_u8
+      bytes_read += 1
+
+      break if next_char == 0
+      string += next_char.chr
     end
-    puts s
-    return s
+
+    return string, bytes_read
   end
 end
