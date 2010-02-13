@@ -15,24 +15,26 @@ class SwfMath
     # unless prec == 16 || prec == 8
     #   raise "invalid precision for parsing to float" 
     # end
-    prec = 16
-    bs = bitstring.reverse
-    decimal = bs.slice(0,prec).reverse
-    
-    number = 0
-    #puts("#{decimal16}")
-    val = 0.5
-    decimal.size.times do |i|
-      number = number + decimal.to_i[i]*val
-      val = val*0.5
-    end
-    if (bitstring.size > prec)
-      integer = bs.slice(prec,prec).reverse.to_i(2)
-    else
-      integer = 0
-    end
-    #puts integer16
-    number = number + integer
+    num = self.parse_signed_int( bitstring )
+    return num / 65536.0
+    # prec = 16
+    #    bs = bitstring.reverse
+    #    decimal = bs.slice(0,prec).reverse
+    #    
+    #    number = 0
+    #    puts "#{decimal}" 
+    #    val = 0.5
+    #    decimal.size.times do |i|
+    #      number = number + decimal.to_i[i]*val
+    #      val = val*0.5
+    #    end
+    #    if (bitstring.size > prec)
+    #      integer = self.parse_signed_int( bs.slice(prec,prec) )
+    #    else
+    #      integer = 0
+    #    end
+    #    #puts integer16
+    #    number = number + integer
     #return number
   end
   

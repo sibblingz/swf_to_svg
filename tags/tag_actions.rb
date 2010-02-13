@@ -81,7 +81,7 @@ def define_shape( tag_length, f, version )
   
   after = f.total_bytes_read
   puts "ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
-  
+  f.skip_to_next_byte
   @tag_data.push( shape )
 end
 
@@ -232,7 +232,7 @@ def define_sprite( tag_length, f )
     # puts "what belongs here??"
   #  f.getc
   #end
-  f.skip_to_next_byte
+  #f.skip_to_next_byte
   
   after = f.total_bytes_read
   puts "DEFINE SPRITE ERROR! difference is: #{after - before}, it should be #{my_tag_length}" unless (after-before) == my_tag_length

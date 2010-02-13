@@ -1,0 +1,2995 @@
+[HEADER]        File version: 7
+[HEADER]        File size: 12670
+[HEADER]        Frame rate: 12.000000
+[HEADER]        Frame count: 48
+[HEADER]        Movie width: 250.00
+[HEADER]        Movie height: 250.00
+[009]         3 SETBACKGROUNDCOLOR (ff/ff/ff)
+[016]       464 DEFINESHAPE2 defines id 0001
+                 bbox [-26.50, -91.25, 62.45, 117.40]
+                 | fillstyles(03)        linestyles(00)
+                 | 1 ) SOLID 261900ff    
+                 | 2 ) SOLID fadbafff    
+                 | 3 ) SOLID 993a00ff    
+                 |
+                 | fill: 01/00 line:00 - moveTo 44.95 -91.25
+                 | fill: 01/00 line:00 - splineTo (33.30 -81.85) 22.75 -77.10
+                 | fill: 01/00 line:00 - lineTo 29.30 -75.05
+                 | fill: 01/00 line:00 - splineTo (19.75 -69.85) 14.05 -57.70
+                 | fill: 01/00 line:00 - splineTo (18.15 -62.80) 22.70 -65.95
+                 | fill: 01/00 line:00 - splineTo (15.80 -56.95) 16.20 -40.60
+                 | fill: 01/00 line:00 - splineTo (17.65 -47.20) 21.40 -53.05
+                 | fill: 01/00 line:00 - splineTo (15.80 -35.50) 20.60 -19.80
+                 | fill: 01/00 line:00 - splineTo (21.20 -24.55) 22.45 -27.30
+                 | fill: 01/00 line:00 - splineTo (21.70 -17.90) 24.90 -9.35
+                 | fill: 01/00 line:00 - splineTo (37.55 -61.15) 53.60 -88.30
+                 | fill: 01/00 line:00 - lineTo 44.95 -91.25
+                 | fill: 00/00 line:00 - moveTo 0.00 0.00
+                 | fill: 03/02 line:00 - moveTo 60.05 -71.65
+                 | fill: 03/02 line:00 - splineTo (59.45 -72.60) 59.15 -73.55
+                 | fill: 03/02 line:00 - lineTo 58.95 -74.00
+                 | fill: 03/02 line:00 - splineTo (57.95 -75.35) 56.80 -75.95
+                 | fill: 03/02 line:00 - splineTo (55.60 -76.60) 53.65 -76.25
+                 | fill: 03/02 line:00 - lineTo 53.15 -76.05
+                 | fill: 03/02 line:00 - splineTo (50.40 -74.15) 48.40 -71.10
+                 | fill: 03/02 line:00 - lineTo 47.90 -70.35
+                 | fill: 03/02 line:00 - splineTo (46.20 -67.65) 44.60 -64.35
+                 | fill: 03/02 line:00 - splineTo (42.75 -60.70) 41.80 -57.90
+                 | fill: 03/02 line:00 - splineTo (40.85 -55.10) 40.70 -52.40
+                 | fill: 03/02 line:00 - splineTo (40.50 -49.70) 41.35 -47.45
+                 | fill: 03/02 line:00 - splineTo (42.15 -45.20) 45.30 -45.75
+                 | fill: 03/02 line:00 - splineTo (48.40 -46.30) 50.75 -47.40
+                 | fill: 03/02 line:00 - splineTo (52.25 -48.15) 53.60 -49.20
+                 | fill: 03/01 line:00 - lineTo 60.05 -71.65
+                 | fill: 02/01 line:00 - lineTo 62.45 -80.10
+                 | fill: 02/01 line:00 - lineTo 45.50 -90.65
+                 | fill: 02/01 line:00 - lineTo 40.45 -76.60
+                 | fill: 02/03 line:00 - splineTo (40.65 -73.25) 41.10 -70.10
+                 | fill: 02/03 line:00 - splineTo (41.55 -67.00) 39.75 -58.60
+                 | fill: 02/03 line:00 - splineTo (37.95 -50.20) 37.30 -48.70
+                 | fill: 02/03 line:00 - lineTo 34.40 -43.55
+                 | fill: 02/03 line:00 - lineTo 30.50 -37.25
+                 | fill: 02/03 line:00 - splineTo (28.75 -34.55) 24.00 -31.20
+                 | fill: 02/01 line:00 - lineTo 21.95 -25.45
+                 | fill: 02/03 line:00 - lineTo 24.05 -22.00
+                 | fill: 02/03 line:00 - splineTo (27.70 -16.75) 27.70 -13.55
+                 | fill: 02/03 line:00 - splineTo (27.70 -7.50) 18.70 -1.00
+                 | fill: 02/03 line:00 - lineTo 11.15 4.40
+                 | fill: 02/01 line:00 - lineTo 9.10 10.10
+                 | fill: 02/03 line:00 - splineTo (10.70 17.35) 10.80 22.20
+                 | fill: 02/03 line:00 - splineTo (10.85 27.05) 10.50 31.95
+                 | fill: 02/03 line:00 - splineTo (10.15 36.85) 7.05 40.55
+                 | fill: 02/03 line:00 - splineTo (3.90 45.15) -1.25 49.30
+                 | fill: 02/03 line:00 - lineTo -6.50 53.30
+                 | fill: 02/01 line:00 - lineTo -11.75 67.80
+                 | fill: 02/03 line:00 - splineTo (-4.70 73.40) -4.70 76.15
+                 | fill: 02/03 line:00 - splineTo (-4.70 82.10) -7.10 86.25
+                 | fill: 02/03 line:00 - splineTo (-9.85 91.10) -14.80 91.10
+                 | fill: 02/03 line:00 - lineTo -19.95 90.40
+                 | fill: 02/01 line:00 - lineTo -26.50 108.50
+                 | fill: 02/01 line:00 - lineTo 5.80 117.40
+                 | fill: 02/01 line:00 - lineTo 12.15 95.40
+                 | fill: 02/03 line:00 - splineTo (7.95 93.60) 5.00 89.95
+                 | fill: 02/03 line:00 - splineTo (1.40 85.40) 1.40 80.60
+                 | fill: 02/03 line:00 - splineTo (1.40 72.50) 7.45 72.50
+                 | fill: 02/03 line:00 - splineTo (10.30 72.50) 13.15 75.00
+                 | fill: 02/03 line:00 - lineTo 17.05 78.30
+                 | fill: 02/01 line:00 - lineTo 24.00 54.05
+                 | fill: 02/03 line:00 - lineTo 13.40 61.90
+                 | fill: 02/03 line:00 - splineTo (6.70 66.85) 5.05 66.85
+                 | fill: 02/03 line:00 - splineTo (1.00 66.85) 1.00 62.15
+                 | fill: 02/03 line:00 - splineTo (1.00 51.60) 8.95 44.55
+                 | fill: 02/03 line:00 - splineTo (16.40 37.85) 29.25 35.65
+                 | fill: 02/01 line:00 - lineTo 31.80 26.75
+                 | fill: 02/03 line:00 - lineTo 29.10 28.80
+                 | fill: 02/03 line:00 - splineTo (26.05 30.80) 23.05 30.80
+                 | fill: 02/03 line:00 - splineTo (20.40 30.80) 18.40 28.80
+                 | fill: 02/03 line:00 - splineTo (16.35 26.80) 16.35 23.90
+                 | fill: 02/03 line:00 - splineTo (16.35 14.20) 23.30 3.85
+                 | fill: 02/03 line:00 - splineTo (30.95 -7.45) 40.25 -7.65
+                 | fill: 02/03 line:00 - lineTo 41.70 -7.65
+                 | fill: 02/01 line:00 - lineTo 44.40 -17.15
+                 | fill: 02/03 line:00 - lineTo 43.35 -16.45
+                 | fill: 02/03 line:00 - splineTo (41.55 -15.35) 38.40 -15.35
+                 | fill: 02/03 line:00 - splineTo (35.20 -15.35) 34.20 -16.95
+                 | fill: 02/03 line:00 - splineTo (33.35 -18.20) 33.35 -22.00
+                 | fill: 02/03 line:00 - splineTo (33.35 -26.25) 35.40 -33.55
+                 | fill: 02/03 line:00 - splineTo (38.00 -42.85) 41.05 -43.65
+                 | fill: 02/03 line:00 - splineTo (44.05 -44.50) 46.65 -42.70
+                 | fill: 02/03 line:00 - splineTo (49.25 -40.90) 50.00 -38.10
+                 | fill: 02/01 line:00 - lineTo 53.60 -49.20
+                 | fill: 01/03 line:00 - moveTo 50.00 -38.10
+                 | fill: 01/03 line:00 - lineTo 44.40 -17.15
+                 | fill: 01/03 line:00 - moveTo 24.00 -31.20
+                 | fill: 01/03 line:00 - lineTo 40.45 -76.60
+                 | fill: 01/03 line:00 - moveTo 17.05 78.30
+                 | fill: 01/03 line:00 - lineTo 12.15 95.40
+                 | fill: 01/03 line:00 - moveTo 29.25 35.65
+                 | fill: 01/03 line:00 - lineTo 24.00 54.05
+                 | fill: 01/03 line:00 - moveTo 11.15 4.40
+                 | fill: 01/03 line:00 - lineTo 21.95 -25.45
+                 | fill: 01/03 line:00 - moveTo 41.70 -7.65
+                 | fill: 01/03 line:00 - lineTo 31.80 26.75
+                 | fill: 01/03 line:00 - moveTo -19.95 90.40
+                 | fill: 01/03 line:00 - lineTo -11.75 67.80
+                 | fill: 01/03 line:00 - moveTo -6.50 53.30
+                 | fill: 01/03 line:00 - lineTo 9.10 10.10
+                 |
+[01a]        18 PLACEOBJECT2 places id 0001 at depth 0002
+                 | Matrix             
+                 | 0.968 0.016   7.15 
+                 | -0.016 0.968 175.75 
+                uses IDs: 1
+[002]        64 DEFINESHAPE defines id 0002
+                 bbox [0.00, 0.00, 19.65, 24.75]
+                 | fillstyles(02)        linestyles(00)
+                 | 1 ) SOLID 642802ff    
+                 | 2 ) SOLID 431b01ff    
+                 |
+                 | fill: 02/01 line:00 - moveTo 15.50 1.00
+                 | fill: 02/01 line:00 - splineTo (15.00 3.25) 18.65 7.25
+                 | fill: 02/00 line:00 - lineTo 19.65 6.20
+                 | fill: 02/00 line:00 - splineTo (19.60 3.10) 18.00 0.00
+                 | fill: 02/00 line:00 - lineTo 15.50 1.00
+                 | fill: 01/00 line:00 - splineTo (13.15 2.20) 10.90 4.30
+                 | fill: 01/00 line:00 - splineTo (5.90 9.25) 7.80 14.60
+                 | fill: 01/00 line:00 - lineTo 0.00 22.70
+                 | fill: 01/00 line:00 - splineTo (1.20 26.65) 15.30 22.90
+                 | fill: 01/00 line:00 - splineTo (11.15 15.05) 18.65 7.25
+                 |
+[01a]        14 PLACEOBJECT2 places id 0002 at depth 0005
+                 | Matrix             
+                 | -0.969 0.000  74.80 
+                 | 0.000 0.969  53.05 
+                uses IDs: 2
+[002]       412 DEFINESHAPE defines id 0003
+                 bbox [2.10, 0.15, 78.05, 57.25]
+                 | fillstyles(07)        linestyles(00)
+                 | 1 ) SOLID 833b00ff    
+                 | 2 ) SOLID 261900ff    
+                 | 3 ) SOLID 6d2c01ff    
+                 | 4 ) SOLID fadbafff    
+                 | 5 ) SOLID b49e6dff    
+                 | 6 ) SOLID 993a00ff    
+                 | 7 ) SOLID ff7777ff    
+                 |
+                 | fill: 06/00 line:00 - moveTo 60.35 37.35
+                 | fill: 06/00 line:00 - lineTo 60.75 36.70
+                 | fill: 06/00 line:00 - splineTo (51.65 26.50) 42.25 17.20
+                 | fill: 06/00 line:00 - lineTo 42.15 13.85
+                 | fill: 06/03 line:00 - splineTo (41.50 15.20) 40.80 15.60
+                 | fill: 06/03 line:00 - splineTo (39.45 16.45) 37.85 13.70
+                 | fill: 06/03 line:00 - lineTo 37.55 13.15
+                 | fill: 06/03 line:00 - lineTo 37.25 12.90
+                 | fill: 06/03 line:00 - splineTo (35.15 2.55) 26.35 3.15
+                 | fill: 06/03 line:00 - lineTo 29.55 2.40
+                 | fill: 06/00 line:00 - splineTo (20.80 -1.70) 12.90 1.60
+                 | fill: 06/00 line:00 - lineTo 12.65 1.70
+                 | fill: 06/00 line:00 - splineTo (3.05 10.10) 2.50 22.30
+                 | fill: 06/00 line:00 - lineTo 2.50 22.45
+                 | fill: 06/00 line:00 - lineTo 2.45 23.00
+                 | fill: 06/00 line:00 - lineTo 2.45 23.30
+                 | fill: 06/00 line:00 - lineTo 2.45 22.95
+                 | fill: 06/01 line:00 - lineTo 2.35 22.95
+                 | fill: 06/00 line:00 - splineTo (1.25 28.45) 5.20 33.95
+                 | fill: 06/00 line:00 - lineTo 5.65 34.35
+                 | fill: 06/00 line:00 - splineTo (7.20 35.70) 9.20 36.85
+                 | fill: 06/00 line:00 - splineTo (12.00 38.40) 15.65 39.50
+                 | fill: 06/04 line:00 - splineTo (12.15 37.85) 9.05 35.25
+                 | fill: 06/01 line:00 - lineTo 9.10 35.20
+                 | fill: 06/04 line:00 - lineTo 8.80 35.05
+                 | fill: 06/04 line:00 - lineTo 8.75 35.00
+                 | fill: 06/00 line:00 - lineTo 8.00 34.45
+                 | fill: 06/00 line:00 - lineTo 7.90 34.40
+                 | fill: 06/00 line:00 - lineTo 7.95 34.35
+                 | fill: 06/00 line:00 - lineTo 8.00 34.35
+                 | fill: 06/04 line:00 - splineTo (5.85 28.95) 7.05 24.30
+                 | fill: 06/04 line:00 - lineTo 7.20 23.75
+                 | fill: 06/04 line:00 - lineTo 7.35 23.45
+                 | fill: 06/04 line:00 - splineTo (9.80 17.05) 17.85 12.90
+                 | fill: 06/04 line:00 - splineTo (25.50 11.30) 33.30 19.45
+                 | fill: 06/04 line:00 - splineTo (40.15 29.15) 56.20 38.65
+                 | fill: 06/04 line:00 - lineTo 56.45 38.80
+                 | fill: 06/04 line:00 - lineTo 56.60 38.90
+                 | fill: 06/04 line:00 - lineTo 57.20 39.15
+                 | fill: 06/04 line:00 - splineTo (58.85 39.55) 60.35 37.35
+                 | fill: 00/04 line:00 - lineTo 61.95 38.05
+                 | fill: 00/04 line:00 - splineTo (72.10 41.95) 77.10 51.90
+                 | fill: 00/04 line:00 - splineTo (78.05 53.75) 78.05 55.10
+                 | fill: 00/04 line:00 - lineTo 77.95 55.35
+                 | fill: 00/02 line:00 - lineTo 77.85 55.75
+                 | fill: 00/02 line:00 - splineTo (77.30 56.55) 76.20 56.85
+                 | fill: 00/02 line:00 - splineTo (74.45 57.30) 71.15 56.30
+                 | fill: 00/02 line:00 - lineTo 68.65 55.35
+                 | fill: 00/02 line:00 - lineTo 68.35 55.25
+                 | fill: 00/07 line:00 - splineTo (67.35 56.25) 65.50 56.75
+                 | fill: 00/04 line:00 - lineTo 61.35 57.25
+                 | fill: 00/04 line:00 - splineTo (51.40 57.45) 46.50 49.70
+                 | fill: 00/04 line:00 - splineTo (24.50 48.95) 18.85 40.40
+                 | fill: 00/04 line:00 - lineTo 18.10 40.15
+                 | fill: 00/04 line:00 - lineTo 15.65 39.50
+                 | fill: 04/02 line:00 - moveTo 69.10 51.60
+                 | fill: 04/02 line:00 - lineTo 68.85 51.50
+                 | fill: 04/02 line:00 - splineTo (66.65 50.80) 64.10 48.95
+                 | fill: 04/02 line:00 - splineTo (61.50 47.15) 60.10 45.30
+                 | fill: 04/02 line:00 - lineTo 59.55 44.45
+                 | fill: 04/05 line:00 - lineTo 59.45 44.25
+                 | fill: 04/05 line:00 - splineTo (58.85 43.20) 59.25 42.70
+                 | fill: 04/05 line:00 - lineTo 62.00 42.65
+                 | fill: 04/05 line:00 - splineTo (64.15 43.45) 66.75 45.25
+                 | fill: 04/05 line:00 - splineTo (69.30 47.10) 70.75 48.85
+                 | fill: 04/05 line:00 - splineTo (72.15 50.70) 71.60 51.50
+                 | fill: 04/05 line:00 - lineTo 69.30 51.65
+                 | fill: 04/00 line:00 - lineTo 69.10 51.60
+                 | fill: 02/00 line:00 - lineTo 69.20 51.55
+                 | fill: 02/05 line:00 - splineTo (70.55 50.80) 66.45 47.25
+                 | fill: 02/05 line:00 - splineTo (61.20 42.65) 59.55 44.45
+                 | fill: 04/02 line:00 - moveTo 57.25 49.40
+                 | fill: 04/02 line:00 - lineTo 55.20 47.55
+                 | fill: 04/02 line:00 - splineTo (65.45 53.50) 69.55 54.75
+                 | fill: 04/02 line:00 - splineTo (74.40 56.25) 75.95 55.90
+                 | fill: 04/02 line:00 - lineTo 77.95 55.35
+                 | fill: 03/00 line:00 - moveTo 42.15 13.85
+                 | fill: 03/00 line:00 - splineTo (41.50 1.30) 37.15 1.45
+                 | fill: 03/00 line:00 - lineTo 36.55 1.55
+                 | fill: 03/00 line:00 - lineTo 29.55 2.40
+                 | fill: 01/00 line:00 - moveTo 2.45 22.95
+                 | fill: 01/00 line:00 - lineTo 2.45 22.45
+                 | fill: 01/00 line:00 - lineTo 2.35 22.95
+                 | fill: 06/04 line:00 - moveTo 12.45 23.05
+                 | fill: 06/04 line:00 - splineTo (9.10 21.70) 8.45 28.15
+                 | fill: 06/04 line:00 - lineTo 8.45 28.45
+                 | fill: 06/04 line:00 - splineTo (8.90 33.45) 12.40 35.45
+                 | fill: 06/04 line:00 - splineTo (17.75 38.45) 18.85 36.80
+                 | fill: 06/04 line:00 - splineTo (20.70 33.00) 14.70 25.00
+                 | fill: 06/04 line:00 - splineTo (14.10 23.70) 12.80 23.20
+                 | fill: 06/04 line:00 - lineTo 12.45 23.05
+                 | fill: 04/00 line:00 - moveTo 8.00 34.35
+                 | fill: 04/00 line:00 - lineTo 8.75 35.00
+                 | fill: 01/04 line:00 - moveTo 9.05 35.25
+                 | fill: 01/04 line:00 - lineTo 10.60 36.20
+                 | fill: 01/04 line:00 - lineTo 9.10 35.20
+                 | fill: 05/00 line:00 - moveTo 69.20 51.55
+                 | fill: 05/00 line:00 - lineTo 69.30 51.65
+                 | fill: 04/07 line:00 - moveTo 65.50 56.75
+                 | fill: 04/07 line:00 - splineTo (61.00 55.75) 57.10 51.45
+                 | fill: 04/07 line:00 - lineTo 56.70 50.95
+                 | fill: 04/07 line:00 - splineTo (55.90 49.60) 57.25 49.40
+                 | fill: 02/07 line:00 - lineTo 58.10 50.15
+                 | fill: 02/07 line:00 - splineTo (62.75 53.35) 68.35 55.25
+                 |
+[01a]        19 PLACEOBJECT2 places id 0003 at depth 0006
+                 | Matrix             
+                 | 1.018 0.084  40.75 
+                 | -0.106 0.959  74.25 
+                uses IDs: 3
+[002]       237 DEFINESHAPE defines id 0004
+                 bbox [0.00, 0.00, 30.00, 25.50]
+                 | fillstyles(03)        linestyles(00)
+                 | 1 ) SOLID 542201ff    
+                 | 2 ) SOLID e4bd71ff    
+                 | 3 ) SOLID 993a00ff    
+                 |
+                 | fill: 01/03 line:00 - moveTo 25.10 0.00
+                 | fill: 01/03 line:00 - splineTo (23.05 0.95) 25.00 6.60
+                 | fill: 01/00 line:00 - splineTo (27.30 5.95) 30.00 5.80
+                 | fill: 01/00 line:00 - lineTo 28.50 0.10
+                 | fill: 01/00 line:00 - lineTo 25.10 0.00
+                 | fill: 03/00 line:00 - splineTo (19.20 0.10) 15.35 2.05
+                 | fill: 03/02 line:00 - lineTo 15.30 2.40
+                 | fill: 03/02 line:00 - lineTo 15.50 3.00
+                 | fill: 03/02 line:00 - lineTo 16.05 3.00
+                 | fill: 03/02 line:00 - lineTo 17.50 5.00
+                 | fill: 03/02 line:00 - lineTo 17.50 5.50
+                 | fill: 03/02 line:00 - splineTo (16.65 5.50) 15.45 4.45
+                 | fill: 03/02 line:00 - lineTo 14.45 3.40
+                 | fill: 03/02 line:00 - lineTo 13.40 4.70
+                 | fill: 03/02 line:00 - lineTo 14.60 6.45
+                 | fill: 03/02 line:00 - splineTo (15.80 8.35) 16.00 9.30
+                 | fill: 03/02 line:00 - splineTo (16.90 8.65) 18.85 8.15
+                 | fill: 03/02 line:00 - lineTo 21.80 7.75
+                 | fill: 03/00 line:00 - splineTo (23.30 7.05) 25.00 6.60
+                 | fill: 02/03 line:00 - moveTo 9.30 8.40
+                 | fill: 02/03 line:00 - splineTo (11.35 8.95) 12.55 9.80
+                 | fill: 02/03 line:00 - lineTo 14.70 11.80
+                 | fill: 02/03 line:00 - lineTo 14.70 12.30
+                 | fill: 02/03 line:00 - lineTo 13.95 12.40
+                 | fill: 02/03 line:00 - splineTo (13.15 12.40) 12.70 12.00
+                 | fill: 02/03 line:00 - splineTo (12.00 11.40) 11.00 11.00
+                 | fill: 02/03 line:00 - lineTo 8.65 10.15
+                 | fill: 02/00 line:00 - splineTo (8.15 11.65) 7.95 13.35
+                 | fill: 02/00 line:00 - lineTo 7.75 13.55
+                 | fill: 02/03 line:00 - splineTo (8.00 14.10) 8.55 14.30
+                 | fill: 02/03 line:00 - lineTo 8.85 14.40
+                 | fill: 02/03 line:00 - lineTo 8.80 14.05
+                 | fill: 02/03 line:00 - splineTo (8.80 13.00) 10.10 13.00
+                 | fill: 02/03 line:00 - splineTo (11.10 13.00) 12.40 14.30
+                 | fill: 02/03 line:00 - splineTo (13.70 15.60) 13.70 16.55
+                 | fill: 02/03 line:00 - splineTo (13.70 17.40) 12.65 17.40
+                 | fill: 02/00 line:00 - lineTo 12.50 17.50
+                 | fill: 02/03 line:00 - lineTo 12.50 17.55
+                 | fill: 02/03 line:00 - lineTo 13.45 18.60
+                 | fill: 02/03 line:00 - lineTo 13.85 19.05
+                 | fill: 02/00 line:00 - splineTo (13.80 14.80) 16.80 11.45
+                 | fill: 02/00 line:00 - splineTo (18.90 9.10) 21.80 7.75
+                 | fill: 02/03 line:00 - moveTo 10.60 6.20
+                 | fill: 02/03 line:00 - lineTo 11.20 5.80
+                 | fill: 02/03 line:00 - lineTo 14.20 8.25
+                 | fill: 02/03 line:00 - splineTo (15.40 9.25) 15.90 10.20
+                 | fill: 02/03 line:00 - lineTo 15.90 10.80
+                 | fill: 02/03 line:00 - lineTo 15.20 10.80
+                 | fill: 02/03 line:00 - splineTo (13.90 10.25) 12.50 8.50
+                 | fill: 02/03 line:00 - lineTo 10.60 6.20
+                 | fill: 02/00 line:00 - moveTo 15.35 2.05
+                 | fill: 02/00 line:00 - splineTo (12.35 3.50) 10.55 6.15
+                 | fill: 02/00 line:00 - splineTo (9.80 7.20) 9.30 8.40
+                 | fill: 03/00 line:00 - lineTo 8.70 10.10
+                 | fill: 03/00 line:00 - lineTo 8.65 10.15
+                 | fill: 03/00 line:00 - moveTo 7.75 13.55
+                 | fill: 03/00 line:00 - lineTo 0.00 20.45
+                 | fill: 03/00 line:00 - splineTo (0.70 22.05) 2.55 23.50
+                 | fill: 03/00 line:00 - splineTo (5.20 25.50) 8.65 25.50
+                 | fill: 03/00 line:00 - lineTo 12.10 24.85
+                 | fill: 03/00 line:00 - lineTo 14.55 23.20
+                 | fill: 03/00 line:00 - splineTo (13.85 21.00) 13.85 19.05
+                 | fill: 00/03 line:00 - moveTo 12.65 17.40
+                 | fill: 00/03 line:00 - lineTo 12.40 17.40
+                 | fill: 00/03 line:00 - lineTo 12.50 17.50
+                 |
+[01a]        14 PLACEOBJECT2 places id 0004 at depth 0007
+                 | Matrix             
+                 | -0.969 0.000  69.30 
+                 | 0.000 0.969  53.25 
+                uses IDs: 4
+[002]        74 DEFINESHAPE defines id 0005
+                 bbox [0.00, 0.00, 18.40, 12.25]
+                 | fillstyles(02)        linestyles(00)
+                 | 1 ) SOLID 000000ff    
+                 | 2 ) SOLID 542201ff    
+                 |
+                 | fill: 01/02 line:00 - moveTo 17.60 8.15
+                 | fill: 01/02 line:00 - lineTo 14.90 6.20
+                 | fill: 01/02 line:00 - splineTo (9.85 1.90) 4.50 4.00
+                 | fill: 01/02 line:00 - splineTo (1.50 4.70) 0.50 7.65
+                 | fill: 01/00 line:00 - lineTo 0.35 8.10
+                 | fill: 01/00 line:00 - splineTo (0.05 9.25) 0.00 10.80
+                 | fill: 01/00 line:00 - splineTo (7.65 7.90) 12.30 11.40
+                 | fill: 01/00 line:00 - splineTo (13.60 12.40) 14.95 12.25
+                 | fill: 01/00 line:00 - splineTo (17.15 10.70) 18.40 8.70
+                 | fill: 01/00 line:00 - lineTo 17.60 8.15
+                 | fill: 02/00 line:00 - splineTo (16.40 1.30) 10.80 0.50
+                 | fill: 02/00 line:00 - splineTo (5.15 -1.20) 1.40 3.10
+                 | fill: 02/00 line:00 - splineTo (-0.80 6.00) 0.50 7.65
+                 |
+[01a]        14 PLACEOBJECT2 places id 0005 at depth 0008
+                 | Matrix             
+                 | -0.969 0.000  75.30 
+                 | 0.000 0.969  76.30 
+                uses IDs: 5
+[002]       104 DEFINESHAPE defines id 0006
+                 bbox [-0.25, -0.25, 16.25, 16.25]
+                 | fillstyles(02)        linestyles(00)
+                 | 1 ) SOLID ffffffff    
+                 | 2 ) SOLID 000000ff    
+                 |
+                 | fill: 02/00 line:00 - moveTo 13.85 2.20
+                 | fill: 02/00 line:00 - splineTo (11.40 -0.25) 8.00 -0.25
+                 | fill: 02/00 line:00 - splineTo (4.60 -0.25) 2.20 2.20
+                 | fill: 02/00 line:00 - splineTo (-0.25 4.60) -0.25 8.00
+                 | fill: 02/00 line:00 - splineTo (-0.25 11.40) 2.20 13.85
+                 | fill: 02/00 line:00 - splineTo (4.60 16.25) 8.00 16.25
+                 | fill: 02/00 line:00 - splineTo (11.40 16.25) 13.85 13.85
+                 | fill: 02/00 line:00 - splineTo (16.25 11.40) 16.25 8.00
+                 | fill: 02/00 line:00 - splineTo (16.25 4.60) 13.85 2.20
+                 | fill: 02/01 line:00 - moveTo 15.75 8.00
+                 | fill: 02/01 line:00 - splineTo (15.75 11.20) 13.50 13.50
+                 | fill: 02/01 line:00 - splineTo (11.20 15.75) 8.00 15.75
+                 | fill: 02/01 line:00 - splineTo (4.80 15.75) 2.55 13.50
+                 | fill: 02/01 line:00 - splineTo (0.25 11.20) 0.25 8.00
+                 | fill: 02/01 line:00 - splineTo (0.25 4.80) 2.55 2.55
+                 | fill: 02/01 line:00 - splineTo (4.80 0.25) 8.00 0.25
+                 | fill: 02/01 line:00 - splineTo (11.20 0.25) 13.50 2.55
+                 | fill: 02/01 line:00 - splineTo (15.75 4.80) 15.75 8.00
+                 |
+[01a]        14 PLACEOBJECT2 places id 0006 at depth 0009
+                 | Matrix             
+                 | -0.969 0.000  75.80 
+                 | 0.000 0.969  81.25 
+                uses IDs: 6
+[002]        94 DEFINESHAPE defines id 0007
+                 bbox [0.00, 0.55, 6.65, 15.45]
+                 | fillstyles(03)        linestyles(00)
+                 | 1 ) SOLID 000000ff    
+                 | 2 ) SOLID 795e00ff    
+                 | 3 ) SOLID a18e4eff    
+                 |
+                 | fill: 02/01 line:00 - moveTo 2.60 2.10
+                 | fill: 02/01 line:00 - splineTo (3.65 4.05) 4.05 5.90
+                 | fill: 02/01 line:00 - lineTo 4.05 6.00
+                 | fill: 02/03 line:00 - lineTo 6.50 5.90
+                 | fill: 02/00 line:00 - splineTo (6.15 3.20) 5.00 0.55
+                 | fill: 02/00 line:00 - splineTo (3.70 1.10) 2.60 2.10
+                 | fill: 01/00 line:00 - lineTo 2.35 2.35
+                 | fill: 01/00 line:00 - splineTo (0.00 4.70) 0.00 8.00
+                 | fill: 01/00 line:00 - splineTo (0.00 11.30) 2.35 13.65
+                 | fill: 01/00 line:00 - lineTo 2.60 13.90
+                 | fill: 01/02 line:00 - splineTo (3.95 11.55) 4.20 9.15
+                 | fill: 01/03 line:00 - splineTo (4.35 7.55) 4.05 6.00
+                 | fill: 03/02 line:00 - moveTo 4.20 9.15
+                 | fill: 03/02 line:00 - lineTo 6.60 9.25
+                 | fill: 03/00 line:00 - lineTo 6.50 5.90
+                 | fill: 00/02 line:00 - moveTo 6.60 9.25
+                 | fill: 00/02 line:00 - splineTo (6.35 12.35) 5.00 15.45
+                 | fill: 00/02 line:00 - splineTo (3.70 14.90) 2.60 13.90
+                 |
+[01a]        18 PLACEOBJECT2 places id 0007 at depth 0010
+                 | Matrix             
+                 | -0.961 0.116  74.80 
+                 | 0.119 0.935  80.65 
+                uses IDs: 7
+[002]       197 DEFINESHAPE defines id 0008
+                 bbox [0.55, 0.00, 33.75, 25.20]
+                 | fillstyles(05)        linestyles(00)
+                 | 1 ) SOLID cf6165ff    
+                 | 2 ) SOLID ffccd1ff    
+                 | 3 ) SOLID feb4bcff    
+                 | 4 ) SOLID 993a00ff    
+                 | 5 ) SOLID db8b6bff    
+                 |
+                 | fill: 00/02 line:00 - moveTo 22.35 2.75
+                 | fill: 00/02 line:00 - lineTo 22.75 2.50
+                 | fill: 00/02 line:00 - splineTo (27.75 -0.05) 31.90 0.00
+                 | fill: 00/02 line:00 - splineTo (34.15 1.25) 33.65 4.45
+                 | fill: 00/05 line:00 - splineTo (33.25 10.50) 29.00 15.35
+                 | fill: 00/05 line:00 - splineTo (22.10 22.60) 15.90 25.10
+                 | fill: 00/05 line:00 - lineTo 15.20 25.15
+                 | fill: 00/05 line:00 - splineTo (11.25 25.50) 7.60 21.90
+                 | fill: 00/01 line:00 - lineTo 7.10 20.85
+                 | fill: 00/04 line:00 - splineTo (-2.10 13.30) 1.60 8.60
+                 | fill: 00/04 line:00 - splineTo (6.15 11.05) 15.80 6.95
+                 | fill: 00/04 line:00 - splineTo (19.20 4.35) 22.35 2.75
+                 | fill: 02/04 line:00 - splineTo (16.85 5.70) 15.00 13.20
+                 | fill: 02/01 line:00 - splineTo (16.65 9.70) 17.90 8.30
+                 | fill: 02/03 line:00 - splineTo (19.10 6.45) 19.95 5.70
+                 | fill: 02/03 line:00 - splineTo (22.00 3.85) 23.80 3.85
+                 | fill: 02/03 line:00 - splineTo (29.50 3.85) 29.50 7.20
+                 | fill: 02/03 line:00 - splineTo (29.50 9.15) 27.00 12.95
+                 | fill: 02/03 line:00 - splineTo (25.25 15.60) 23.70 16.90
+                 | fill: 02/05 line:00 - splineTo (28.90 13.50) 31.90 9.15
+                 | fill: 02/05 line:00 - splineTo (33.30 6.40) 33.65 4.45
+                 | fill: 03/01 line:00 - moveTo 17.90 8.30
+                 | fill: 03/01 line:00 - splineTo (19.45 6.45) 21.30 6.45
+                 | fill: 03/01 line:00 - splineTo (23.15 6.45) 23.90 7.35
+                 | fill: 03/01 line:00 - splineTo (24.60 8.20) 24.60 10.40
+                 | fill: 03/01 line:00 - splineTo (24.60 12.45) 23.10 14.50
+                 | fill: 03/01 line:00 - splineTo (21.85 16.15) 19.10 18.45
+                 | fill: 03/01 line:00 - lineTo 16.60 20.60
+                 | fill: 03/05 line:00 - lineTo 22.15 17.85
+                 | fill: 03/05 line:00 - lineTo 23.70 16.90
+                 | fill: 00/01 line:00 - moveTo 16.60 20.60
+                 | fill: 00/01 line:00 - lineTo 16.55 20.65
+                 | fill: 00/05 line:00 - lineTo 16.60 20.60
+                 | fill: 04/01 line:00 - moveTo 7.10 20.85
+                 | fill: 04/01 line:00 - splineTo (13.05 19.85) 14.70 14.45
+                 | fill: 04/01 line:00 - lineTo 15.00 13.20
+                 | fill: 05/01 line:00 - moveTo 16.55 20.65
+                 | fill: 05/01 line:00 - splineTo (12.80 22.20) 7.60 21.90
+                 |
+[01a]        14 PLACEOBJECT2 places id 0008 at depth 0012
+                 | Matrix             
+                 | -0.969 0.000  54.20 
+                 | 0.000 0.969  68.40 
+                uses IDs: 8
+[016]       429 DEFINESHAPE2 defines id 0009
+                 bbox [-26.50, -95.20, 62.45, 117.40]
+                 | fillstyles(03)        linestyles(00)
+                 | 1 ) SOLID 261900ff    
+                 | 2 ) SOLID d59d66ff    
+                 | 3 ) SOLID 6d2c01ff    
+                 |
+                 | fill: 01/00 line:00 - moveTo 47.40 -95.20
+                 | fill: 01/00 line:00 - splineTo (39.90 -89.20) 33.15 -86.15
+                 | fill: 01/00 line:00 - lineTo 37.35 -84.80
+                 | fill: 01/00 line:00 - splineTo (31.25 -81.50) 27.60 -73.75
+                 | fill: 01/00 line:00 - splineTo (30.20 -77.00) 33.10 -79.00
+                 | fill: 01/00 line:00 - splineTo (28.70 -73.25) 28.95 -62.75
+                 | fill: 01/00 line:00 - splineTo (29.90 -67.00) 32.30 -70.75
+                 | fill: 01/00 line:00 - splineTo (28.70 -59.55) 31.80 -49.50
+                 | fill: 01/00 line:00 - splineTo (32.15 -52.55) 32.95 -54.25
+                 | fill: 01/00 line:00 - splineTo (32.50 -48.25) 34.55 -42.75
+                 | fill: 01/00 line:00 - splineTo (42.65 -75.95) 52.90 -93.30
+                 | fill: 01/00 line:00 - lineTo 47.40 -95.20
+                 | fill: 00/00 line:00 - moveTo 0.00 0.00
+                 | fill: 02/03 line:00 - moveTo 40.25 -76.05
+                 | fill: 02/03 line:00 - lineTo 41.00 -73.45
+                 | fill: 02/03 line:00 - splineTo (42.75 -66.90) 42.75 -59.45
+                 | fill: 02/03 line:00 - splineTo (42.75 -51.00) 38.15 -48.75
+                 | fill: 02/03 line:00 - splineTo (36.60 -48.00) 29.85 -47.30
+                 | fill: 02/01 line:00 - lineTo 27.35 -40.40
+                 | fill: 02/03 line:00 - splineTo (30.90 -31.70) 30.90 -27.95
+                 | fill: 02/03 line:00 - splineTo (29.95 -25.20) 29.95 -24.20
+                 | fill: 02/03 line:00 - splineTo (29.95 -19.50) 21.40 -12.75
+                 | fill: 02/03 line:00 - lineTo 15.90 -8.75
+                 | fill: 02/01 line:00 - lineTo 13.30 -1.45
+                 | fill: 02/03 line:00 - lineTo 15.05 3.95
+                 | fill: 02/03 line:00 - splineTo (17.95 12.95) 17.95 14.25
+                 | fill: 02/03 line:00 - splineTo (17.95 16.55) 8.95 23.55
+                 | fill: 02/03 line:00 - lineTo 2.40 28.65
+                 | fill: 02/01 line:00 - lineTo -2.35 41.85
+                 | fill: 02/03 line:00 - lineTo -0.95 44.75
+                 | fill: 02/03 line:00 - splineTo (1.00 49.20) 1.00 52.75
+                 | fill: 02/03 line:00 - splineTo (1.00 62.50) -6.35 70.70
+                 | fill: 02/03 line:00 - splineTo (-10.35 75.15) -15.40 77.95
+                 | fill: 02/01 line:00 - lineTo -26.50 108.50
+                 | fill: 02/01 line:00 - lineTo 5.80 117.40
+                 | fill: 02/01 line:00 - lineTo 14.10 88.50
+                 | fill: 02/03 line:00 - lineTo 7.40 89.15
+                 | fill: 02/03 line:00 - splineTo (4.95 89.15) 2.40 87.55
+                 | fill: 02/03 line:00 - splineTo (-0.35 85.85) -0.35 83.75
+                 | fill: 02/03 line:00 - splineTo (-0.35 77.75) 6.10 69.35
+                 | fill: 02/03 line:00 - splineTo (13.35 59.95) 21.10 59.95
+                 | fill: 02/03 line:00 - lineTo 22.30 60.00
+                 | fill: 02/01 line:00 - lineTo 25.10 50.15
+                 | fill: 02/03 line:00 - splineTo (24.20 49.95) 22.35 50.85
+                 | fill: 02/03 line:00 - splineTo (16.55 53.40) 13.55 53.00
+                 | fill: 02/03 line:00 - splineTo (10.55 52.55) 6.05 47.20
+                 | fill: 02/03 line:00 - splineTo (1.55 41.85) 11.70 32.20
+                 | fill: 02/03 line:00 - splineTo (14.90 30.00) 21.10 26.95
+                 | fill: 02/03 line:00 - splineTo (28.30 23.35) 33.15 22.20
+                 | fill: 02/01 line:00 - lineTo 35.95 12.40
+                 | fill: 02/03 line:00 - lineTo 35.45 12.60
+                 | fill: 02/03 line:00 - lineTo 32.20 13.60
+                 | fill: 02/03 line:00 - splineTo (30.70 13.95) 26.65 12.95
+                 | fill: 02/03 line:00 - splineTo (24.50 12.15) 23.55 9.00
+                 | fill: 02/03 line:00 - splineTo (22.80 6.65) 22.80 4.60
+                 | fill: 02/03 line:00 - lineTo 23.50 -0.15
+                 | fill: 02/03 line:00 - splineTo (25.45 -5.70) 25.95 -6.20
+                 | fill: 02/03 line:00 - lineTo 33.75 -15.45
+                 | fill: 02/03 line:00 - lineTo 36.20 -17.20
+                 | fill: 02/03 line:00 - splineTo (38.95 -17.20) 40.90 -13.90
+                 | fill: 02/03 line:00 - lineTo 42.35 -11.40
+                 | fill: 02/03 line:00 - lineTo 42.60 -10.85
+                 | fill: 02/01 line:00 - lineTo 44.20 -16.40
+                 | fill: 02/03 line:00 - splineTo (42.75 -17.45) 41.80 -18.75
+                 | fill: 02/03 line:00 - splineTo (39.75 -21.65) 39.75 -28.70
+                 | fill: 02/03 line:00 - splineTo (39.75 -29.70) 42.20 -41.90
+                 | fill: 02/03 line:00 - splineTo (42.20 -43.75) 44.25 -46.95
+                 | fill: 02/03 line:00 - splineTo (46.25 -50.05) 47.20 -50.05
+                 | fill: 02/03 line:00 - splineTo (48.20 -50.05) 52.00 -44.35
+                 | fill: 02/01 line:00 - lineTo 52.95 -47.20
+                 | fill: 02/03 line:00 - splineTo (49.10 -54.85) 49.10 -61.40
+                 | fill: 02/03 line:00 - splineTo (49.10 -66.50) 55.15 -69.75
+                 | fill: 02/03 line:00 - splineTo (57.40 -70.95) 60.10 -71.85
+                 | fill: 02/01 line:00 - lineTo 62.45 -80.10
+                 | fill: 02/01 line:00 - lineTo 45.50 -90.65
+                 | fill: 02/01 line:00 - lineTo 40.25 -76.05
+                 | fill: 03/01 line:00 - lineTo 29.85 -47.30
+                 | fill: 01/03 line:00 - moveTo 15.90 -8.75
+                 | fill: 01/03 line:00 - lineTo 27.35 -40.40
+                 | fill: 03/01 line:00 - moveTo 44.20 -16.40
+                 | fill: 03/01 line:00 - lineTo 50.00 -38.10
+                 | fill: 03/01 line:00 - lineTo 52.00 -44.35
+                 | fill: 03/01 line:00 - moveTo 52.95 -47.20
+                 | fill: 03/01 line:00 - lineTo 60.10 -71.85
+                 | fill: 01/03 line:00 - moveTo 22.30 60.00
+                 | fill: 01/03 line:00 - lineTo 14.10 88.50
+                 | fill: 01/03 line:00 - moveTo 33.15 22.20
+                 | fill: 01/03 line:00 - lineTo 25.10 50.15
+                 | fill: 01/03 line:00 - moveTo 42.60 -10.85
+                 | fill: 01/03 line:00 - lineTo 35.95 12.40
+                 | fill: 01/03 line:00 - moveTo 2.40 28.65
+                 | fill: 01/03 line:00 - lineTo 13.30 -1.45
+                 | fill: 01/03 line:00 - moveTo -15.40 77.95
+                 | fill: 01/03 line:00 - lineTo -2.35 41.85
+                 |
+[01a]        19 PLACEOBJECT2 places id 0009 at depth 0014
+                 | Matrix             
+                 | -0.965 0.085 248.55 
+                 | 0.085 0.965 151.50 
+                uses IDs: 9
+[002]        22 DEFINESHAPE defines id 0010
+                 bbox [5.85, -5.65, 6.10, -5.55]
+                 | fillstyles(01)        linestyles(00)
+                 | 1 ) SOLID 0000ffff    
+                 |
+                 | fill: 00/01 line:00 - moveTo 6.10 -5.65
+                 | fill: 00/01 line:00 - lineTo 5.85 -5.55
+                 | fill: 00/01 line:00 - lineTo 6.10 -5.65
+                 |
+[01a]        14 PLACEOBJECT2 places id 0010 at depth 0015
+                 | Matrix             
+                 | -0.969 0.000 172.70 
+                 | 0.000 0.969  74.60 
+                uses IDs: 10
+[002]        57 DEFINESHAPE defines id 0011
+                 bbox [0.40, 0.10, 16.95, 24.05]
+                 | fillstyles(02)        linestyles(00)
+                 | 1 ) SOLID 4b1f01ff    
+                 | 2 ) SOLID 321401ff    
+                 |
+                 | fill: 00/01 line:00 - moveTo 8.50 3.30
+                 | fill: 00/01 line:00 - splineTo (16.25 11.45) 16.95 21.80
+                 | fill: 00/01 line:00 - splineTo (15.10 26.65) 5.70 20.95
+                 | fill: 00/01 line:00 - splineTo (6.60 13.40) 2.90 5.90
+                 | fill: 00/02 line:00 - lineTo 0.40 1.65
+                 | fill: 00/02 line:00 - splineTo (3.15 0.35) 5.05 0.10
+                 | fill: 00/02 line:00 - lineTo 8.50 3.30
+                 | fill: 01/02 line:00 - splineTo (8.05 5.15) 2.90 5.90
+                 |
+[01a]        14 PLACEOBJECT2 places id 0011 at depth 0016
+                 | Matrix             
+                 | -0.969 0.000 186.40 
+                 | 0.000 0.969  38.05 
+                uses IDs: 11
+[002]       378 DEFINESHAPE defines id 0012
+                 bbox [0.00, 0.15, 78.05, 57.25]
+                 | fillstyles(06)        linestyles(00)
+                 | 1 ) SOLID 0000ffff    
+                 | 2 ) SOLID d59d66ff    
+                 | 3 ) SOLID 6d2c01ff    
+                 | 4 ) SOLID 261900ff    
+                 | 5 ) SOLID 4b1f01ff    
+                 | 6 ) SOLID eccb9bff    
+                 |
+                 | fill: 05/03 line:00 - moveTo 37.45 1.45
+                 | fill: 05/03 line:00 - lineTo 37.25 2.50
+                 | fill: 05/03 line:00 - splineTo (36.10 10.00) 41.25 15.95
+                 | fill: 05/03 line:00 - lineTo 41.35 16.30
+                 | fill: 05/03 line:00 - lineTo 42.25 17.20
+                 | fill: 05/00 line:00 - splineTo (42.15 8.35) 40.60 4.50
+                 | fill: 05/00 line:00 - lineTo 40.10 3.45
+                 | fill: 05/00 line:00 - splineTo (39.00 1.55) 37.45 1.45
+                 | fill: 03/00 line:00 - lineTo 37.15 1.45
+                 | fill: 03/00 line:00 - lineTo 36.55 1.55
+                 | fill: 03/00 line:00 - lineTo 35.00 1.65
+                 | fill: 03/00 line:00 - lineTo 33.70 1.80
+                 | fill: 03/05 line:00 - lineTo 29.45 3.05
+                 | fill: 03/05 line:00 - lineTo 25.60 3.80
+                 | fill: 03/05 line:00 - lineTo 23.80 4.15
+                 | fill: 03/05 line:00 - lineTo 24.15 4.00
+                 | fill: 03/05 line:00 - splineTo (26.80 2.95) 29.55 2.40
+                 | fill: 03/00 line:00 - splineTo (18.55 -2.75) 8.85 3.80
+                 | fill: 03/00 line:00 - lineTo 8.30 4.15
+                 | fill: 03/00 line:00 - lineTo 7.90 4.45
+                 | fill: 03/00 line:00 - lineTo 7.45 4.80
+                 | fill: 03/00 line:00 - splineTo (-0.15 10.95) 0.05 20.10
+                 | fill: 03/00 line:00 - splineTo (-0.40 29.05) 5.65 34.35
+                 | fill: 03/02 line:00 - splineTo (1.05 21.50) 10.75 14.55
+                 | fill: 03/02 line:00 - splineTo (22.35 5.45) 29.75 12.90
+                 | fill: 03/02 line:00 - splineTo (34.80 26.00) 56.20 38.65
+                 | fill: 03/02 line:00 - lineTo 56.45 38.80
+                 | fill: 03/02 line:00 - lineTo 56.60 38.90
+                 | fill: 03/02 line:00 - lineTo 57.20 39.15
+                 | fill: 03/02 line:00 - splineTo (58.85 39.55) 60.35 37.35
+                 | fill: 03/00 line:00 - lineTo 60.75 36.70
+                 | fill: 03/00 line:00 - splineTo (51.65 26.50) 42.25 17.20
+                 | fill: 04/02 line:00 - moveTo 77.75 55.45
+                 | fill: 04/02 line:00 - lineTo 75.95 55.90
+                 | fill: 04/02 line:00 - splineTo (74.40 56.25) 69.55 54.75
+                 | fill: 04/02 line:00 - splineTo (64.65 53.25) 53.25 45.90
+                 | fill: 04/02 line:00 - lineTo 54.55 45.70
+                 | fill: 04/02 line:00 - lineTo 54.85 45.50
+                 | fill: 04/02 line:00 - lineTo 54.95 45.15
+                 | fill: 04/02 line:00 - lineTo 54.80 44.80
+                 | fill: 04/02 line:00 - lineTo 53.65 44.65
+                 | fill: 04/02 line:00 - lineTo 51.60 44.95
+                 | fill: 04/02 line:00 - splineTo (50.55 45.25) 50.45 45.40
+                 | fill: 04/02 line:00 - lineTo 50.35 45.80
+                 | fill: 04/02 line:00 - lineTo 50.55 46.10
+                 | fill: 04/02 line:00 - lineTo 50.95 46.20
+                 | fill: 04/02 line:00 - lineTo 51.60 46.20
+                 | fill: 04/02 line:00 - lineTo 52.80 47.05
+                 | fill: 04/02 line:00 - splineTo (62.40 52.85) 68.35 55.25
+                 | fill: 04/00 line:00 - lineTo 68.65 55.35
+                 | fill: 04/00 line:00 - lineTo 71.15 56.30
+                 | fill: 04/00 line:00 - splineTo (74.45 57.30) 76.20 56.85
+                 | fill: 04/00 line:00 - splineTo (77.30 56.55) 77.85 55.75
+                 | fill: 04/01 line:00 - lineTo 77.75 55.45
+                 | fill: 02/01 line:00 - lineTo 77.95 55.35
+                 | fill: 02/00 line:00 - lineTo 78.05 55.10
+                 | fill: 02/00 line:00 - splineTo (78.05 53.75) 77.10 51.90
+                 | fill: 02/00 line:00 - splineTo (72.10 41.95) 61.95 38.05
+                 | fill: 02/00 line:00 - lineTo 60.35 37.35
+                 | fill: 02/04 line:00 - moveTo 69.10 51.60
+                 | fill: 02/04 line:00 - lineTo 68.85 51.50
+                 | fill: 02/04 line:00 - splineTo (66.65 50.80) 64.10 48.95
+                 | fill: 02/04 line:00 - splineTo (61.50 47.15) 60.10 45.30
+                 | fill: 02/04 line:00 - lineTo 59.55 44.45
+                 | fill: 02/06 line:00 - lineTo 59.45 44.25
+                 | fill: 02/06 line:00 - splineTo (58.85 43.20) 59.25 42.70
+                 | fill: 02/06 line:00 - lineTo 62.00 42.65
+                 | fill: 02/06 line:00 - splineTo (64.15 43.45) 66.75 45.25
+                 | fill: 02/06 line:00 - splineTo (69.30 47.10) 70.75 48.85
+                 | fill: 02/06 line:00 - splineTo (72.15 50.70) 71.60 51.50
+                 | fill: 02/06 line:00 - lineTo 69.30 51.65
+                 | fill: 02/00 line:00 - lineTo 69.10 51.60
+                 | fill: 04/00 line:00 - lineTo 69.20 51.55
+                 | fill: 04/06 line:00 - splineTo (70.55 50.80) 66.45 47.25
+                 | fill: 04/06 line:00 - splineTo (61.20 42.65) 59.55 44.45
+                 | fill: 05/00 line:00 - moveTo 33.70 1.80
+                 | fill: 05/00 line:00 - lineTo 29.55 2.40
+                 | fill: 03/02 line:00 - moveTo 10.75 22.00
+                 | fill: 03/02 line:00 - lineTo 10.40 21.85
+                 | fill: 03/02 line:00 - splineTo (7.05 20.50) 6.40 26.95
+                 | fill: 03/02 line:00 - lineTo 6.40 27.25
+                 | fill: 03/02 line:00 - splineTo (6.85 32.25) 10.35 34.25
+                 | fill: 03/02 line:00 - splineTo (15.70 37.25) 16.80 35.60
+                 | fill: 03/02 line:00 - splineTo (18.65 31.80) 12.65 23.80
+                 | fill: 03/02 line:00 - splineTo (12.05 22.50) 10.75 22.00
+                 | fill: 02/00 line:00 - moveTo 5.65 34.35
+                 | fill: 02/00 line:00 - lineTo 5.80 34.45
+                 | fill: 02/00 line:00 - splineTo (10.20 38.25) 18.10 40.15
+                 | fill: 02/00 line:00 - lineTo 18.85 40.40
+                 | fill: 02/00 line:00 - splineTo (24.50 48.95) 46.50 49.70
+                 | fill: 02/00 line:00 - splineTo (51.40 57.45) 61.35 57.25
+                 | fill: 02/00 line:00 - splineTo (66.45 57.15) 68.35 55.25
+                 | fill: 00/01 line:00 - moveTo 77.95 55.35
+                 | fill: 00/01 line:00 - lineTo 77.85 55.75
+                 | fill: 06/00 line:00 - moveTo 69.20 51.55
+                 | fill: 06/00 line:00 - lineTo 69.30 51.65
+                 |
+[01a]        14 PLACEOBJECT2 places id 0012 at depth 0017
+                 | Matrix             
+                 | -0.969 0.000 200.40 
+                 | 0.000 0.969  55.60 
+                uses IDs: 12
+[002]        58 DEFINESHAPE defines id 0013
+                 bbox [0.50, 0.00, 16.45, 15.65]
+                 | fillstyles(02)        linestyles(00)
+                 | 1 ) SOLID ffffffff    
+                 | 2 ) SOLID 110a00ff    
+                 |
+                 | fill: 00/01 line:00 - moveTo 2.45 8.40
+                 | fill: 00/01 line:00 - lineTo 1.90 7.90
+                 | fill: 00/01 line:00 - lineTo 0.50 6.10
+                 | fill: 00/01 line:00 - splineTo (13.15 -2.40) 15.65 0.95
+                 | fill: 00/01 line:00 - lineTo 16.05 1.80
+                 | fill: 00/01 line:00 - splineTo (17.50 8.45) 13.35 14.65
+                 | fill: 00/02 line:00 - lineTo 14.80 15.40
+                 | fill: 00/02 line:00 - lineTo 14.60 15.65
+                 | fill: 00/02 line:00 - splineTo (4.35 12.05) 2.45 8.40
+                 | fill: 01/02 line:00 - splineTo (5.60 11.10) 13.35 14.65
+                 |
+[01a]        14 PLACEOBJECT2 places id 0013 at depth 0018
+                 | Matrix             
+                 | -0.969 0.000 185.25 
+                 | 0.000 0.969  65.00 
+                uses IDs: 13
+[002]       104 DEFINESHAPE defines id 0014
+                 bbox [0.00, -0.85, 23.50, 8.40]
+                 | fillstyles(03)        linestyles(00)
+                 | 1 ) SOLID 000000ff    
+                 | 2 ) SOLID 6d2c01ff    
+                 | 3 ) SOLID d59d66ff    
+                 |
+                 | fill: 00/01 line:00 - moveTo 17.10 0.10
+                 | fill: 00/01 line:00 - lineTo 17.05 0.00
+                 | fill: 00/01 line:00 - lineTo 17.20 0.15
+                 | fill: 00/01 line:00 - lineTo 17.45 0.35
+                 | fill: 00/01 line:00 - splineTo (19.80 2.35) 20.65 5.15
+                 | fill: 00/01 line:00 - splineTo (22.05 4.85) 22.80 4.10
+                 | fill: 00/01 line:00 - lineTo 23.05 4.00
+                 | fill: 00/01 line:00 - splineTo (23.55 3.85) 23.50 4.75
+                 | fill: 00/01 line:00 - splineTo (23.50 5.50) 23.10 5.90
+                 | fill: 00/01 line:00 - splineTo (19.70 9.05) 3.95 8.25
+                 | fill: 00/01 line:00 - splineTo (-0.65 7.10) 0.10 6.25
+                 | fill: 00/01 line:00 - lineTo 0.80 6.05
+                 | fill: 00/01 line:00 - lineTo 2.55 6.20
+                 | fill: 00/03 line:00 - splineTo (4.30 2.80) 7.30 0.65
+                 | fill: 00/02 line:00 - lineTo 7.75 0.35
+                 | fill: 00/02 line:00 - splineTo (14.25 -1.95) 17.10 0.10
+                 | fill: 01/02 line:00 - splineTo (18.70 2.70) 19.40 5.60
+                 | fill: 01/02 line:00 - lineTo 19.25 5.65
+                 | fill: 01/02 line:00 - lineTo 18.95 5.75
+                 | fill: 01/03 line:00 - splineTo (14.15 6.85) 2.55 6.20
+                 | fill: 03/02 line:00 - moveTo 18.95 5.75
+                 | fill: 03/02 line:00 - splineTo (14.80 1.00) 7.30 0.65
+                 |
+[01a]        14 PLACEOBJECT2 places id 0014 at depth 0019
+                 | Matrix             
+                 | -0.969 0.000 186.80 
+                 | 0.000 0.969  64.15 
+                uses IDs: 14
+[002]        53 DEFINESHAPE defines id 0015
+                 bbox [0.00, 0.00, 5.35, 10.40]
+                 | fillstyles(01)        linestyles(00)
+                 | 1 ) SOLID 000000ff    
+                 |
+                 | fill: 00/01 line:00 - moveTo 0.65 10.35
+                 | fill: 00/01 line:00 - splineTo (-0.05 10.05) 0.00 8.30
+                 | fill: 00/01 line:00 - splineTo (0.10 6.60) 0.95 4.50
+                 | fill: 00/01 line:00 - splineTo (1.80 2.35) 2.90 1.00
+                 | fill: 00/01 line:00 - splineTo (4.00 -0.25) 4.70 0.05
+                 | fill: 00/01 line:00 - splineTo (5.40 0.30) 5.35 1.95
+                 | fill: 00/01 line:00 - splineTo (5.25 3.70) 4.40 5.85
+                 | fill: 00/01 line:00 - splineTo (3.55 7.95) 2.45 9.25
+                 | fill: 00/01 line:00 - splineTo (1.35 10.60) 0.65 10.35
+                 |
+[01a]        14 PLACEOBJECT2 places id 0015 at depth 0020
+                 | Matrix             
+                 | -0.969 0.000 173.60 
+                 | 0.000 0.932  70.15 
+                uses IDs: 15
+[002]        62 DEFINESHAPE defines id 0016
+                 bbox [0.35, 0.85, 19.85, 20.95]
+                 | fillstyles(02)        linestyles(00)
+                 | 1 ) SOLID 6d2c01ff    
+                 | 2 ) SOLID 431b01ff    
+                 |
+                 | fill: 02/00 line:00 - moveTo 8.45 4.00
+                 | fill: 02/00 line:00 - lineTo 4.50 0.85
+                 | fill: 02/00 line:00 - splineTo (1.90 2.40) 0.40 5.05
+                 | fill: 02/00 line:00 - lineTo 0.35 5.10
+                 | fill: 02/00 line:00 - splineTo (2.50 7.00) 3.95 8.75
+                 | fill: 02/01 line:00 - splineTo (7.05 6.20) 8.45 4.00
+                 | fill: 00/01 line:00 - lineTo 14.35 8.75
+                 | fill: 00/01 line:00 - splineTo (21.55 18.10) 19.30 19.30
+                 | fill: 00/01 line:00 - splineTo (10.30 22.50) 4.15 19.45
+                 | fill: 00/01 line:00 - splineTo (9.35 15.40) 3.95 8.75
+                 |
+[01a]        14 PLACEOBJECT2 places id 0016 at depth 0021
+                 | Matrix             
+                 | -0.969 0.000 194.05 
+                 | 0.000 0.969  39.70 
+                uses IDs: 16
+[002]       177 DEFINESHAPE defines id 0017
+                 bbox [0.00, 0.00, 32.05, 25.65]
+                 | fillstyles(05)        linestyles(00)
+                 | 1 ) SOLID 6d2c01ff    
+                 | 2 ) SOLID d59d66ff    
+                 | 3 ) SOLID cf6165ff    
+                 | 4 ) SOLID feb4bcff    
+                 | 5 ) SOLID ffccd1ff    
+                 |
+                 | fill: 00/01 line:00 - moveTo 12.00 5.35
+                 | fill: 00/01 line:00 - splineTo (23.90 15.10) 31.60 13.35
+                 | fill: 00/01 line:00 - splineTo (32.75 16.60) 31.00 19.20
+                 | fill: 00/01 line:00 - lineTo 22.70 23.35
+                 | fill: 00/03 line:00 - lineTo 23.25 23.50
+                 | fill: 00/03 line:00 - splineTo (23.70 23.60) 23.35 24.80
+                 | fill: 00/03 line:00 - lineTo 23.20 25.15
+                 | fill: 00/03 line:00 - splineTo (22.35 25.90) 21.50 25.55
+                 | fill: 00/02 line:00 - lineTo 18.50 25.40
+                 | fill: 00/02 line:00 - splineTo (2.55 21.50) 1.05 9.30
+                 | fill: 00/05 line:00 - lineTo 0.90 8.85
+                 | fill: 00/05 line:00 - splineTo (-2.05 -2.05) 4.90 0.45
+                 | fill: 00/05 line:00 - lineTo 5.30 0.60
+                 | fill: 00/05 line:00 - splineTo (9.20 2.55) 12.00 5.35
+                 | fill: 01/05 line:00 - splineTo (15.95 9.40) 17.45 15.20
+                 | fill: 01/04 line:00 - lineTo 17.55 15.55
+                 | fill: 01/04 line:00 - lineTo 17.65 16.05
+                 | fill: 01/04 line:00 - lineTo 18.05 17.40
+                 | fill: 01/03 line:00 - splineTo (19.65 22.25) 22.70 23.35
+                 | fill: 04/05 line:00 - moveTo 17.45 15.20
+                 | fill: 04/05 line:00 - splineTo (10.85 3.60) 6.10 4.20
+                 | fill: 04/05 line:00 - lineTo 5.40 4.35
+                 | fill: 04/05 line:00 - lineTo 5.25 4.45
+                 | fill: 04/05 line:00 - splineTo (-1.45 7.50) 12.40 20.45
+                 | fill: 04/02 line:00 - lineTo 12.65 20.60
+                 | fill: 04/00 line:00 - lineTo 12.70 20.55
+                 | fill: 04/03 line:00 - splineTo (3.75 10.30) 8.40 9.30
+                 | fill: 04/03 line:00 - lineTo 8.70 9.25
+                 | fill: 04/03 line:00 - splineTo (9.25 9.15) 11.15 9.80
+                 | fill: 04/03 line:00 - splineTo (13.00 10.40) 18.05 17.40
+                 | fill: 00/03 line:00 - moveTo 12.80 20.70
+                 | fill: 00/03 line:00 - lineTo 12.70 20.55
+                 | fill: 00/02 line:00 - moveTo 12.65 20.60
+                 | fill: 00/02 line:00 - lineTo 12.80 20.70
+                 | fill: 03/02 line:00 - splineTo (16.60 23.15) 21.50 25.55
+                 | fill: 02/05 line:00 - moveTo 12.40 20.45
+                 | fill: 02/05 line:00 - splineTo (4.15 15.05) 1.05 9.30
+                 |
+[01a]        15 PLACEOBJECT2 places id 0017 at depth 0022
+                 | Matrix             
+                 | -0.969 0.000 220.60 
+                 | 0.000 0.969  46.80 
+                uses IDs: 17
+[001]         0 SHOWFRAME 1-2 (00:00:00,000-00:00:00,083)
+[01c]         2 REMOVEOBJECT2 removes object from depth 0009
+[01c]         2 REMOVEOBJECT2 removes object from depth 0010
+[01a]        12 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.969 0.000  75.30 
+                 | 0.000 0.969  80.90 
+[001]         0 SHOWFRAME 3 (00:00:00,167)
+[01a]        12 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -1.048 0.000  76.25 
+                 | 0.000 0.856  82.15 
+[001]         0 SHOWFRAME 4 (00:00:00,250)
+[01a]        12 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.969 0.000  75.30 
+                 | 0.000 0.969  76.10 
+[01a]        14 PLACEOBJECT2 places id 0006 at depth 0009
+                 | Matrix             
+                 | -0.969 0.000  75.80 
+                 | 0.000 1.013  80.80 
+                uses IDs: 6
+[01a]        19 PLACEOBJECT2 places id 0007 at depth 0010
+                 | Matrix             
+                 | -0.961 0.128  74.70 
+                 | 0.119 1.037  79.85 
+                uses IDs: 7
+[001]         0 SHOWFRAME 5 (00:00:00,333)
+[01a]        12 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.969 0.000  75.30 
+                 | 0.000 0.969  76.30 
+[01a]        12 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | -0.969 0.000  75.80 
+                 | 0.000 0.969  81.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | -0.961 0.116  74.80 
+                 | 0.119 0.935  80.65 
+[001]         0 SHOWFRAME 6-7 (00:00:00,417-00:00:00,500)
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | -0.961 0.119  74.75 
+                 | 0.123 0.935  80.60 
+[001]         0 SHOWFRAME 8 (00:00:00,583)
+[01a]        16 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             
+                 | 0.967 0.039   5.35 
+                 | -0.038 0.988 174.15 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | -0.969 -0.022  71.55 
+                 | -0.022 0.969  50.65 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | 1.020 0.063  37.00 
+                 | -0.083 0.960  71.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | -0.969 -0.022  66.05 
+                 | -0.022 0.969  50.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.969 -0.022  71.55 
+                 | -0.022 0.991  73.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | -0.969 -0.022  71.85 
+                 | -0.022 0.991  78.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | -0.963 0.101  70.85 
+                 | 0.101 0.959  78.00 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | -0.969 -0.022  50.60 
+                 | -0.022 0.969  65.55 
+[001]         0 SHOWFRAME 9 (00:00:00,667)
+[01a]        17 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             
+                 | 0.966 0.057   3.85 
+                 | -0.055 1.005 172.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | -0.968 -0.042  68.95 
+                 | -0.042 0.968  48.65 
+[01a]        16 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | 1.021 0.042  34.05 
+                 | -0.061 0.961  68.30 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | -0.968 -0.042  63.45 
+                 | -0.042 0.968  48.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.968 -0.044  68.45 
+                 | -0.042 1.013  71.35 
+[01a]        16 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | -0.968 -0.044  68.65 
+                 | -0.042 1.013  76.50 
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | -0.964 0.086  67.55 
+                 | 0.085 0.982  75.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | -0.968 -0.042  47.70 
+                 | -0.042 0.968  63.10 
+[001]         0 SHOWFRAME 10 (00:00:00,750)
+[01a]        17 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             
+                 | 0.965 0.072   2.65 
+                 | -0.068 1.017 171.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | -0.967 -0.055  66.85 
+                 | -0.055 0.967  47.15 
+[01a]        16 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | 1.022 0.029  31.70 
+                 | -0.047 0.962  66.30 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | -0.967 -0.055  61.35 
+                 | -0.055 0.967  47.00 
+[01a]        16 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.967 -0.059  66.15 
+                 | -0.055 1.035  69.45 
+[01a]        16 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | -0.967 -0.059  66.15 
+                 | -0.055 1.035  74.80 
+[01a]        17 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | -0.965 0.075  65.10 
+                 | 0.072 1.005  74.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | -0.967 -0.055  45.40 
+                 | -0.055 0.967  61.25 
+[01a]        17 PLACEOBJECT2 moves object at depth 0014
+                 | Matrix             
+                 | -0.966 0.064 249.95 
+                 | 0.064 0.974 151.10 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | -0.969 0.009 176.05 
+                 | 0.009 0.969  71.95 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | -0.969 0.009 189.40 
+                 | 0.009 0.969  35.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | -0.969 0.009 203.60 
+                 | 0.009 0.969  52.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | -0.969 0.009 188.50 
+                 | 0.009 0.969  62.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.969 0.009 190.05 
+                 | 0.009 0.969  61.35 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | -0.969 0.009 176.90 
+                 | 0.009 0.932  67.50 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | -0.969 0.009 197.10 
+                 | 0.009 0.969  36.85 
+[01a]        16 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | -0.969 0.009 223.70 
+                 | 0.009 0.969  43.70 
+[001]         0 SHOWFRAME 11 (00:00:00,833)
+[01a]        17 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             
+                 | 0.964 0.085   2.15 
+                 | -0.080 1.026 170.85 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | -0.966 -0.068  65.50 
+                 | -0.068 0.966  46.10 
+[01a]        16 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | 1.022 0.017  30.05 
+                 | -0.034 0.962  64.90 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | -0.966 -0.068  60.00 
+                 | -0.068 0.966  45.90 
+[01a]        17 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.966 -0.074  64.50 
+                 | -0.068 1.057  68.20 
+[01a]        17 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | -0.966 -0.074  64.40 
+                 | -0.068 1.057  73.55 
+[01a]        17 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | -0.966 0.068  63.25 
+                 | 0.064 1.028  72.80 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | -0.966 -0.068  43.85 
+                 | -0.068 0.966  60.00 
+[01a]        17 PLACEOBJECT2 moves object at depth 0014
+                 | Matrix             
+                 | -0.967 0.048 251.10 
+                 | 0.047 0.981 150.65 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | -0.969 0.017 178.85 
+                 | 0.017 0.969  69.85 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | -0.969 0.017 191.90 
+                 | 0.017 0.969  33.10 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | -0.969 0.017 206.20 
+                 | 0.017 0.969  50.35 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | -0.969 0.017 191.25 
+                 | 0.017 0.969  60.00 
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.969 0.017 192.75 
+                 | 0.017 0.969  59.15 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | -0.969 0.017 179.65 
+                 | 0.017 0.931  65.40 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | -0.969 0.017 199.55 
+                 | 0.017 0.969  34.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | -0.969 0.017 226.25 
+                 | 0.017 0.969  41.20 
+[001]         0 SHOWFRAME 12 (00:00:00,917)
+[01a]        17 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             
+                 | 0.964 0.091   1.60 
+                 | -0.085 1.031 170.35 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | -0.966 -0.072  64.60 
+                 | -0.072 0.966  45.45 
+[01a]        16 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | 1.022 0.012  29.05 
+                 | -0.029 0.962  64.00 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | -0.966 -0.072  59.05 
+                 | -0.072 0.966  45.25 
+[01a]        17 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.966 -0.079  63.50 
+                 | -0.072 1.056  67.50 
+[01a]        17 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | -0.966 -0.079  63.35 
+                 | -0.072 1.056  72.85 
+[01a]        17 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | -0.966 0.063  62.20 
+                 | 0.059 1.028  72.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | -0.966 -0.072  42.90 
+                 | -0.072 0.966  59.20 
+[01a]        17 PLACEOBJECT2 moves object at depth 0014
+                 | Matrix             
+                 | -0.968 0.035 252.15 
+                 | 0.034 0.987 150.20 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | -0.968 0.025 181.20 
+                 | 0.025 0.968  68.15 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | -0.968 0.025 193.95 
+                 | 0.025 0.968  31.30 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | -0.968 0.025 208.40 
+                 | 0.025 0.968  48.40 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | -0.968 0.025 193.50 
+                 | 0.025 0.968  58.40 
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.969 -0.005 195.30 
+                 | -0.005 0.969  57.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | -0.968 0.025 182.00 
+                 | 0.025 0.931  63.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | -0.968 0.025 201.65 
+                 | 0.025 0.968  32.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | -0.968 0.025 228.35 
+                 | 0.025 0.968  39.10 
+[001]         0 SHOWFRAME 13 (00:00:00,1000)
+[01a]        17 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             
+                 | 0.964 0.095   1.60 
+                 | -0.088 1.033 170.40 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | -0.966 -0.076  64.45 
+                 | -0.076 0.966  45.30 
+[01a]        16 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | 1.023 0.009  28.85 
+                 | -0.025 0.962  63.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | -0.966 -0.076  58.90 
+                 | -0.076 0.966  45.05 
+[01a]        17 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.966 -0.083  63.25 
+                 | -0.076 1.056  67.35 
+[01a]        17 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | -0.966 -0.083  63.05 
+                 | -0.076 1.056  72.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | -0.967 0.059  61.95 
+                 | 0.056 1.029  71.90 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | -0.966 -0.076  42.65 
+                 | -0.076 0.966  58.95 
+[01a]        16 PLACEOBJECT2 moves object at depth 0014
+                 | Matrix             
+                 | -0.968 0.026 252.95 
+                 | 0.026 0.991 149.80 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | -0.968 0.030 183.00 
+                 | 0.030 0.968  66.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | -0.968 0.030 195.55 
+                 | 0.030 0.968  29.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | -0.968 0.030 210.10 
+                 | 0.030 0.968  46.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | -0.968 0.030 195.25 
+                 | 0.030 0.968  57.00 
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.968 -0.029 197.25 
+                 | -0.029 0.968  55.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | -0.968 0.029 183.75 
+                 | 0.030 0.931  62.10 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | -0.968 0.030 203.25 
+                 | 0.030 0.968  31.10 
+[01a]        16 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | -0.968 0.030 230.05 
+                 | 0.030 0.968  37.30 
+[001]         0 SHOWFRAME 14 (00:00:01,083)
+[01a]        16 PLACEOBJECT2 moves object at depth 0014
+                 | Matrix             
+                 | -0.968 0.018 253.45 
+                 | 0.017 0.994 149.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | -0.968 0.034 184.20 
+                 | 0.034 0.968  65.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | -0.968 0.034 196.60 
+                 | 0.034 0.968  28.60 
+[01a]        17 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | -0.968 0.034 211.25 
+                 | 0.034 0.968  45.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | -0.968 0.034 196.40 
+                 | 0.034 0.968  56.10 
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.967 -0.050 198.55 
+                 | -0.050 0.967  54.55 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | -0.968 0.033 184.95 
+                 | 0.034 0.931  61.10 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | -0.968 0.034 204.30 
+                 | 0.034 0.968  30.00 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | -0.968 0.034 231.10 
+                 | 0.034 0.968  36.10 
+[001]         0 SHOWFRAME 15 (00:00:01,167)
+[01a]        16 PLACEOBJECT2 moves object at depth 0014
+                 | Matrix             
+                 | -0.968 0.014 253.80 
+                 | 0.013 0.996 149.50 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | -0.968 0.035 185.05 
+                 | 0.035 0.968  65.00 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | -0.968 0.035 197.45 
+                 | 0.035 0.968  28.00 
+[01a]        17 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | -0.968 0.035 212.05 
+                 | 0.035 0.968  45.00 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | -0.968 0.035 197.25 
+                 | 0.035 0.968  55.65 
+[01a]        17 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.965 -0.071 199.60 
+                 | -0.071 0.965  53.90 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | -0.968 0.033 185.80 
+                 | 0.035 0.931  60.50 
+[01a]        17 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | -0.968 0.035 205.15 
+                 | 0.035 0.968  29.40 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | -0.968 0.035 231.90 
+                 | 0.035 0.968  35.50 
+[001]         0 SHOWFRAME 16 (00:00:01,250)
+[01a]        16 PLACEOBJECT2 moves object at depth 0014
+                 | Matrix             
+                 | -0.968 0.014 253.95 
+                 | 0.013 0.996 149.40 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | -0.968 0.038 185.30 
+                 | 0.038 0.968  64.85 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | -0.968 0.038 197.55 
+                 | 0.038 0.968  27.80 
+[01a]        17 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | -0.968 0.038 212.25 
+                 | 0.038 0.968  44.80 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | -0.968 0.038 197.50 
+                 | 0.038 0.968  55.50 
+[01a]        17 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.964 -0.084 199.90 
+                 | -0.084 0.964  53.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | -0.968 0.037 186.00 
+                 | 0.038 0.931  60.35 
+[01a]        17 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | -0.968 0.038 205.25 
+                 | 0.038 0.968  29.15 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | -0.968 0.038 232.05 
+                 | 0.038 0.968  35.15 
+[001]         0 SHOWFRAME 17 (00:00:01,333)
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | -0.968 0.038 197.50 
+                 | 0.038 0.968  55.60 
+[01a]        17 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.963 -0.097 200.00 
+                 | -0.097 0.963  53.65 
+[001]         0 SHOWFRAME 18 (00:00:01,417)
+[01c]         2 REMOVEOBJECT2 removes object from depth 0009
+[01c]         2 REMOVEOBJECT2 removes object from depth 0010
+[01a]        17 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             
+                 | 0.964 0.095   3.55 
+                 | -0.088 1.033 172.35 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | -0.966 -0.076  66.40 
+                 | -0.076 0.966  47.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | 1.023 0.009  30.80 
+                 | -0.025 0.962  65.65 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | -0.966 -0.076  60.85 
+                 | -0.076 0.966  47.00 
+[01a]        17 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -1.044 -0.067  65.55 
+                 | -0.082 0.853  76.30 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | -0.966 -0.076  44.60 
+                 | -0.076 0.966  60.90 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | -0.968 0.038 197.50 
+                 | 0.038 0.968  55.65 
+[01a]        17 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.962 -0.106 200.10 
+                 | -0.106 0.962  53.70 
+[001]         0 SHOWFRAME 19 (00:00:01,500)
+[01a]        17 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             
+                 | 0.955 -0.152   9.90 
+                 | 0.142 1.023 189.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | -0.961 -0.123  90.95 
+                 | -0.123 0.961  84.15 
+[01a]        16 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | 1.023 -0.038  54.45 
+                 | 0.024 0.961 100.85 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | -0.961 -0.123  85.40 
+                 | -0.123 0.961  83.65 
+[01a]        17 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -1.039 -0.108  88.65 
+                 | -0.133 0.849 113.15 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | -0.961 -0.123  68.50 
+                 | -0.123 0.961  96.75 
+[01a]        17 PLACEOBJECT2 moves object at depth 0014
+                 | Matrix             
+                 | -0.967 0.048 251.50 
+                 | 0.046 0.995 151.65 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | -0.968 0.038 179.30 
+                 | 0.038 0.968  69.35 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | -0.968 0.038 191.55 
+                 | 0.038 0.968  32.30 
+[01a]        17 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | -0.968 0.038 206.25 
+                 | 0.038 0.968  49.30 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | -0.968 0.038 191.50 
+                 | 0.038 0.968  60.25 
+[01a]        17 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.962 -0.115 194.20 
+                 | -0.115 0.962  58.20 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | -0.968 0.037 180.00 
+                 | 0.038 0.931  64.85 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | -0.968 0.038 199.25 
+                 | 0.038 0.968  33.65 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | -0.968 0.038 226.05 
+                 | 0.038 0.968  39.65 
+[001]         0 SHOWFRAME 20 (00:00:01,583)
+[01c]         2 REMOVEOBJECT2 removes object from depth 0018
+[01c]         2 REMOVEOBJECT2 removes object from depth 0020
+[01a]        17 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             
+                 | 0.905 -0.360  20.60 
+                 | 0.336 0.970 211.10 
+[01a]        17 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | -0.966 -0.076 106.10 
+                 | -0.076 0.966 120.90 
+[01a]        16 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | 1.023 0.009  70.50 
+                 | -0.025 0.962 139.30 
+[01a]        17 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | -0.966 -0.076 100.55 
+                 | -0.076 0.966 120.65 
+[01a]        17 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -1.044 -0.067 105.25 
+                 | -0.082 0.853 149.95 
+[01a]        17 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | -0.966 -0.076  84.30 
+                 | -0.076 0.966 134.55 
+[01a]        17 PLACEOBJECT2 moves object at depth 0014
+                 | Matrix             
+                 | -0.943 0.224 237.95 
+                 | 0.218 0.970 164.70 
+[01a]        17 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | -0.966 -0.063 155.70 
+                 | -0.063 0.966  97.00 
+[01a]        17 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | -0.966 -0.329 177.05 
+                 | -0.063 0.949  61.80 
+[01a]        17 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | -0.966 -0.063 184.60 
+                 | -0.063 0.966  79.85 
+[01a]        17 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.935 0.264 168.10 
+                 | 0.247 1.001  84.75 
+[01a]        17 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | -0.966 -0.429 185.80 
+                 | -0.063 0.942  64.85 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | -1.139 -0.063 210.00 
+                 | -0.002 0.966  70.75 
+[001]         0 SHOWFRAME 21 (00:00:01,667)
+[01c]         2 REMOVEOBJECT2 removes object from depth 0002
+[002]       490 DEFINESHAPE defines id 0018
+                 bbox [7.80, 0.00, 166.50, 195.25]
+                 | fillstyles(03)        linestyles(00)
+                 | 1 ) SOLID 261900ff    
+                 | 2 ) SOLID fadbafff    
+                 | 3 ) SOLID 993a00ff    
+                 |
+                 | fill: 00/01 line:00 - moveTo 123.85 3.60
+                 | fill: 00/01 line:00 - splineTo (131.85 -0.10) 132.00 0.00
+                 | fill: 00/01 line:00 - splineTo (144.60 5.90) 155.60 8.20
+                 | fill: 00/01 line:00 - lineTo 149.40 10.80
+                 | fill: 00/01 line:00 - splineTo (159.40 13.65) 166.50 22.60
+                 | fill: 00/01 line:00 - splineTo (161.85 19.10) 157.00 17.20
+                 | fill: 00/01 line:00 - splineTo (164.85 23.45) 166.40 36.70
+                 | fill: 00/01 line:00 - splineTo (164.15 31.60) 159.80 27.40
+                 | fill: 00/01 line:00 - splineTo (167.40 40.75) 164.50 54.10
+                 | fill: 00/01 line:00 - splineTo (163.35 50.35) 161.80 48.30
+                 | fill: 00/01 line:00 - splineTo (164.05 57.50) 160.35 66.50
+                 | fill: 00/01 line:00 - lineTo 160.00 66.40
+                 | fill: 00/03 line:00 - lineTo 159.85 67.65
+                 | fill: 00/03 line:00 - splineTo (158.60 78.10) 155.65 87.95
+                 | fill: 00/02 line:00 - splineTo (153.85 93.95) 151.40 99.75
+                 | fill: 00/03 line:00 - splineTo (142.90 119.80) 126.70 137.30
+                 | fill: 00/02 line:00 - lineTo 126.65 137.35
+                 | fill: 00/03 line:00 - splineTo (111.20 153.95) 88.80 168.20
+                 | fill: 00/02 line:00 - lineTo 80.40 173.35
+                 | fill: 00/03 line:00 - splineTo (69.75 179.55) 57.70 185.30
+                 | fill: 00/02 line:00 - splineTo (46.85 190.45) 34.90 195.25
+                 | fill: 00/02 line:00 - splineTo (14.10 190.70) 7.80 180.35
+                 | fill: 00/02 line:00 - splineTo (27.00 171.55) 45.35 160.75
+                 | fill: 00/03 line:00 - lineTo 60.30 151.50
+                 | fill: 00/02 line:00 - lineTo 77.10 140.05
+                 | fill: 00/02 line:00 - lineTo 77.35 139.90
+                 | fill: 00/02 line:00 - lineTo 77.65 140.00
+                 | fill: 00/03 line:00 - lineTo 77.75 139.55
+                 | fill: 00/03 line:00 - lineTo 93.15 126.40
+                 | fill: 00/02 line:00 - lineTo 101.60 118.55
+                 | fill: 00/03 line:00 - splineTo (112.75 107.70) 120.80 97.60
+                 | fill: 00/02 line:00 - lineTo 127.80 88.05
+                 | fill: 00/03 line:00 - lineTo 128.15 87.50
+                 | fill: 00/03 line:00 - splineTo (133.60 79.25) 136.90 71.50
+                 | fill: 00/02 line:00 - lineTo 138.70 66.85
+                 | fill: 00/03 line:00 - splineTo (139.85 63.35) 140.60 60.00
+                 | fill: 00/03 line:00 - splineTo (142.60 47.45) 139.70 38.55
+                 | fill: 00/02 line:00 - lineTo 138.60 35.65
+                 | fill: 00/03 line:00 - splineTo (133.15 23.60) 117.35 19.25
+                 | fill: 00/02 line:00 - lineTo 117.15 19.20
+                 | fill: 00/02 line:00 - lineTo 115.10 18.65
+                 | fill: 00/02 line:00 - splineTo (101.40 5.95) 119.90 3.10
+                 | fill: 00/02 line:00 - lineTo 121.10 2.90
+                 | fill: 00/02 line:00 - lineTo 123.35 3.40
+                 | fill: 00/02 line:00 - lineTo 123.50 3.65
+                 | fill: 00/02 line:00 - lineTo 123.65 3.50
+                 | fill: 00/02 line:00 - lineTo 123.10 3.95
+                 | fill: 00/02 line:00 - lineTo 123.85 3.60
+                 | fill: 01/02 line:00 - splineTo (134.05 6.35) 141.40 12.30
+                 | fill: 01/03 line:00 - splineTo (151.25 20.30) 155.90 34.15
+                 | fill: 01/02 line:00 - splineTo (157.15 37.90) 158.05 42.10
+                 | fill: 01/03 line:00 - splineTo (160.30 52.85) 160.00 66.40
+                 | fill: 02/03 line:00 - moveTo 117.35 19.25
+                 | fill: 02/03 line:00 - splineTo (123.65 12.30) 131.65 16.30
+                 | fill: 02/03 line:00 - splineTo (133.05 16.95) 136.85 19.80
+                 | fill: 02/03 line:00 - splineTo (140.65 22.60) 142.10 27.60
+                 | fill: 02/03 line:00 - splineTo (143.55 32.55) 138.60 35.65
+                 | fill: 03/02 line:00 - moveTo 141.40 12.30
+                 | fill: 03/02 line:00 - lineTo 141.00 13.60
+                 | fill: 03/02 line:00 - lineTo 140.60 15.70
+                 | fill: 03/02 line:00 - splineTo (140.60 19.40) 142.70 24.00
+                 | fill: 03/02 line:00 - splineTo (144.35 27.60) 146.00 29.40
+                 | fill: 03/02 line:00 - splineTo (147.60 31.10) 152.15 32.95
+                 | fill: 03/02 line:00 - lineTo 155.90 34.15
+                 | fill: 02/03 line:00 - moveTo 139.70 38.55
+                 | fill: 02/03 line:00 - lineTo 141.40 35.95
+                 | fill: 02/03 line:00 - splineTo (143.50 33.20) 145.20 33.20
+                 | fill: 02/03 line:00 - splineTo (147.30 33.20) 148.70 36.25
+                 | fill: 02/03 line:00 - lineTo 149.30 37.60
+                 | fill: 02/03 line:00 - lineTo 150.60 43.40
+                 | fill: 02/03 line:00 - splineTo (152.95 61.30) 145.20 65.05
+                 | fill: 02/03 line:00 - lineTo 138.70 66.85
+                 | fill: 02/03 line:00 - moveTo 136.90 71.50
+                 | fill: 02/03 line:00 - splineTo (150.75 60.55) 149.00 74.40
+                 | fill: 02/03 line:00 - splineTo (147.35 97.55) 135.40 96.40
+                 | fill: 02/03 line:00 - splineTo (127.20 96.00) 127.80 88.05
+                 | fill: 02/03 line:00 - moveTo 155.65 87.95
+                 | fill: 02/03 line:00 - splineTo (149.80 59.20) 158.05 42.10
+                 | fill: 02/03 line:00 - moveTo 93.15 126.40
+                 | fill: 02/03 line:00 - splineTo (99.10 152.05) 89.50 157.65
+                 | fill: 02/03 line:00 - lineTo 88.05 158.30
+                 | fill: 02/03 line:00 - lineTo 79.35 162.50
+                 | fill: 02/03 line:00 - splineTo (71.85 164.45) 74.60 150.40
+                 | fill: 02/03 line:00 - lineTo 77.65 140.00
+                 | fill: 02/03 line:00 - moveTo 57.70 185.30
+                 | fill: 02/03 line:00 - splineTo (47.55 181.05) 60.10 169.45
+                 | fill: 02/03 line:00 - lineTo 61.35 168.60
+                 | fill: 02/03 line:00 - lineTo 61.85 168.20
+                 | fill: 02/03 line:00 - splineTo (69.60 162.40) 80.40 173.35
+                 | fill: 02/03 line:00 - moveTo 60.30 151.50
+                 | fill: 02/03 line:00 - splineTo (77.10 162.05) 59.80 165.30
+                 | fill: 02/03 line:00 - lineTo 56.60 165.90
+                 | fill: 02/03 line:00 - splineTo (49.20 166.55) 45.35 160.75
+                 | fill: 02/03 line:00 - moveTo 126.70 137.30
+                 | fill: 02/03 line:00 - splineTo (129.60 133.55) 130.40 121.20
+                 | fill: 02/03 line:00 - splineTo (128.10 102.70) 140.60 103.00
+                 | fill: 02/03 line:00 - splineTo (146.00 102.90) 151.40 99.75
+                 | fill: 02/03 line:00 - moveTo 120.80 97.60
+                 | fill: 02/03 line:00 - splineTo (133.00 116.55) 113.80 134.10
+                 | fill: 02/03 line:00 - lineTo 109.80 136.35
+                 | fill: 02/03 line:00 - splineTo (96.55 140.50) 101.60 118.55
+                 | fill: 02/03 line:00 - moveTo 88.80 168.20
+                 | fill: 02/03 line:00 - splineTo (91.85 157.35) 101.80 147.20
+                 | fill: 02/03 line:00 - splineTo (111.75 137.65) 126.65 137.35
+                 |
+[01a]        14 PLACEOBJECT2 places id 0018 at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  75.55 
+                 | 0.000 0.969 107.15 
+                uses IDs: 18
+[01a]        17 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.959 0.136 165.00 
+                 | -0.136 0.959  82.60 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.022 0.051 201.65 
+                 | 0.038 0.961  98.80 
+[01a]        17 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.959 0.136 170.50 
+                 | -0.136 0.959  82.05 
+[01a]        17 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 1.037 0.120 167.65 
+                 | -0.147 0.847 111.55 
+[01a]        17 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.959 0.136 187.60 
+                 | -0.136 0.959  94.90 
+[01a]        18 PLACEOBJECT2 moves object at depth 0014
+                 | Matrix             
+                 | -0.810 0.528 220.05 
+                 | 0.528 0.810 181.55 
+[01a]        17 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | -0.966 -0.063 114.70 
+                 | -0.063 0.966 138.00 
+[01a]        17 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | -0.966 -0.329 136.05 
+                 | -0.063 0.949 102.80 
+[01a]        17 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | -0.966 -0.063 143.60 
+                 | -0.063 0.966 120.85 
+[01a]        17 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.935 0.264 127.10 
+                 | 0.247 1.001 125.75 
+[01a]        17 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | -0.966 -0.429 144.80 
+                 | -0.063 0.942 105.85 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | -1.139 -0.063 169.00 
+                 | -0.002 0.966 111.75 
+[001]         0 SHOWFRAME 22 (00:00:01,750)
+[01c]         2 REMOVEOBJECT2 removes object from depth 0008
+[01c]         2 REMOVEOBJECT2 removes object from depth 0014
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  78.00 
+                 | 0.000 0.969  98.10 
+[01a]        17 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.965 0.085 169.40 
+                 | -0.085 0.965  71.85 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.023 0.000 205.20 
+                 | -0.016 0.962  89.95 
+[01a]        17 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.965 0.085 174.90 
+                 | -0.085 0.965  71.55 
+[01a]        19 PLACEOBJECT2 places id 0006 at depth 0009
+                 | Matrix             
+                 | 0.965 0.093 171.05 
+                 | -0.085 1.055  99.30 
+                uses IDs: 6
+[01a]        19 PLACEOBJECT2 places id 0007 at depth 0010
+                 | Matrix             
+                 | 0.965 0.091 171.05 
+                 | -0.085 1.027  99.45 
+                uses IDs: 7
+[01a]        19 PLACEOBJECT2 places id 0005 at depth 0011
+                 | Matrix             
+                 | 0.992 0.066 171.10 
+                 | -0.088 0.752  97.00 
+                uses IDs: 5
+[01a]        17 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.965 0.085 191.25 
+                 | -0.085 0.965  85.30 
+[002]       559 DEFINESHAPE defines id 0019
+                 bbox [-0.05, -0.60, 156.95, 210.15]
+                 | fillstyles(03)        linestyles(00)
+                 | 1 ) SOLID d59d66ff    
+                 | 2 ) SOLID 6d2c01ff    
+                 | 3 ) SOLID 110a00ff    
+                 |
+                 | fill: 00/01 line:00 - moveTo 41.90 0.50
+                 | fill: 00/01 line:00 - lineTo 43.15 0.50
+                 | fill: 00/01 line:00 - lineTo 45.00 0.20
+                 | fill: 00/01 line:00 - lineTo 46.25 0.05
+                 | fill: 00/01 line:00 - splineTo (48.15 0.20) 49.70 1.70
+                 | fill: 00/01 line:00 - splineTo (51.95 3.75) 52.30 6.95
+                 | fill: 00/01 line:00 - lineTo 52.40 7.95
+                 | fill: 00/01 line:00 - splineTo (52.45 10.55) 51.00 12.65
+                 | fill: 00/01 line:00 - splineTo (49.90 14.45) 48.15 15.15
+                 | fill: 00/01 line:00 - lineTo 47.45 15.35
+                 | fill: 00/01 line:00 - lineTo 47.00 15.45
+                 | fill: 00/01 line:00 - lineTo 46.35 15.60
+                 | fill: 00/02 line:00 - splineTo (30.80 19.45) 24.40 29.95
+                 | fill: 00/01 line:00 - lineTo 23.15 32.20
+                 | fill: 00/02 line:00 - splineTo (18.60 41.50) 20.45 55.50
+                 | fill: 00/02 line:00 - splineTo (20.75 58.35) 21.35 61.20
+                 | fill: 00/01 line:00 - lineTo 22.00 64.20
+                 | fill: 00/02 line:00 - splineTo (24.00 72.10) 28.00 80.35
+                 | fill: 00/01 line:00 - splineTo (31.10 86.75) 35.40 93.35
+                 | fill: 00/02 line:00 - splineTo (38.50 98.15) 42.30 103.05
+                 | fill: 00/02 line:00 - lineTo 42.75 103.75
+                 | fill: 00/02 line:00 - lineTo 50.10 113.60
+                 | fill: 00/01 line:00 - lineTo 59.60 125.65
+                 | fill: 00/02 line:00 - splineTo (66.00 133.25) 73.10 140.40
+                 | fill: 00/01 line:00 - splineTo (80.40 147.80) 88.40 154.70
+                 | fill: 00/02 line:00 - splineTo (94.70 160.15) 101.50 165.30
+                 | fill: 00/01 line:00 - lineTo 107.50 169.75
+                 | fill: 00/02 line:00 - splineTo (121.55 179.85) 137.40 188.65
+                 | fill: 00/01 line:00 - splineTo (146.85 193.90) 156.95 198.70
+                 | fill: 00/01 line:00 - splineTo (146.60 211.30) 122.45 210.05
+                 | fill: 00/01 line:00 - splineTo (102.90 199.75) 85.80 188.35
+                 | fill: 00/02 line:00 - splineTo (74.75 181.40) 64.45 173.30
+                 | fill: 00/01 line:00 - lineTo 57.00 167.25
+                 | fill: 00/02 line:00 - splineTo (37.20 150.50) 24.70 132.80
+                 | fill: 00/01 line:00 - lineTo 22.80 130.05
+                 | fill: 00/02 line:00 - splineTo (10.30 111.60) 4.65 92.55
+                 | fill: 00/01 line:00 - splineTo (2.65 85.80) 1.55 79.00
+                 | fill: 00/02 line:00 - splineTo (-0.55 66.80) 0.15 54.35
+                 | fill: 00/02 line:00 - lineTo 0.80 48.95
+                 | fill: 00/02 line:00 - splineTo (2.50 40.95) 4.95 34.30
+                 | fill: 00/01 line:00 - splineTo (6.30 30.65) 7.85 27.40
+                 | fill: 00/02 line:00 - splineTo (9.30 24.35) 10.90 21.65
+                 | fill: 00/03 line:00 - splineTo (8.55 22.35) 6.60 25.70
+                 | fill: 00/03 line:00 - splineTo (6.60 20.90) 10.50 15.50
+                 | fill: 00/03 line:00 - splineTo (9.10 16.20) 6.60 19.50
+                 | fill: 00/03 line:00 - splineTo (8.30 14.10) 17.20 7.50
+                 | fill: 00/03 line:00 - splineTo (13.75 7.35) 10.20 9.00
+                 | fill: 00/03 line:00 - splineTo (10.45 6.45) 17.70 3.90
+                 | fill: 00/03 line:00 - lineTo 18.00 3.85
+                 | fill: 00/03 line:00 - splineTo (25.05 0.85) 29.05 0.60
+                 | fill: 00/03 line:00 - lineTo 30.45 0.60
+                 | fill: 00/03 line:00 - splineTo (37.45 -1.75) 41.90 0.50
+                 | fill: 01/03 line:00 - splineTo (32.75 1.70) 25.45 6.30
+                 | fill: 01/03 line:00 - lineTo 24.55 6.90
+                 | fill: 01/02 line:00 - splineTo (25.05 17.70) 12.65 25.05
+                 | fill: 01/02 line:00 - lineTo 7.85 27.40
+                 | fill: 00/02 line:00 - moveTo 40.15 11.90
+                 | fill: 00/02 line:00 - lineTo 40.20 11.85
+                 | fill: 00/01 line:00 - lineTo 40.10 11.80
+                 | fill: 00/01 line:00 - lineTo 40.15 11.90
+                 | fill: 02/01 line:00 - splineTo (34.65 9.55) 26.95 16.40
+                 | fill: 02/01 line:00 - lineTo 26.70 16.50
+                 | fill: 02/01 line:00 - splineTo (18.25 23.35) 24.40 29.95
+                 | fill: 02/03 line:00 - moveTo 24.55 6.90
+                 | fill: 02/03 line:00 - splineTo (16.80 12.05) 11.25 21.10
+                 | fill: 02/03 line:00 - lineTo 10.90 21.65
+                 | fill: 01/02 line:00 - moveTo 21.35 61.20
+                 | fill: 01/02 line:00 - splineTo (17.25 60.80) 13.50 57.10
+                 | fill: 01/02 line:00 - splineTo (6.90 51.10) 13.15 33.00
+                 | fill: 01/02 line:00 - splineTo (14.00 30.55) 15.20 29.30
+                 | fill: 01/02 line:00 - splineTo (19.95 23.05) 21.35 29.55
+                 | fill: 01/02 line:00 - splineTo (22.25 32.35) 23.15 32.20
+                 | fill: 01/02 line:00 - moveTo 28.00 80.35
+                 | fill: 01/02 line:00 - splineTo (30.05 88.95) 24.55 91.30
+                 | fill: 01/02 line:00 - lineTo 23.30 91.70
+                 | fill: 01/02 line:00 - splineTo (11.50 92.10) 9.50 79.10
+                 | fill: 01/02 line:00 - lineTo 9.50 66.20
+                 | fill: 01/02 line:00 - splineTo (8.95 57.15) 16.30 60.70
+                 | fill: 01/02 line:00 - splineTo (19.30 61.95) 22.00 64.20
+                 | fill: 01/02 line:00 - moveTo 4.65 92.55
+                 | fill: 01/02 line:00 - splineTo (10.05 95.15) 17.70 97.80
+                 | fill: 01/02 line:00 - lineTo 18.70 98.10
+                 | fill: 01/02 line:00 - splineTo (23.15 99.90) 22.80 107.50
+                 | fill: 01/02 line:00 - splineTo (22.15 122.80) 22.80 130.05
+                 | fill: 01/02 line:00 - moveTo 4.95 34.30
+                 | fill: 01/02 line:00 - splineTo (9.85 52.15) 1.55 79.00
+                 | fill: 01/02 line:00 - moveTo 40.20 11.85
+                 | fill: 01/02 line:00 - splineTo (44.00 13.00) 46.35 15.60
+                 | fill: 02/01 line:00 - moveTo 35.40 93.35
+                 | fill: 02/01 line:00 - splineTo (23.05 105.55) 30.40 121.00
+                 | fill: 02/01 line:00 - splineTo (40.75 139.10) 47.90 134.00
+                 | fill: 02/01 line:00 - splineTo (53.10 130.10) 51.90 124.40
+                 | fill: 02/01 line:00 - lineTo 50.10 113.60
+                 | fill: 01/02 line:00 - moveTo 101.50 165.30
+                 | fill: 01/02 line:00 - splineTo (99.35 170.25) 89.30 169.50
+                 | fill: 01/02 line:00 - splineTo (82.05 169.35) 79.90 166.75
+                 | fill: 01/02 line:00 - lineTo 79.20 165.65
+                 | fill: 01/02 line:00 - lineTo 78.90 164.05
+                 | fill: 01/02 line:00 - splineTo (77.95 156.40) 88.40 154.70
+                 | fill: 02/01 line:00 - moveTo 59.60 125.65
+                 | fill: 02/01 line:00 - splineTo (47.95 147.25) 58.40 157.60
+                 | fill: 02/01 line:00 - lineTo 64.95 162.80
+                 | fill: 02/01 line:00 - lineTo 65.75 163.30
+                 | fill: 02/01 line:00 - splineTo (72.50 167.20) 73.80 158.20
+                 | fill: 02/01 line:00 - splineTo (74.60 148.55) 73.10 140.40
+                 | fill: 01/02 line:00 - moveTo 24.70 132.80
+                 | fill: 01/02 line:00 - splineTo (37.85 134.20) 49.45 147.20
+                 | fill: 01/02 line:00 - lineTo 50.85 148.95
+                 | fill: 01/02 line:00 - splineTo (54.05 153.10) 55.60 158.30
+                 | fill: 01/02 line:00 - lineTo 55.80 159.10
+                 | fill: 01/02 line:00 - splineTo (56.80 162.90) 57.00 167.25
+                 | fill: 01/02 line:00 - moveTo 64.45 173.30
+                 | fill: 01/02 line:00 - splineTo (73.60 164.60) 84.10 170.90
+                 | fill: 01/02 line:00 - splineTo (101.50 179.25) 91.90 186.20
+                 | fill: 01/02 line:00 - splineTo (88.55 187.85) 85.80 188.35
+                 | fill: 01/02 line:00 - moveTo 137.40 188.65
+                 | fill: 01/02 line:00 - splineTo (132.85 190.25) 124.80 188.00
+                 | fill: 01/02 line:00 - splineTo (99.25 178.20) 107.50 169.75
+                 |
+[01a]        14 PLACEOBJECT2 places id 0019 at depth 0013
+                 | Matrix             
+                 | 0.969 0.000  18.50 
+                 | 0.000 0.969  88.50 
+                uses IDs: 19
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | 0.962 -0.106  84.35 
+                 | 0.106 0.962  95.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | 0.962 -0.106  74.75 
+                 | 0.106 0.962  57.30 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | 0.962 -0.106  58.90 
+                 | 0.106 0.962  73.15 
+[01a]        17 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.877 -0.434  74.25 
+                 | 0.406 0.939  80.85 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | 0.962 -0.106  66.95 
+                 | 0.106 0.962  58.05 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.938 0.235  33.70 
+                 | -0.235 0.938  72.95 
+[001]         0 SHOWFRAME 23 (00:00:01,833)
+[01c]         2 REMOVEOBJECT2 removes object from depth 0011
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  79.90 
+                 | 0.000 0.969  91.00 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.968 0.047 172.75 
+                 | -0.047 0.968  63.50 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.021 -0.037 207.80 
+                 | -0.056 0.961  83.00 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.968 0.047 178.25 
+                 | -0.047 0.968  63.45 
+[01a]        19 PLACEOBJECT2 places id 0005 at depth 0008
+                 | Matrix             
+                 | 0.968 0.052 173.30 
+                 | -0.047 1.058  85.65 
+                uses IDs: 5
+[01a]        17 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | 0.968 0.052 173.30 
+                 | -0.047 1.058  91.00 
+[01a]        17 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | 0.968 0.050 173.30 
+                 | -0.047 1.030  91.20 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.968 0.047 194.10 
+                 | -0.047 0.968  77.85 
+[01a]        12 PLACEOBJECT2 moves object at depth 0013
+                 | Matrix             
+                 | 0.969 0.000  14.65 
+                 | 0.000 0.969  80.80 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | 0.966 -0.068  79.90 
+                 | 0.068 0.966  87.90 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | 0.966 -0.068  68.80 
+                 | 0.068 0.966  50.55 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | 0.966 -0.068  53.65 
+                 | 0.068 0.966  67.00 
+[01a]        17 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.893 -0.397  69.25 
+                 | 0.371 0.956  74.10 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | 0.966 -0.068  61.05 
+                 | 0.068 0.966  51.65 
+[01a]        16 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.962 0.102  30.80 
+                 | -0.102 0.962  61.50 
+[001]         0 SHOWFRAME 24 (00:00:01,917)
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  81.25 
+                 | 0.000 0.969  86.00 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.969 0.021 175.10 
+                 | -0.021 0.969  57.80 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.020 -0.063 209.65 
+                 | -0.083 0.960  78.20 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.969 0.021 180.60 
+                 | -0.021 0.969  57.85 
+[01a]        16 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 0.969 0.023 175.05 
+                 | -0.021 1.059  79.85 
+[01a]        16 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | 0.969 0.023 174.90 
+                 | -0.021 1.059  85.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | 0.969 0.023 174.95 
+                 | -0.021 1.031  85.45 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.969 0.021 196.05 
+                 | -0.021 0.969  72.70 
+[01a]        12 PLACEOBJECT2 moves object at depth 0013
+                 | Matrix             
+                 | 0.969 0.000  11.65 
+                 | 0.000 0.969  74.80 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | 0.968 -0.038  76.45 
+                 | 0.038 0.968  82.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | 0.968 -0.038  64.20 
+                 | 0.038 0.968  45.20 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | 0.968 -0.038  49.55 
+                 | 0.038 0.968  62.20 
+[01a]        17 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.904 -0.368  65.40 
+                 | 0.344 0.968  68.80 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | 0.968 -0.038  56.45 
+                 | 0.038 0.968  46.55 
+[01a]        16 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.963 0.093  27.20 
+                 | -0.093 0.963  56.25 
+[001]         0 SHOWFRAME 25 (00:00:01,1000)
+[002]        50 DEFINESHAPE defines id 0020
+                 bbox [0.45, 0.00, 23.50, 23.95]
+                 | fillstyles(01)        linestyles(00)
+                 | 1 ) SOLID cf6165ff    
+                 |
+                 | fill: 01/00 line:00 - moveTo 10.60 23.95
+                 | fill: 01/00 line:00 - splineTo (13.55 21.20) 18.00 15.30
+                 | fill: 01/00 line:00 - splineTo (22.45 9.35) 23.35 6.15
+                 | fill: 01/00 line:00 - splineTo (24.85 -8.05) 11.40 10.55
+                 | fill: 01/00 line:00 - splineTo (2.95 -2.05) 0.80 2.90
+                 | fill: 01/00 line:00 - lineTo 0.65 3.20
+                 | fill: 01/00 line:00 - lineTo 0.65 3.30
+                 | fill: 01/00 line:00 - splineTo (-1.05 8.50) 10.60 23.95
+                 |
+[01a]        20 PLACEOBJECT2 places id 0020 at depth 0003
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.969 0.000  85.80 | mul     1.0  1.0  1.0  0.0 
+                 | 0.000 0.969  50.05 | add       0    0    0    0 
+                uses IDs: 20
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  82.10 
+                 | 0.000 0.969  82.95 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.969 0.005 176.65 
+                 | -0.005 0.969  54.20 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.018 -0.080 210.80 
+                 | -0.101 0.959  75.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.969 0.005 182.15 
+                 | -0.005 0.969  54.35 
+[01a]        16 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 0.969 0.005 176.25 
+                 | -0.005 1.060  76.30 
+[01a]        16 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | 0.969 0.005 176.00 
+                 | -0.005 1.060  81.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | 0.969 0.005 176.00 
+                 | -0.005 1.031  81.90 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.969 0.005 197.35 
+                 | -0.005 0.969  69.45 
+[01a]        12 PLACEOBJECT2 moves object at depth 0013
+                 | Matrix             
+                 | 0.969 0.000   9.50 
+                 | 0.000 0.969  70.50 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | 0.969 -0.017  74.05 
+                 | 0.017 0.969  78.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | 0.969 -0.017  61.00 
+                 | 0.017 0.969  41.50 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | 0.969 -0.017  46.70 
+                 | 0.017 0.969  58.75 
+[01a]        18 PLACEOBJECT2 places id 0013 at depth 0018
+                 | Matrix             
+                 | 0.969 -0.017  61.65 
+                 | 0.017 0.969  68.95 
+                uses IDs: 13
+[01a]        15 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.969 0.005  60.05 
+                 | -0.005 0.969  67.60 
+[01a]        18 PLACEOBJECT2 places id 0015 at depth 0020
+                 | Matrix             
+                 | 0.969 -0.016  73.25 
+                 | 0.017 0.931  73.80 
+                uses IDs: 15
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | 0.969 -0.017  53.30 
+                 | 0.017 0.969  43.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.961 0.114  24.20 
+                 | -0.114 0.961  53.35 
+[001]         0 SHOWFRAME 26 (00:00:02,083)
+[01a]        18 PLACEOBJECT2 moves object at depth 0003
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.969 0.000  88.25 | mul     1.0  1.0  1.0  0.1 
+                 | 0.000 0.969  47.20 | add       0    0    0    0 
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  82.30 
+                 | 0.000 0.969  81.95 
+[01a]        12 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.969 0.000 177.10 
+                 | 0.000 0.969  53.05 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.018 -0.084 211.15 
+                 | -0.106 0.959  74.25 
+[01a]        12 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.969 0.000 182.60 
+                 | 0.000 0.969  53.25 
+[01a]        13 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 0.969 0.000 176.55 
+                 | 0.000 1.060  75.15 
+[01a]        13 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | 0.969 0.000 176.30 
+                 | 0.000 1.060  80.55 
+[01a]        13 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | 0.969 0.000 176.30 
+                 | 0.000 1.031  80.75 
+[01a]        17 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.922 0.296 193.55 
+                 | -0.296 0.922  70.20 
+[01a]        12 PLACEOBJECT2 moves object at depth 0013
+                 | Matrix             
+                 | 0.969 0.000   8.25 
+                 | 0.000 0.969  67.95 
+[01a]        15 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | 0.969 -0.004  72.55 
+                 | 0.004 0.969  75.90 
+[01a]        15 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | 0.969 -0.004  59.00 
+                 | 0.004 0.969  39.30 
+[01a]        15 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | 0.969 -0.004  44.95 
+                 | 0.004 0.969  56.80 
+[01a]        15 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | 0.969 -0.004  60.05 
+                 | 0.004 0.969  66.25 
+[01a]        15 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.969 -0.004  58.50 
+                 | 0.004 0.969  65.40 
+[01a]        15 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | 0.969 -0.004  71.65 
+                 | 0.004 0.932  71.45 
+[01a]        15 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | 0.969 -0.004  51.35 
+                 | 0.004 0.969  40.90 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.960 0.127  22.35 
+                 | -0.127 0.960  51.65 
+[001]         0 SHOWFRAME 27 (00:00:02,167)
+[01a]        18 PLACEOBJECT2 moves object at depth 0003
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.969 0.000  90.70 | mul     1.0  1.0  1.0  0.2 
+                 | 0.000 0.969  44.35 | add       0    0    0    0 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.966 -0.047 198.35 
+                 | 0.047 0.966  68.30 
+[01a]        12 PLACEOBJECT2 moves object at depth 0013
+                 | Matrix             
+                 | 0.969 0.000   7.80 
+                 | 0.000 0.969  67.15 
+[01a]        12 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | 0.969 0.000  71.95 
+                 | 0.000 0.969  75.10 
+[01a]        12 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | 0.969 0.000  58.25 
+                 | 0.000 0.969  38.55 
+[01a]        12 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | 0.969 0.000  44.25 
+                 | 0.000 0.969  56.10 
+[01a]        12 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | 0.969 0.000  59.40 
+                 | 0.000 0.969  65.50 
+[01a]        12 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.969 0.000  57.85 
+                 | 0.000 0.969  64.65 
+[01a]        12 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | 0.969 0.000  71.05 
+                 | 0.000 0.932  70.65 
+[01a]        12 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | 0.969 0.000  50.60 
+                 | 0.000 0.969  40.20 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.946 0.207  20.50 
+                 | -0.207 0.946  53.40 
+[001]         0 SHOWFRAME 28 (00:00:02,250)
+[01a]        18 PLACEOBJECT2 moves object at depth 0003
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.969 0.000  93.15 | mul     1.0  1.0  1.0  0.3 
+                 | 0.000 0.969  41.50 | add       0    0    0    0 
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  82.40 
+                 | 0.000 0.969  82.65 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.969 0.013 176.70 
+                 | -0.013 0.969  54.60 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.019 -0.071 211.05 
+                 | -0.092 0.960  75.35 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.969 0.013 182.20 
+                 | -0.013 0.969  54.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 0.969 0.014 176.45 
+                 | -0.013 1.060  76.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | 0.969 0.014 176.25 
+                 | -0.013 1.060  82.15 
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | 0.969 0.014 176.25 
+                 | -0.013 1.031  82.35 
+[01a]        17 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.917 0.308 193.35 
+                 | -0.308 0.917  71.55 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.907 -0.335  32.40 
+                 | 0.335 0.907  39.40 
+[001]         0 SHOWFRAME 29 (00:00:02,333)
+[01a]        18 PLACEOBJECT2 moves object at depth 0003
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.969 0.000  95.60 | mul     1.0  1.0  1.0  0.4 
+                 | 0.000 0.969  38.60 | add       0    0    0    0 
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  82.50 
+                 | 0.000 0.969  83.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.968 0.025 176.25 
+                 | -0.025 0.968  55.90 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.020 -0.059 210.80 
+                 | -0.079 0.960  76.15 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.968 0.025 181.75 
+                 | -0.025 0.968  55.95 
+[01a]        16 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 0.968 0.028 176.30 
+                 | -0.025 1.059  77.95 
+[01a]        16 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | 0.968 0.028 176.20 
+                 | -0.025 1.059  83.35 
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | 0.968 0.027 176.20 
+                 | -0.025 1.031  83.55 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.967 -0.021 197.90 
+                 | 0.021 0.967  70.60 
+[01a]        12 PLACEOBJECT2 moves object at depth 0013
+                 | Matrix             
+                 | 0.969 0.000   7.50 
+                 | 0.000 0.969  68.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | 0.968 -0.022  71.65 
+                 | 0.022 0.968  76.50 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | 0.968 -0.022  58.75 
+                 | 0.022 0.968  39.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | 0.968 -0.022  44.40 
+                 | 0.022 0.968  56.90 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | 0.968 -0.022  59.30 
+                 | 0.022 0.968  66.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.968 -0.022  57.80 
+                 | 0.022 0.968  65.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | 0.968 -0.021  70.85 
+                 | 0.022 0.931  72.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | 0.968 -0.022  51.10 
+                 | 0.022 0.968  41.15 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.950 0.185  20.70 
+                 | -0.185 0.950  53.65 
+[001]         0 SHOWFRAME 30 (00:00:02,417)
+[01c]         2 REMOVEOBJECT2 removes object from depth 0009
+[01c]         2 REMOVEOBJECT2 removes object from depth 0010
+[002]        50 DEFINESHAPE defines id 0021
+                 bbox [0.45, 0.00, 23.50, 23.95]
+                 | fillstyles(01)        linestyles(00)
+                 | 1 ) SOLID feb4bcff    
+                 |
+                 | fill: 01/00 line:00 - moveTo 18.00 15.30
+                 | fill: 01/00 line:00 - splineTo (22.45 9.35) 23.35 6.15
+                 | fill: 01/00 line:00 - splineTo (24.85 -8.05) 11.40 10.55
+                 | fill: 01/00 line:00 - splineTo (2.95 -2.05) 0.80 2.90
+                 | fill: 01/00 line:00 - lineTo 0.65 3.20
+                 | fill: 01/00 line:00 - lineTo 0.65 3.30
+                 | fill: 01/00 line:00 - splineTo (-1.05 8.50) 10.60 23.95
+                 | fill: 01/00 line:00 - splineTo (13.55 21.20) 18.00 15.30
+                 |
+[01a]        25 PLACEOBJECT2 places id 0021 at depth 0002
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.722 -0.100 147.65 | mul     1.0  1.0  1.0  0.0 
+                 | 0.089 0.812  66.25 | add       0    0    0    0 
+                uses IDs: 21
+[01a]        18 PLACEOBJECT2 moves object at depth 0003
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.969 0.000  93.00 | mul     1.0  1.0  1.0  0.5 
+                 | 0.000 0.969  36.50 | add       0    0    0    0 
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  82.60 
+                 | 0.000 0.969  83.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.968 0.034 176.00 
+                 | -0.034 0.968  57.10 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.021 -0.050 210.75 
+                 | -0.070 0.961  77.00 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.968 0.034 181.50 
+                 | -0.034 0.968  57.10 
+[01a]        17 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 1.047 0.030 175.60 
+                 | -0.037 0.856  86.20 
+[01a]        17 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.910 0.329 193.05 
+                 | -0.329 0.910  73.65 
+[01a]        12 PLACEOBJECT2 moves object at depth 0013
+                 | Matrix             
+                 | 0.969 0.000   7.25 
+                 | 0.000 0.969  68.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | 0.968 -0.042  71.25 
+                 | 0.042 0.968  77.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | 0.968 -0.042  59.15 
+                 | 0.042 0.968  40.50 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | 0.968 -0.042  44.45 
+                 | 0.042 0.968  57.45 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | 0.968 -0.042  59.10 
+                 | 0.042 0.968  67.45 
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.968 -0.042  57.60 
+                 | 0.042 0.968  66.55 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | 0.968 -0.041  70.55 
+                 | 0.042 0.930  73.10 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | 0.968 -0.042  51.40 
+                 | 0.042 0.968  41.80 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.891 -0.375  33.30 
+                 | 0.375 0.891  40.20 
+[001]         0 SHOWFRAME 31 (00:00:02,500)
+[01a]        23 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.722 -0.100 145.90 | mul     1.0  1.0  1.0  0.3 
+                 | 0.089 0.812  62.70 | add       0    0    0    0 
+[01a]        18 PLACEOBJECT2 moves object at depth 0003
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.969 0.000  90.80 | mul     1.0  1.0  1.0  0.7 
+                 | 0.000 0.969  34.70 | add       0    0    0    0 
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  82.70 
+                 | 0.000 0.969  84.15 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.968 0.043 175.85 
+                 | -0.043 0.968  58.00 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.021 -0.042 210.75 
+                 | -0.061 0.961  77.65 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.968 0.043 181.35 
+                 | -0.043 0.968  57.95 
+[01a]        16 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 0.968 0.043 176.35 
+                 | -0.043 0.968  81.05 
+[01a]        19 PLACEOBJECT2 places id 0006 at depth 0009
+                 | Matrix             
+                 | 0.968 0.045 176.05 
+                 | -0.043 1.012  85.75 
+                uses IDs: 6
+[01a]        18 PLACEOBJECT2 places id 0007 at depth 0010
+                 | Matrix             
+                 | 0.968 0.043 176.05 
+                 | -0.043 0.985  85.95 
+                uses IDs: 7
+[01a]        15 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.967 -0.004 197.70 
+                 | 0.004 0.967  72.30 
+[01a]        12 PLACEOBJECT2 moves object at depth 0013
+                 | Matrix             
+                 | 0.969 0.000   7.10 
+                 | 0.000 0.969  69.35 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | 0.967 -0.056  71.00 
+                 | 0.056 0.967  78.55 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | 0.967 -0.056  59.40 
+                 | 0.056 0.967  41.30 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | 0.967 -0.056  44.45 
+                 | 0.056 0.967  58.00 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | 0.967 -0.056  59.05 
+                 | 0.056 0.967  68.30 
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.967 -0.056  57.55 
+                 | 0.056 0.967  67.30 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | 0.967 -0.053  70.35 
+                 | 0.056 0.930  74.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | 0.967 -0.056  51.70 
+                 | 0.056 0.967  42.55 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.956 0.152  20.90 
+                 | -0.152 0.956  53.95 
+[001]         0 SHOWFRAME 32 (00:00:02,583)
+[01a]        23 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.722 -0.100 144.45 | mul     1.0  1.0  1.0  0.6 
+                 | 0.089 0.812  59.80 | add       0    0    0    0 
+[01a]        18 PLACEOBJECT2 moves object at depth 0003
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.969 0.000  89.00 | mul     1.0  1.0  1.0  0.8 
+                 | 0.000 0.969  33.20 | add       0    0    0    0 
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  82.75 
+                 | 0.000 0.969  84.50 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.967 0.048 175.60 
+                 | -0.048 0.967  58.65 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.021 -0.037 210.65 
+                 | -0.056 0.961  78.15 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.967 0.048 181.10 
+                 | -0.048 0.967  58.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 0.967 0.048 176.20 
+                 | -0.048 0.967  81.65 
+[01a]        17 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | 0.967 0.050 175.95 
+                 | -0.048 1.011  86.40 
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | 0.967 0.048 175.95 
+                 | -0.048 0.984  86.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.967 0.048 196.95 
+                 | -0.048 0.967  73.00 
+[01a]        12 PLACEOBJECT2 moves object at depth 0013
+                 | Matrix             
+                 | 0.969 0.000   6.95 
+                 | 0.000 0.969  69.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | 0.966 -0.068  70.80 
+                 | 0.068 0.966  79.20 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | 0.966 -0.068  59.70 
+                 | 0.068 0.966  41.85 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | 0.966 -0.068  44.55 
+                 | 0.068 0.966  58.30 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | 0.966 -0.068  58.95 
+                 | 0.068 0.966  68.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.966 -0.068  57.50 
+                 | 0.068 0.966  67.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | 0.966 -0.065  70.20 
+                 | 0.068 0.929  74.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | 0.966 -0.068  51.95 
+                 | 0.068 0.966  42.95 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.880 -0.398  33.90 
+                 | 0.398 0.880  40.85 
+[001]         0 SHOWFRAME 33 (00:00:02,667)
+[01c]         2 REMOVEOBJECT2 removes object from depth 0009
+[01c]         2 REMOVEOBJECT2 removes object from depth 0010
+[01a]        25 PLACEOBJECT2 places id 0020 at depth 0001
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.953 -0.173 156.05 | mul     1.0  1.0  1.0  0.0 
+                 | 0.173 0.953  41.00 | add       0    0    0    0 
+                uses IDs: 20
+[01a]        23 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.722 -0.100 143.30 | mul     1.0  1.0  1.0  0.8 
+                 | 0.089 0.812  57.50 | add       0    0    0    0 
+[01a]        18 PLACEOBJECT2 moves object at depth 0003
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.969 0.000  87.60 | mul     1.0  1.0  1.0  0.9 
+                 | 0.000 0.969  32.05 | add       0    0    0    0 
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  82.75 
+                 | 0.000 0.969  84.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.967 0.055 175.35 
+                 | -0.055 0.967  59.30 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.022 -0.030 210.50 
+                 | -0.048 0.962  78.45 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.967 0.055 180.85 
+                 | -0.055 0.967  59.15 
+[01a]        16 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 0.967 0.055 176.45 
+                 | -0.055 0.967  87.10 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.967 0.055 196.80 
+                 | -0.055 0.967  73.40 
+[01a]        12 PLACEOBJECT2 moves object at depth 0013
+                 | Matrix             
+                 | 0.969 0.000   6.90 
+                 | 0.000 0.969  69.95 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | 0.965 -0.072  70.75 
+                 | 0.072 0.965  79.55 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | 0.965 -0.072  59.85 
+                 | 0.072 0.965  42.15 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | 0.965 -0.072  44.55 
+                 | 0.072 0.965  58.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | 0.965 -0.072  58.95 
+                 | 0.072 0.965  69.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.965 -0.072  57.50 
+                 | 0.072 0.965  68.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | 0.965 -0.070  70.20 
+                 | 0.072 0.928  75.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | 0.965 -0.072  52.05 
+                 | 0.072 0.965  43.20 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.958 0.135  21.10 
+                 | -0.135 0.958  54.05 
+[001]         0 SHOWFRAME 34 (00:00:02,750)
+[01a]        23 PLACEOBJECT2 moves object at depth 0001
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.952 -0.173 157.45 | mul     1.0  1.0  1.0  0.2 
+                 | 0.173 0.952  38.50 | add       0    0    0    0 
+[01a]        23 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.722 -0.100 142.50 | mul     1.0  1.0  1.0  0.9 
+                 | 0.089 0.812  55.90 | add       0    0    0    0 
+[01a]        18 PLACEOBJECT2 moves object at depth 0003
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.969 0.000  86.60 | mul     1.0  1.0  1.0  0.9 
+                 | 0.000 0.969  31.25 | add       0    0    0    0 
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  82.80 
+                 | 0.000 0.969  84.85 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.967 0.056 175.30 
+                 | -0.056 0.967  59.55 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.022 -0.029 210.50 
+                 | -0.047 0.962  78.70 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.967 0.056 180.85 
+                 | -0.056 0.967  59.40 
+[01a]        17 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 1.046 0.049 175.55 
+                 | -0.060 0.854  88.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.967 0.056 196.80 
+                 | -0.056 0.967  73.65 
+[01a]        12 PLACEOBJECT2 moves object at depth 0013
+                 | Matrix             
+                 | 0.969 0.000   6.85 
+                 | 0.000 0.969  70.05 
+[01a]        16 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | 0.965 -0.077  70.85 
+                 | 0.077 0.965  79.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | 0.965 -0.077  60.10 
+                 | 0.077 0.965  42.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | 0.965 -0.077  44.75 
+                 | 0.077 0.965  58.65 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | 0.965 -0.077  59.10 
+                 | 0.077 0.965  69.20 
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.965 -0.077  57.65 
+                 | 0.077 0.965  68.20 
+[01a]        16 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | 0.965 -0.074  70.30 
+                 | 0.077 0.928  75.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | 0.965 -0.077  52.30 
+                 | 0.077 0.965  43.30 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.959 0.131  21.30 
+                 | -0.131 0.959  54.10 
+[001]         0 SHOWFRAME 35 (00:00:02,833)
+[01a]        23 PLACEOBJECT2 moves object at depth 0001
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.952 -0.173 158.65 | mul     1.0  1.0  1.0  0.4 
+                 | 0.173 0.952  36.35 | add       0    0    0    0 
+[01a]        23 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.722 -0.100 142.00 | mul     1.0  1.0  1.0  1.0 
+                 | 0.089 0.812  54.90 | add       0    0    0    0 
+[01a]        18 PLACEOBJECT2 moves object at depth 0003
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.969 0.000  86.00 | mul     1.0  1.0  1.0  1.0 
+                 | 0.000 0.969  30.75 | add       0    0    0    0 
+[01a]        12 PLACEOBJECT2 moves object at depth 0004
+                 | Matrix             
+                 | 0.969 0.000  82.80 
+                 | 0.000 0.969  84.90 
+[01a]        16 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | 0.967 0.059 175.30 
+                 | -0.059 0.967  59.75 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | -1.022 -0.026 210.55 
+                 | -0.044 0.962  78.75 
+[01a]        16 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | 0.967 0.059 180.80 
+                 | -0.059 0.967  59.60 
+[01a]        16 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 0.967 0.059 176.20 
+                 | -0.059 0.967  82.70 
+[01a]        19 PLACEOBJECT2 places id 0006 at depth 0009
+                 | Matrix             
+                 | 0.967 0.062 176.00 
+                 | -0.059 1.011  87.45 
+                uses IDs: 6
+[01a]        18 PLACEOBJECT2 places id 0007 at depth 0010
+                 | Matrix             
+                 | 0.967 0.060 176.00 
+                 | -0.059 0.984  87.65 
+                uses IDs: 7
+[01a]        16 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | 0.967 0.059 196.85 
+                 | -0.059 0.967  73.75 
+[01a]        17 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.877 -0.406  34.25 
+                 | 0.406 0.877  41.10 
+[001]         0 SHOWFRAME 36 (00:00:02,917)
+[01a]        23 PLACEOBJECT2 moves object at depth 0001
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.952 -0.173 159.65 | mul     1.0  1.0  1.0  0.6 
+                 | 0.173 0.952  34.50 | add       0    0    0    0 
+[01a]        18 PLACEOBJECT2 moves object at depth 0002
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.722 -0.100 141.85 | mul     1.0  1.0  1.0  1.0 
+                 | 0.089 0.812  54.65 | add       0    0    0    0 
+[01a]        13 PLACEOBJECT2 moves object at depth 0003
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.969 0.000  85.80 | mul     1.0  1.0  1.0  1.0 
+                 | 0.000 0.969  30.65 | add       0    0    0    0 
+[01a]        16 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | 0.967 0.059 176.20 
+                 | -0.059 0.967  82.95 
+[01a]        16 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | 0.967 0.059 176.00 
+                 | -0.059 0.967  87.95 
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | 0.967 0.057 176.00 
+                 | -0.059 0.941  88.10 
+[01a]        16 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | 0.965 -0.077  25.30 
+                 | 0.077 0.965  48.25 
+[001]         0 SHOWFRAME 37 (00:00:02,1000)
+[01a]        23 PLACEOBJECT2 moves object at depth 0001
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.952 -0.173 160.45 | mul     1.0  1.0  1.0  0.8 
+                 | 0.173 0.952  33.00 | add       0    0    0    0 
+[001]         0 SHOWFRAME 38 (00:00:03,083)
+[01c]         2 REMOVEOBJECT2 removes object from depth 0018
+[01c]         2 REMOVEOBJECT2 removes object from depth 0020
+[01a]        23 PLACEOBJECT2 moves object at depth 0001
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.952 -0.173 161.10 | mul     1.0  1.0  1.0  0.9 
+                 | 0.173 0.952  31.85 | add       0    0    0    0 
+[01a]        17 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.890 -0.406  60.35 
+                 | 0.379 0.952  65.85 
+[001]         0 SHOWFRAME 39 (00:00:03,167)
+[01a]        23 PLACEOBJECT2 moves object at depth 0001
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.952 -0.173 161.55 | mul     1.0  1.0  1.0  0.9 
+                 | 0.173 0.952  31.00 | add       0    0    0    0 
+[01a]        17 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.935 -0.379  59.70 
+                 | 0.398 0.890  66.10 
+[001]         0 SHOWFRAME 40 (00:00:03,250)
+[01a]        23 PLACEOBJECT2 moves object at depth 0001
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.952 -0.173 161.80 | mul     1.0  1.0  1.0  1.0 
+                 | 0.173 0.952  30.50 | add       0    0    0    0 
+[01a]        18 PLACEOBJECT2 places id 0013 at depth 0018
+                 | Matrix             
+                 | 0.965 -0.077  59.05 
+                 | 0.077 0.965  69.70 
+                uses IDs: 13
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.967 -0.055  57.50 
+                 | 0.055 0.967  68.25 
+[01a]        18 PLACEOBJECT2 places id 0015 at depth 0020
+                 | Matrix             
+                 | 0.965 -0.074  70.30 
+                 | 0.077 0.928  75.25 
+                uses IDs: 15
+[001]         0 SHOWFRAME 41 (00:00:03,333)
+[01a]        18 PLACEOBJECT2 moves object at depth 0001
+                 | Matrix             | CXForm    r    g    b    a 
+                 | 0.953 -0.173 161.90 | mul     1.0  1.0  1.0  1.0 
+                 | 0.173 0.953  30.35 | add       0    0    0    0 
+[01a]        16 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | 0.965 -0.077  59.10 
+                 | 0.077 0.965  69.20 
+[01a]        16 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | 0.965 -0.077  57.65 
+                 | 0.077 0.965  68.20 
+[001]         0 SHOWFRAME 42 (00:00:03,417)
+[01c]         2 REMOVEOBJECT2 removes object from depth 0001
+[01c]         2 REMOVEOBJECT2 removes object from depth 0003
+[01c]         2 REMOVEOBJECT2 removes object from depth 0004
+[01c]         2 REMOVEOBJECT2 removes object from depth 0013
+[01a]        18 PLACEOBJECT2 moves id 0001 at depth 0002
+                 | Matrix             
+                 | 0.968 0.016   7.15 
+                 | -0.016 0.968 175.75 
+                uses IDs: 1
+[01a]        12 PLACEOBJECT2 moves object at depth 0005
+                 | Matrix             
+                 | -0.969 0.000  74.80 
+                 | 0.000 0.969  53.05 
+[01a]        17 PLACEOBJECT2 moves object at depth 0006
+                 | Matrix             
+                 | 1.018 0.084  40.75 
+                 | -0.106 0.959  74.25 
+[01a]        12 PLACEOBJECT2 moves object at depth 0007
+                 | Matrix             
+                 | -0.969 0.000  69.30 
+                 | 0.000 0.969  53.25 
+[01a]        12 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.969 0.000  75.30 
+                 | 0.000 0.969  76.30 
+[01a]        12 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | -0.969 0.000  75.80 
+                 | 0.000 0.969  81.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | -0.961 0.116  74.80 
+                 | 0.119 0.935  80.65 
+[01a]        12 PLACEOBJECT2 moves object at depth 0012
+                 | Matrix             
+                 | -0.969 0.000  54.20 
+                 | 0.000 0.969  68.40 
+[01a]        19 PLACEOBJECT2 places id 0009 at depth 0014
+                 | Matrix             
+                 | -0.965 0.085 248.55 
+                 | 0.085 0.965 151.50 
+                uses IDs: 9
+[01a]        12 PLACEOBJECT2 moves object at depth 0015
+                 | Matrix             
+                 | -0.969 0.000 172.70 
+                 | 0.000 0.969  74.60 
+[01a]        12 PLACEOBJECT2 moves object at depth 0016
+                 | Matrix             
+                 | -0.969 0.000 186.40 
+                 | 0.000 0.969  38.05 
+[01a]        12 PLACEOBJECT2 moves object at depth 0017
+                 | Matrix             
+                 | -0.969 0.000 200.40 
+                 | 0.000 0.969  55.60 
+[01a]        12 PLACEOBJECT2 moves object at depth 0018
+                 | Matrix             
+                 | -0.969 0.000 185.25 
+                 | 0.000 0.969  65.00 
+[01a]        12 PLACEOBJECT2 moves object at depth 0019
+                 | Matrix             
+                 | -0.969 0.000 186.80 
+                 | 0.000 0.969  64.15 
+[01a]        12 PLACEOBJECT2 moves object at depth 0020
+                 | Matrix             
+                 | -0.969 0.000 173.60 
+                 | 0.000 0.932  70.15 
+[01a]        12 PLACEOBJECT2 moves object at depth 0021
+                 | Matrix             
+                 | -0.969 0.000 194.05 
+                 | 0.000 0.969  39.70 
+[01a]        13 PLACEOBJECT2 moves object at depth 0022
+                 | Matrix             
+                 | -0.969 0.000 220.60 
+                 | 0.000 0.969  46.80 
+[001]         0 SHOWFRAME 43-44 (00:00:03,500-00:00:03,583)
+[01c]         2 REMOVEOBJECT2 removes object from depth 0009
+[01c]         2 REMOVEOBJECT2 removes object from depth 0010
+[01a]        12 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.969 0.000  75.30 
+                 | 0.000 0.969  80.90 
+[001]         0 SHOWFRAME 45 (00:00:03,667)
+[01a]        12 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -1.048 0.000  76.25 
+                 | 0.000 0.856  82.15 
+[001]         0 SHOWFRAME 46 (00:00:03,750)
+[01a]        12 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.969 0.000  75.30 
+                 | 0.000 0.969  76.10 
+[01a]        14 PLACEOBJECT2 places id 0006 at depth 0009
+                 | Matrix             
+                 | -0.969 0.000  75.80 
+                 | 0.000 1.013  80.80 
+                uses IDs: 6
+[01a]        19 PLACEOBJECT2 places id 0007 at depth 0010
+                 | Matrix             
+                 | -0.961 0.128  74.70 
+                 | 0.119 1.037  79.85 
+                uses IDs: 7
+[001]         0 SHOWFRAME 47 (00:00:03,833)
+[01a]        12 PLACEOBJECT2 moves object at depth 0008
+                 | Matrix             
+                 | -0.969 0.000  75.30 
+                 | 0.000 0.969  76.30 
+[01a]        12 PLACEOBJECT2 moves object at depth 0009
+                 | Matrix             
+                 | -0.969 0.000  75.80 
+                 | 0.000 0.969  81.25 
+[01a]        16 PLACEOBJECT2 moves object at depth 0010
+                 | Matrix             
+                 | -0.961 0.116  74.80 
+                 | 0.119 0.935  80.65 
+[001]         0 SHOWFRAME 48 (00:00:03,917)
+[000]         0 END

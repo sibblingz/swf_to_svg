@@ -162,7 +162,7 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
   # puts "getting shape record"
   #f.skip_to_next_byte   # shape records are byte aligned
   type_flag = f.next_n_bits(1)
-    
+  
   if type_flag == '0'    
     state_new_styles_flag = f.next_n_bits(1)
     # only effective in version 2 and 3
@@ -196,11 +196,11 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
         num_move_bits = move_bits.to_i(2)
       
         move_delta_x_bit_string = f.next_n_bits(num_move_bits)
-        #puts "Move Delta X: #{SwfMath.parse_signed_int(move_delta_x_bit_string)}"
+        puts "Move Delta X: #{SwfMath.parse_signed_int(move_delta_x_bit_string)}"
         shape_record.move_delta_x = SwfMath.parse_signed_int( move_delta_x_bit_string )
     
         move_delta_y_bit_string = f.next_n_bits(num_move_bits)
-        #puts "Move Delta Y: #{SwfMath.parse_signed_int(move_delta_y_bit_string)}"
+        puts "Move Delta Y: #{SwfMath.parse_signed_int(move_delta_y_bit_string)}"
         shape_record.move_delta_y = SwfMath.parse_signed_int( move_delta_y_bit_string )
       end
   
@@ -238,16 +238,16 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
         fill_styles = get_fill_style_array( f )
         #puts "NEW FILL STYLES: #{fill_styles.inspect}"
         puts "getting line style array!"
-        
-        #line_styles = get_line_style_array( f )
+        f.skip_to_next_byte
+        line_styles = get_line_style_array( f )
         # the offender :( is somewhere in get_line_style_array...
         
         #puts "NEW LINE STYLES: #{line_styles.inspect}"
         
-        #new_style_num_fill_bits = f.next_n_bits(4).to_i(2)
+        num_fill_bits = f.next_n_bits(4).to_i(2)
         
         #puts "num fill bits: #{new_style_num_fill_bits}"
-        #new_style_num_line_bits = f.next_n_bits(4).to_i(2)
+        num_line_bits = f.next_n_bits(4).to_i(2)
         #puts "num line bits: #{new_style_num_line_bits}"
         
 
@@ -266,28 +266,43 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
       
       general_line_flag = f.next_n_bits(1)
       
+      
+    # if( general_line_flag == '1' )
+    #       shape_record.general_line = true
+    #       delta_x = f.next_n_bits( num_bits )
+    #       delta_y = f.next_n_bits( num_bits )
+    #     else
+    #       vert_line_flag = f.next_n_bits(1)
+    #       shape_record.vert_line = (vert_line_flag == '1')
+    #       
+    #       if( vert_line_flag == '1')
+    #         delta_y = f.next_n_bits( num_bits )
+    #       else
+    #         delta_x = f.next_n_bits( num_bits )
+    #       end
+    #     end
       if general_line_flag == '1'
-        shape_record.general_line = true
-        # puts "General Line"
-      end
-      
-      if general_line_flag == '0'
-        vert_line_flag = f.next_n_bits(1)
-        # puts (vert_line_flag == '1' ? "Vertical Line" : "Horizontal Line")
-        shape_record.vert_line = (vert_line_flag == '1')
-      end
-      
-      if general_line_flag == '1' || vert_line_flag == '0'
-        delta_x = f.next_n_bits(num_bits)
-        # puts "Delta X: #{parse_signed_int(delta_x)}"
-        shape_record.delta_x = SwfMath.parse_signed_int(delta_x)
-      end
-      
-      if general_line_flag == '1' || vert_line_flag == '1'
-        delta_y = f.next_n_bits(num_bits)
-        # puts "Delta Y: #{parse_signed_int(delta_y)}"
-        shape_record.delta_y = SwfMath.parse_signed_int(delta_y)
-      end
+             shape_record.general_line = true
+             # puts "General Line"
+           end
+           
+           if general_line_flag == '0'
+             vert_line_flag = f.next_n_bits(1)
+             # puts (vert_line_flag == '1' ? "Vertical Line" : "Horizontal Line")
+             shape_record.vert_line = (vert_line_flag == '1')
+           end
+           
+           if general_line_flag == '1' || vert_line_flag == '0'
+             delta_x = f.next_n_bits(num_bits)
+             puts "Delta X: #{SwfMath.parse_signed_int(delta_x)/20.0}"
+             shape_record.delta_x = SwfMath.parse_signed_int(delta_x)
+           end
+           
+           if general_line_flag == '1' || vert_line_flag == '1'
+             delta_y = f.next_n_bits(num_bits)
+             puts "Delta Y: #{SwfMath.parse_signed_int(delta_y)/20.0}"
+             shape_record.delta_y = SwfMath.parse_signed_int(delta_y)
+           end
     else
       puts "Curved Edge Record"
       shape_record = CurvedEdgeRecord.new
@@ -297,20 +312,20 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
       
       control_delta_x = f.next_n_bits( num_bits )
       control_delta_y = f.next_n_bits( num_bits )
-      # puts "Control Delta: (#{parse_signed_int(control_delta_x)}, #{parse_signed_int(control_delta_y)})"
+      puts "Control Delta: (#{SwfMath.parse_signed_int(control_delta_x)/20.0}, #{SwfMath.parse_signed_int(control_delta_y)/29.9})"
       shape_record.control_delta_x = SwfMath.parse_signed_int(control_delta_x)
       shape_record.control_delta_y = SwfMath.parse_signed_int(control_delta_y)
       
       anchor_delta_x = f.next_n_bits( num_bits )
       anchor_delta_y = f.next_n_bits( num_bits )
-      # puts "Anchor Point: (#{parse_signed_int(anchor_delta_x)}, #{parse_signed_int(anchor_delta_y)})"
+      puts "Anchor Point: (#{SwfMath.parse_signed_int(anchor_delta_x)/20.0}, #{SwfMath.parse_signed_int(anchor_delta_y)/20.0})"
       shape_record.anchor_delta_x = SwfMath.parse_signed_int(anchor_delta_x)
       shape_record.anchor_delta_y = SwfMath.parse_signed_int(anchor_delta_y)
     end
   end
   
   #f.skip_to_next_byte # shape records are byte aligned
-  return shape_record
+  return shape_record, num_fill_bits, num_line_bits
 end
 
 def get_shape_with_style( f, l )
@@ -320,10 +335,13 @@ def get_shape_with_style( f, l )
   
   fill_styles = get_fill_style_array( f ) 
   s.fill_styles = fill_styles
-   
+  
+  #f.skip_to_next_byte
+  
   line_styles = get_line_style_array( f )
   s.line_styles = line_styles
-#f.skip_to_next_byte
+  
+  #f.skip_to_next_byte
   num_fill_bits = f.next_n_bits(4).to_i(2)
   puts "  NUM FILL BITS #{num_fill_bits}"
   num_line_bits = f.next_n_bits(4).to_i(2)
@@ -349,7 +367,7 @@ def get_shape_with_style( f, l )
   total_len = 0
   while true
       current = f.total_bytes_read
-       shape_record = get_shape_record( f, num_fill_bits, num_line_bits )
+       shape_record, num_fill_bits, num_line_bits = get_shape_record( f, num_fill_bits, num_line_bits )
       after = f.total_bytes_read
       len = after - current 
       total_len = total_len + len

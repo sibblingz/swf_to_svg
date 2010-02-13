@@ -162,7 +162,7 @@ class Rect
   
   def initialize( f )    
     # rects are byte aligned
-    f.skip_to_next_byte
+    #f.skip_to_next_byte
       #{}"SwfMath".constantize.parse_signed_int()
 
     num_bits = f.next_n_bits( 5 ).to_i(2)
@@ -185,13 +185,13 @@ class RGB
   attr_reader :r, :g, :b
   
   def initialize( f )
-    f.skip_to_next_byte
+    #f.skip_to_next_byte
     @r = f.get_u8
     @g = f.get_u8
     @b = f.get_u8
-    # puts "RGB: (#{r}, #{g}, #{b})"
+    puts "RGB: (#{r}, #{g}, #{b})"
     
-    f.skip_to_next_byte  
+    #f.skip_to_next_byte  
   end
   
   def to_xml
