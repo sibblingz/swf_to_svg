@@ -56,10 +56,11 @@ puts "Frame Rate: #{frame_rate}"
 
 #frame_count_1 = f.getc
 #frame_count_2 = f.getc
+
 frame_count = f.get_u16#frame_count_1 + 256*frame_count_2
 puts "Frame Count: #{frame_count}"
 
-output = File.open("output/unpacked.xml", "w")
+output = File.open("output/#{ARGV[0].chomp(".swf")}.xml", "w")
 output.write("<?xml version='1.0'?>")
 output.write("<tags>")
 while !f.eof?
@@ -82,6 +83,7 @@ after = f.total_bytes_read
 puts "READ: #{after - before} LEN #{num_bytes_total}"
 f.close
 output.close
+
 
 
 # d = get_dictionary

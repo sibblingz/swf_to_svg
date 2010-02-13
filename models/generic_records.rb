@@ -189,13 +189,17 @@ class RGB
     @r = f.get_u8
     @g = f.get_u8
     @b = f.get_u8
-    puts "RGB: (#{r}, #{g}, #{b})"
+    #puts "RGB: (#{r}, #{g}, #{b})"
     
     #f.skip_to_next_byte  
   end
   
   def to_xml
     "<RGB r='#{r}' g='#{g}' b='#{b}'/>"
+  end
+  
+  def to_xml_attrib
+    "r='#{r}' g='#{g}' b='#{b}'"
   end
 end
 

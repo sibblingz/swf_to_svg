@@ -67,6 +67,9 @@ class Tag
       when 39
         @tag_string = "DEFINE SPRITE"
         define_sprite( @tag_length, f )
+      when 43
+        @tag_string = "FRAME LABEL"
+        frame_label( @tag_length, f )
       when 46
         @tag_string = "DEFINE MORPH SHAPE"
         define_morph_shape( @tag_length, f )

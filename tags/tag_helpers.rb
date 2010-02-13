@@ -4,7 +4,7 @@ require 'models/sprite.rb'
 require 'models/line_style.rb'
 require 'models/fill_style.rb'
 require 'models/generic_records.rb'
-require 'models/symbol_class_tag.rb'
+require 'tags/tag_classes.rb'
 require 'swf_math.rb'
 
 
@@ -74,7 +74,7 @@ def get_fill_style( f )
     puts "radial gradient fill"
     raise "un-supported fill type"
   when '13'.to_i(16)
-    puts "focial radial gradient fill"
+    puts "focal radial gradient fill"
     raise "un-supported fill type"
   when '40'.to_i(16)
     puts "repeating bitmap fill"
@@ -183,7 +183,7 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
     if (state_new_styles_flag + state_line_style_flag + state_fill_style_1_flag + state_fill_style_0_flag + state_move_to_flag) == "00000"
       puts "End Shape Record"
       shape_record = EndShapeRecord.new
-      f.skip_to_next_byte
+      #f.skip_to_next_byte
     else
       tmp = state_new_styles_flag + state_line_style_flag + state_fill_style_1_flag + state_fill_style_0_flag + state_move_to_flag
       puts "Style Change Record #{tmp}"
@@ -196,11 +196,11 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
         num_move_bits = move_bits.to_i(2)
       
         move_delta_x_bit_string = f.next_n_bits(num_move_bits)
-        puts "Move Delta X: #{SwfMath.parse_signed_int(move_delta_x_bit_string)}"
+        #puts "Move Delta X: #{SwfMath.parse_signed_int(move_delta_x_bit_string)}"
         shape_record.move_delta_x = SwfMath.parse_signed_int( move_delta_x_bit_string )
     
         move_delta_y_bit_string = f.next_n_bits(num_move_bits)
-        puts "Move Delta Y: #{SwfMath.parse_signed_int(move_delta_y_bit_string)}"
+        #puts "Move Delta Y: #{SwfMath.parse_signed_int(move_delta_y_bit_string)}"
         shape_record.move_delta_y = SwfMath.parse_signed_int( move_delta_y_bit_string )
       end
   
@@ -209,7 +209,7 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
         
         shape_record.state_fill_style_0 = true
         fill_style_0_bit_string = f.next_n_bits(num_fill_bits)
-        puts "Fill Style 0 Bit String: #{fill_style_0_bit_string}"
+        #puts "Fill Style 0 Bit String: #{fill_style_0_bit_string}"
         shape_record.fill_style_0 = fill_style_0_bit_string.to_i(2)
       end
   
@@ -218,7 +218,7 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
         
         shape_record.state_fill_style_1 = true
         fill_style_1_bit_string = f.next_n_bits(num_fill_bits)
-        puts "Fill Style 1 Bit String: #{fill_style_1_bit_string}"
+        #puts "Fill Style 1 Bit String: #{fill_style_1_bit_string}"
         shape_record.fill_style_1 = fill_style_1_bit_string.to_i(2)
       end
   
@@ -237,7 +237,7 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
         #puts "getting fill style array!"
         fill_styles = get_fill_style_array( f )
         #puts "NEW FILL STYLES: #{fill_styles.inspect}"
-        puts "getting line style array!"
+        #puts "getting line style array!"
         f.skip_to_next_byte
         line_styles = get_line_style_array( f )
         # the offender :( is somewhere in get_line_style_array...

@@ -1,3 +1,39 @@
+class SymbolClassTag
+  attr_accessor :num_symbols, :tag_ids, :tag_names
+  
+  def to_xml
+    "<symbols num='#{num_symbols}'>
+      #{tags_to_xml}
+     </symbols>"
+  end
+  private
+    def tags_to_xml
+      return_val = tag_ids.each_with_index.map{ |id, i| "<symbol tag_id='#{id}' name='#{tag_names[i]}'/>" }.join("\n")
+    end
+end
+
+class ShowTag
+  def to_txt
+    path="SHOW TAG\n"
+  end
+  
+  def to_xml
+    "<show_tag/>"
+  end
+end
+
+class PlaceTag
+  attr_accessor :character_id, :depth, :matrix, :color_transform
+  
+  def to_txt
+    path="PLACE TAG\n"
+  end
+  
+  def to_xml
+    "<place_tag/>"
+  end
+end
+
 class PlaceObject2Tag
   attr_accessor :depth, :character_id, :matrix, :color_transform, :ratio, :name, :clip_depth, :clip_actions
   
@@ -45,4 +81,12 @@ class PlaceObject2Tag
      </place_object_2>"
   end
   
+end
+
+class FrameLabel
+  attr_accessor :frame_label
+  
+  def to_xml
+    "<frame_label name='#{frame_label}'/>"
+  end
 end

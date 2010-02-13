@@ -7,9 +7,7 @@ class FillStyle
   end
   
   def to_xml
-"<fill_style type='#{self.fill_style_type}' name='#{fill_style_type_txt}'>
-  #{color.to_xml}
-</fill_style>"
+"<fill_style type='#{self.fill_style_type}' name='#{fill_style_type_txt}' #{color.to_xml_attrib} />"
   end
   
   private
@@ -22,7 +20,7 @@ class FillStyle
       when '12'.to_i(16)
         "radial gradient fill"
       when '13'.to_i(16)
-        "focial radial gradient fill"
+        "focal radial gradient fill"
       when '40'.to_i(16)
         "repeating bitmap fill"
       when '41'.to_i(16)

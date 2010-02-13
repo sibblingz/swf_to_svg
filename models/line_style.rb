@@ -6,6 +6,6 @@ class LineStyle
   end
   
   def to_xml
-    "<line_style width='#{self.width}' color='#{self.color}' ></fill_style>"
+    "<line_style width='#{self.width}' #{color.to_xml_attrib}' />"
   end
 end

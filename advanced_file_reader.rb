@@ -59,7 +59,7 @@ class AdvancedFileReader
   
   def skip_to_next_byte
     raise "Skipping more than a byte (#{buffer.size}) or buffer is nonzero (#{buffer}). Bytes read so far: #{total_bytes_read}" unless (@buffer.size < 8 && @buffer.to_i(2)  == 0)
-    puts "Skipping to next byte.  Buffer size: #{buffer.size} #{buffer}"
+    #puts "Skipping to next byte.  Buffer size: #{buffer.size} #{buffer}"
     @buffer = ''
   end
   
