@@ -34,20 +34,32 @@ class Shape
   end
   
   def line_styles_xml
+    if(@line_styles)
     return_val = "<line_styles>"
     return_val += line_styles.map{ |line_style| line_style.to_xml }.join('')
     return_val += "</line_styles>"
+  else
+    ""
+  end
   end
   
   def fill_styles_xml
+    if(@fill_styles)
     return_val = "<fill_styles>"
     return_val += self.fill_styles.map{ |fill_style| fill_style.to_xml }.join('')
     return_val += "</fill_styles>"
+  else
+    ""
+  end
   end
   
   def shape_records_xml
+    if(@shape_records)
     return_val = "<shape_records>"
     return_val += self.shape_records.map{ |shape_record| shape_record.to_xml }.join('')
     return_val += "</shape_records>"
+  else
+    ""
+  end
   end
 end

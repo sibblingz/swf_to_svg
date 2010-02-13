@@ -19,6 +19,8 @@ end
 file_stream = File.open(ARGV[0], "r")
 f = AdvancedFileReader.new( file_stream )
 
+before = f.total_bytes_read
+
 signature_1 = f.get_u8
 signature_2 = f.get_u8
 signature_3 = f.get_u8
@@ -76,7 +78,8 @@ while !f.eof?
   puts ""
 end
 output.write("</tags>")
-
+after = f.total_bytes_read
+puts "READ: #{after - before} LEN #{num_bytes_total}"
 f.close
 output.close
 

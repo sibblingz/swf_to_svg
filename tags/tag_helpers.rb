@@ -4,6 +4,7 @@ require 'models/sprite.rb'
 require 'models/line_style.rb'
 require 'models/fill_style.rb'
 require 'models/generic_records.rb'
+require 'models/symbol_class_tag.rb'
 require 'swf_math.rb'
 
 
@@ -62,7 +63,7 @@ def get_fill_style( f )
   
   case fill_style_type
   when 0
-    # puts "Solid Fill"
+    puts "Solid Fill"
     color = RGB.new( f )
     fs.color = color
     return fs
@@ -90,6 +91,7 @@ def get_fill_style( f )
   else
     raise "unknown fill type: #{fill_style_type}"
   end
+  #f.skip_to_next_byte
 end
 
 def get_fill_style_array( f )
@@ -127,7 +129,7 @@ def get_line_style( f )
   
   color = RGB.new( f )
   ls.color = color
-  
+  #f.skip_to_next_byte
   return ls
 end
 
@@ -158,6 +160,7 @@ end
 
 def get_shape_record( f, num_fill_bits, num_line_bits )
   # puts "getting shape record"
+  #f.skip_to_next_byte   # shape records are byte aligned
   type_flag = f.next_n_bits(1)
     
   if type_flag == '0'    
@@ -177,13 +180,16 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
     state_move_to_flag = f.next_n_bits(1)
     # puts "State Move To Flag: #{state_move_to_flag}"
     
-    if (state_new_styles_flag + state_line_style_flag + state_fill_style_1_flag + state_fill_style_0_flag + state_move_to_flag) == '00000'
-      # puts "End Shape Record"
+    if (state_new_styles_flag + state_line_style_flag + state_fill_style_1_flag + state_fill_style_0_flag + state_move_to_flag) == "00000"
+      puts "End Shape Record"
       shape_record = EndShapeRecord.new
+      f.skip_to_next_byte
     else
-      # puts "Style Change Record"
+      tmp = state_new_styles_flag + state_line_style_flag + state_fill_style_1_flag + state_fill_style_0_flag + state_move_to_flag
+      puts "Style Change Record #{tmp}"
       shape_record = StyleChangeRecord.new
-      if state_move_to_flag == '1'
+      
+      if state_move_to_flag == "1"
         shape_record.state_move_to = true
         
         move_bits = f.next_n_bits(5)
@@ -198,49 +204,61 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
         shape_record.move_delta_y = SwfMath.parse_signed_int( move_delta_y_bit_string )
       end
   
-      if state_fill_style_0_flag == '1'
+      if state_fill_style_0_flag == "1"
+        #raise "shouldn't be reading state fill style 0!" unless num_fill_bits > 0
+        
         shape_record.state_fill_style_0 = true
         fill_style_0_bit_string = f.next_n_bits(num_fill_bits)
         puts "Fill Style 0 Bit String: #{fill_style_0_bit_string}"
         shape_record.fill_style_0 = fill_style_0_bit_string.to_i(2)
       end
   
-      if state_fill_style_1_flag == '1'
+      if state_fill_style_1_flag == "1"
+        #raise "shouldn't be reading state fill style 1!" unless num_fill_bits > 0
+        
         shape_record.state_fill_style_1 = true
         fill_style_1_bit_string = f.next_n_bits(num_fill_bits)
         puts "Fill Style 1 Bit String: #{fill_style_1_bit_string}"
         shape_record.fill_style_1 = fill_style_1_bit_string.to_i(2)
       end
   
-      if state_line_style_flag == '1'
+      if state_line_style_flag == "1"
+        #raise "shouldn't be reading state line style!" unless num_line_bits > 0
         #puts "STATE LINE STYLE FLAG is TRUE"
         shape_record.state_line_style = true
         line_style_bit_string = f.next_n_bits(num_line_bits)
         #puts "num line bits: #{num_line_bits}"
-        #puts "Line Style Bit String: #{line_style_bit_string}"
+        puts "Line Style Bit String: #{line_style_bit_string}"
         shape_record.line_style = line_style_bit_string.to_i(2)
         #puts "END STATE LINE STYLE SECTION"
       end
   
-      if state_new_styles_flag == '1'
-        fill_styles = get_fill_style_array(f)
+      if state_new_styles_flag == "1"
+        #puts "getting fill style array!"
+        fill_styles = get_fill_style_array( f )
         #puts "NEW FILL STYLES: #{fill_styles.inspect}"
+        puts "getting line style array!"
         
-        line_styles = get_line_style_array( f )
+        #line_styles = get_line_style_array( f )
+        # the offender :( is somewhere in get_line_style_array...
+        
         #puts "NEW LINE STYLES: #{line_styles.inspect}"
         
-        new_style_num_fill_bits = f.next_n_bits(4).to_i(2)
-        puts "num fill bits: #{new_style_num_fill_bits}"
-        new_style_num_line_bits = f.next_n_bits(4).to_i(2)
-        puts "num line bits: #{new_style_num_line_bits}"
+        #new_style_num_fill_bits = f.next_n_bits(4).to_i(2)
+        
+        #puts "num fill bits: #{new_style_num_fill_bits}"
+        #new_style_num_line_bits = f.next_n_bits(4).to_i(2)
+        #puts "num line bits: #{new_style_num_line_bits}"
+        
 
       end
     end
   else
+    
     straight_flag = f.next_n_bits(1)
     
     if straight_flag == '1'
-      # puts "Straight Edge Record"
+      puts "Straight Edge Record"
       shape_record = StraightEdgeRecord.new
       
       num_bits_bit_string = f.next_n_bits(4)
@@ -271,7 +289,7 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
         shape_record.delta_y = SwfMath.parse_signed_int(delta_y)
       end
     else
-      # puts "Curved Edge Record"
+      puts "Curved Edge Record"
       shape_record = CurvedEdgeRecord.new
       
       num_bits_bit_string = f.next_n_bits(4)
@@ -291,12 +309,13 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
     end
   end
   
+  #f.skip_to_next_byte # shape records are byte aligned
   return shape_record
 end
 
-def get_shape_with_style( f )
+def get_shape_with_style( f, l )
   #f.skip_to_next_byte
-  
+  before = f.total_bytes_read
   s = Shape.new
   
   fill_styles = get_fill_style_array( f ) 
@@ -304,26 +323,50 @@ def get_shape_with_style( f )
    
   line_styles = get_line_style_array( f )
   s.line_styles = line_styles
-
+#f.skip_to_next_byte
   num_fill_bits = f.next_n_bits(4).to_i(2)
   puts "  NUM FILL BITS #{num_fill_bits}"
   num_line_bits = f.next_n_bits(4).to_i(2)
   puts "  NUM LINE BITS #{num_line_bits}"
+  puts "  line style array len: #{line_styles.size}"
   
-    
+  #puts "#{f.buffer}"  
   #f.skip_to_next_byte
   # bit_string = bit_string( f.getc )
   # num_fill_bits = bit_string.slice(0,4).to_i(2)
   # num_line_bits = bit_string.slice(4,4).to_i(2)
   
   # puts "num fill bits: #{num_fill_bits}"
+  now = f.total_bytes_read
+  remaining = l - (now-before)
+  # remaining.times do
+  #         a = f.getc
+  #         #puts "#{a}"
+  #         puts "#{a.chr.unpack("B8")}"
+  # end
   
   shape_records = []
+  total_len = 0
   while true
-    shape_record = get_shape_record( f, num_fill_bits, num_line_bits )
-    shape_records.push shape_record
-    break if shape_record.is_a? EndShapeRecord
-  end
+      current = f.total_bytes_read
+       shape_record = get_shape_record( f, num_fill_bits, num_line_bits )
+      after = f.total_bytes_read
+      len = after - current 
+      total_len = total_len + len
+       shape_records.push shape_record
+       break if shape_record.is_a? EndShapeRecord
+   end
+   
+   if(total_len != remaining)
+     (remaining - total_len).times do
+       f.getc
+       total_len = total_len + 1
+     end
+   end
+   
+   raise "total len and remaining are not equal!" unless total_len == remaining
+  
+  
   # tmp = []
   # while true
   #   shape_record = get_shape_record( f, num_fill_bits, num_line_bits )
