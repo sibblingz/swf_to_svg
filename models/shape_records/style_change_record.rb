@@ -18,14 +18,19 @@ class StyleChangeRecord
     # there isn't always a "path" when we move...
     if state_move_to
       return_val = "<path "
+      if state_fill_style_1
+        fill_style = shape.fill_styles[fill_style_1 - 1]
+        color = fill_style.color
+        return_val += "fill-style-1='rgb(#{color.r}, #{color.g}, #{color.b})' "
+      end
+      
       if state_fill_style_0
         fill_style = shape.fill_styles[fill_style_0 - 1]
         color = fill_style.color
-        return_val += "fill='rgb(#{color.r}, #{color.g}, #{color.b})' "
+        return_val += "fill-style-0='rgb(#{color.r}, #{color.g}, #{color.b})'"
       end
       
-      return_val += "stroke='red' stroke-width='0' d='
-      M#{move_delta_x/20.0},#{move_delta_y/20.0}"
+      return_val += " fill='none' stroke='black' stroke-width='0.5' d='M#{move_delta_x/20.0},#{move_delta_y/20.0}"
       
       if shape.shape_records.first != self
         return_val = "' />" + return_val
