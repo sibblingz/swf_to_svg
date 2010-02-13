@@ -52,7 +52,7 @@ end
 
 
 
-def get_fill_style( f ) 
+def get_fill_style( f, v ) 
   # puts "getting fill style"
   fill_style_type = f.get_u8
   
@@ -64,12 +64,23 @@ def get_fill_style( f )
   case fill_style_type
   when 0
     puts "Solid Fill"
-    color = RGB.new( f )
+    if( v <= 2 )
+      color = RGB.new( f )
+    else
+      color = RGBA.new( f )
+    end
     fs.color = color
     return fs
   when '10'.to_i(16)
     puts "Linear Gradient Fill"
-    raise "un-supported fill type"
+    
+    fs.gradient_matrix = Matrix.new( f )
+    #puts "got matrix"
+    fs.gradient = Gradient.new( f, v )
+    #puts "got gradient"
+    
+    return fs
+    #raise "un-supported fill type"
   when '12'.to_i(16)
     puts "radial gradient fill"
     raise "un-supported fill type"
@@ -94,7 +105,7 @@ def get_fill_style( f )
   #f.skip_to_next_byte
 end
 
-def get_fill_style_array( f )
+def get_fill_style_array( f, v )
   #f.skip_to_next_byte
   puts "getting fill style array"
   fill_style_count = f.get_u8
@@ -109,7 +120,7 @@ def get_fill_style_array( f )
   
   fill_styles = []
   fill_style_count.times do
-    fill_style = get_fill_style( f )
+    fill_style = get_fill_style( f, v )
     fill_styles.push( fill_style )
   end
   # puts "fill styles array: #{fill_styles.inspect}"
@@ -117,7 +128,7 @@ def get_fill_style_array( f )
   return fill_styles
 end
 
-def get_line_style( f )
+def get_line_style( f, v )
   # puts "getting line style"
   ls = LineStyle.new
   
@@ -126,14 +137,18 @@ def get_line_style( f )
   width = f.get_u16 #width_1 + 256*width_2
   
   ls.width = width
+  if( v <= 2)
+    color = RGB.new( f )
+  else
+    color = RGBA.new( f )
+  end
   
-  color = RGB.new( f )
   ls.color = color
   #f.skip_to_next_byte
   return ls
 end
 
-def get_line_style_array( f )
+def get_line_style_array( f, v )
   #f.skip_to_next_byte
   
   puts "getting line style array"
@@ -150,7 +165,11 @@ def get_line_style_array( f )
   
   line_styles = []
   line_style_count.times do
-    line_style = get_line_style( f )
+    if (v <= 3 )
+      line_style = get_line_style( f, v )
+    else
+      # get line style 2
+    end
     line_styles.push( line_style )
   end
   # puts "line styles array: #{line_styles.inspect}"
@@ -158,7 +177,7 @@ def get_line_style_array( f )
   return line_styles
 end
 
-def get_shape_record( f, num_fill_bits, num_line_bits )
+def get_shape_record( f, num_fill_bits, num_line_bits, v )
   # puts "getting shape record"
   #f.skip_to_next_byte   # shape records are byte aligned
   type_flag = f.next_n_bits(1)
@@ -235,11 +254,11 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
   
       if state_new_styles_flag == "1"
         #puts "getting fill style array!"
-        fill_styles = get_fill_style_array( f )
+        fill_styles = get_fill_style_array( f, v )
         #puts "NEW FILL STYLES: #{fill_styles.inspect}"
         #puts "getting line style array!"
         f.skip_to_next_byte
-        line_styles = get_line_style_array( f )
+        line_styles = get_line_style_array( f, v )
         # the offender :( is somewhere in get_line_style_array...
         
         #puts "NEW LINE STYLES: #{line_styles.inspect}"
@@ -294,13 +313,13 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
            
            if general_line_flag == '1' || vert_line_flag == '0'
              delta_x = f.next_n_bits(num_bits)
-             puts "Delta X: #{SwfMath.parse_signed_int(delta_x)/20.0}"
+             #puts "Delta X: #{SwfMath.parse_signed_int(delta_x)/20.0}"
              shape_record.delta_x = SwfMath.parse_signed_int(delta_x)
            end
            
            if general_line_flag == '1' || vert_line_flag == '1'
              delta_y = f.next_n_bits(num_bits)
-             puts "Delta Y: #{SwfMath.parse_signed_int(delta_y)/20.0}"
+             #puts "Delta Y: #{SwfMath.parse_signed_int(delta_y)/20.0}"
              shape_record.delta_y = SwfMath.parse_signed_int(delta_y)
            end
     else
@@ -312,13 +331,13 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
       
       control_delta_x = f.next_n_bits( num_bits )
       control_delta_y = f.next_n_bits( num_bits )
-      puts "Control Delta: (#{SwfMath.parse_signed_int(control_delta_x)/20.0}, #{SwfMath.parse_signed_int(control_delta_y)/29.9})"
+      #puts "Control Delta: (#{SwfMath.parse_signed_int(control_delta_x)/20.0}, #{SwfMath.parse_signed_int(control_delta_y)/29.9})"
       shape_record.control_delta_x = SwfMath.parse_signed_int(control_delta_x)
       shape_record.control_delta_y = SwfMath.parse_signed_int(control_delta_y)
       
       anchor_delta_x = f.next_n_bits( num_bits )
       anchor_delta_y = f.next_n_bits( num_bits )
-      puts "Anchor Point: (#{SwfMath.parse_signed_int(anchor_delta_x)/20.0}, #{SwfMath.parse_signed_int(anchor_delta_y)/20.0})"
+      #puts "Anchor Point: (#{SwfMath.parse_signed_int(anchor_delta_x)/20.0}, #{SwfMath.parse_signed_int(anchor_delta_y)/20.0})"
       shape_record.anchor_delta_x = SwfMath.parse_signed_int(anchor_delta_x)
       shape_record.anchor_delta_y = SwfMath.parse_signed_int(anchor_delta_y)
     end
@@ -328,17 +347,17 @@ def get_shape_record( f, num_fill_bits, num_line_bits )
   return shape_record, num_fill_bits, num_line_bits
 end
 
-def get_shape_with_style( f, l )
+def get_shape_with_style( f, l, v )
   #f.skip_to_next_byte
   before = f.total_bytes_read
   s = Shape.new
   
-  fill_styles = get_fill_style_array( f ) 
+  fill_styles = get_fill_style_array( f, v ) 
   s.fill_styles = fill_styles
   
   #f.skip_to_next_byte
   
-  line_styles = get_line_style_array( f )
+  line_styles = get_line_style_array( f, v )
   s.line_styles = line_styles
   
   #f.skip_to_next_byte
@@ -366,23 +385,18 @@ def get_shape_with_style( f, l )
   shape_records = []
   total_len = 0
   while true
-      current = f.total_bytes_read
-       shape_record, num_fill_bits, num_line_bits = get_shape_record( f, num_fill_bits, num_line_bits )
+      before = f.total_bytes_read
+      
+       shape_record, num_fill_bits, num_line_bits = get_shape_record( f, num_fill_bits, num_line_bits, v )
+      
       after = f.total_bytes_read
-      len = after - current 
-      total_len = total_len + len
+      total_len = total_len + (after - before)
+      
        shape_records.push shape_record
        break if shape_record.is_a? EndShapeRecord
    end
    
-   if(total_len != remaining)
-     (remaining - total_len).times do
-       f.getc
-       total_len = total_len + 1
-     end
-   end
-   
-   raise "total len and remaining are not equal!" unless total_len == remaining
+   raise "total len and remaining are not equal! total #{total_len} rem #{remaining}" unless total_len == remaining
   
   
   # tmp = []

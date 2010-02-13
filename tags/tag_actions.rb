@@ -22,7 +22,7 @@ def end_tag( tag_length, f )
   end
   
   after = f.total_bytes_read
-  puts "END TAG ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
+  raise "END TAG ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
 end
 
 # Tag code = 1
@@ -36,11 +36,11 @@ def show_frame( tag_length, f )
   end
   
   after = f.total_bytes_read
-  puts "SHOW FRAME ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
+  raise "SHOW FRAME ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
   @tag_data.push( sf )
 end
 
-# Tag code = 2 or 22
+# Tag code = 2 or 22 or 32 or 83
 def define_shape( tag_length, f, version )
   puts "Define Shape #{version} Tag"
   before = f.total_bytes_read
@@ -60,7 +60,7 @@ def define_shape( tag_length, f, version )
     #       f.getc
     #     end    
         
-    shape = get_shape_with_style( f, remaining )
+    shape = get_shape_with_style( f, remaining, version )
     #shape = Shape.new
     shape.bounds = shape_bounds
     shape.id = shape_id
@@ -80,7 +80,7 @@ def define_shape( tag_length, f, version )
   end
   
   after = f.total_bytes_read
-  puts "ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
+  raise "ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
   f.skip_to_next_byte
   @tag_data.push( shape )
 end
@@ -102,7 +102,7 @@ def set_background_color( tag_length, f )
   #puts "Set Background Color to: (#{color[0]}, #{color[1]}, #{color[2]})"
   
   after = f.total_bytes_read
-  puts "SET BACKGROUND COLOR ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
+  raise "SET BACKGROUND COLOR ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
   
   @tag_data.push( color )
 end
@@ -172,28 +172,33 @@ def place_object_2( tag_length, f )
   #end
   
   after = f.total_bytes_read
-  puts "PLACE OBJECT 2 ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
+  raise "PLACE OBJECT 2 ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
   
   @tag_data.push( obj2 )
 end
 
 # Tag code 28
 def remove_object_2( tag_length, f )
-  puts "Remove Object 2"
-
-  tag_length.times do
-    f.getc
-  end
-end
-
-# Tag code = 32
-def define_shape_3( tag_length, f )
-  puts "Define Shape 3"
+  before = f.total_bytes_read
   
-  tag_length.times do
-    f.getc
-  end
+  puts "Remove Object 2"
+  ro2 = RemoveObject2Tag.new
+  ro2.depth = f.get_u16
+  
+  after = f.total_bytes_read
+  raise "REMOVE OBJECT 2 ERROR difference is #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
+  
+  @tag_data.push( ro2 )
 end
+
+# # Tag code = 32
+# def define_shape_3( tag_length, f )
+#   puts "Define Shape 3"
+#   
+#   tag_length.times do
+#     f.getc
+#   end
+# end
 
 # Tag code = 39
 def define_sprite( tag_length, f )
@@ -237,7 +242,7 @@ def define_sprite( tag_length, f )
   #f.skip_to_next_byte
   
   after = f.total_bytes_read
-  puts "DEFINE SPRITE ERROR! difference is: #{after - before}, it should be #{my_tag_length}" unless (after-before) == my_tag_length
+  raise "DEFINE SPRITE ERROR! difference is: #{after - before}, it should be #{my_tag_length}" unless (after-before) == my_tag_length
 
   @tag_data.push( sprite )
 end
@@ -245,7 +250,7 @@ end
 # Tag code = 43
 def frame_label( tag_length, f )
   
-  flabel = FrameLabel.new
+  flabel = FrameLabelTag.new
   flabel.frame_label, bytes_read = SwfMath.parse_ASCII_string( f )
   
   @tag_data.push( flabel )

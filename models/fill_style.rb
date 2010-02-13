@@ -1,5 +1,5 @@
 class FillStyle
-  attr_accessor :fill_style_type, :color
+  attr_accessor :fill_style_type, :color, :gradient_matrix, :gradient
   
   def to_txt
     what_fill_style
@@ -7,7 +7,17 @@ class FillStyle
   end
   
   def to_xml
-"<fill_style type='#{self.fill_style_type}' name='#{fill_style_type_txt}' #{color.to_xml_attrib} />"
+    return case self.fill_style_type
+    when 0
+      "<fill_style type='#{self.fill_style_type}' name='#{fill_style_type_txt}' #{color.to_xml_attrib} />"
+    when '10'.to_i(16)
+"<fill_style type='#{self.fill_style_type}' name='#{fill_style_type_txt}'>
+  #{self.gradient_matrix.to_xml}
+  #{self.gradient.to_xml}
+</fill_style>"
+    else
+      "<fill_style type='#{self.fill_style_type}' name='#{fill_style_type_txt}' />"
+    end
   end
   
   private

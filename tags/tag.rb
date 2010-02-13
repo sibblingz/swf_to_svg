@@ -6,7 +6,7 @@ class Tag
     @tag_length = tag_length
     @tag_data = []
     
-    puts "tag starts on #{f.total_bytes_read}, buffer is #{f.buffer}"
+    #puts "tag starts on #{f.total_bytes_read}, buffer is #{f.buffer}"
     handle_tag( f )
     #skip_all_tag_data( f )
   end
@@ -63,7 +63,7 @@ class Tag
         remove_object_2( @tag_length, f )
       when 32
         @tag_string = "DEFINE SHAPE 3"
-        define_shape_3( @tag_length, f )
+        define_shape( @tag_length, f, 3 )
       when 39
         @tag_string = "DEFINE SPRITE"
         define_sprite( @tag_length, f )

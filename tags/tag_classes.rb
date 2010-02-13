@@ -22,15 +22,23 @@ class ShowTag
   end
 end
 
-class PlaceTag
+class RemoveObject2Tag
+  attr_accessor :depth
+  
+  def to_xml
+    "<remove_object_2 depth='#{depth}'/>"
+  end
+end
+
+class PlaceObjectTag
   attr_accessor :character_id, :depth, :matrix, :color_transform
   
   def to_txt
-    path="PLACE TAG\n"
+    path="PLACE OBJECT TAG\n"
   end
   
   def to_xml
-    "<place_tag/>"
+    "<place_object/>"
   end
 end
 
@@ -83,10 +91,16 @@ class PlaceObject2Tag
   
 end
 
-class FrameLabel
+class FrameLabelTag
   attr_accessor :frame_label
   
   def to_xml
     "<frame_label name='#{frame_label}'/>"
+  end
+end
+
+class NilClass
+  def to_xml
+    ""
   end
 end

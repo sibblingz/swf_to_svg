@@ -1,5 +1,75 @@
 require 'swf_math.rb'
 
+class Gradient
+  attr_reader :spread_mode, :interpolation_mode, :num_gradients, :gradient_records
+  def initialize( f, v )
+    @spread_mode = f.next_n_bits(2).to_i(2)
+    
+    @interpolation_mode = f.next_n_bits(2).to_i(2)
+    
+    @num_gradients = f.next_n_bits(4).to_i(2)
+    #puts "#{spread_mode}, #{interpolation_mode}, num #{num_gradients}"
+    @gradient_records = []
+    
+    @num_gradients.times do
+      @gradient_records.push( GradRecord.new(f,v) )
+    end
+  end
+  
+  def to_xml
+"<gradient num='#{num_gradients}' spread_mode='#{spread_mode_to_txt}' interpolation_mode='#{interpolation_mode_to_txt}'>
+    #{ gradient_records.map{ |grad| grad.to_xml }.join("\n") }
+</gradient>"
+  end
+  
+  def spread_mode_to_txt
+    case @spread_mode
+    when 0
+      "pad mode"
+    when 1
+      "reflect mode"
+    when 2
+      "repeat mode"
+    when 3
+      "reserved"
+    else
+      "unknown"
+    end
+  end
+  
+  def interpolation_mode_to_txt
+    case @interpolation_mode
+    when 0
+      "normal RGB mode interpolation"
+    when 1
+      "linear RGB mode interpolation"
+    when 2
+      "reserved"
+    when 3
+      "reserved"
+    else
+      "unknown"
+    end
+  end
+end
+
+class GradRecord
+  attr_reader :ratio, :color
+  
+  def initialize(f, v)
+    @ratio = f.get_u8
+    if( v <= 2 )
+      @color = RGB.new( f )
+    else
+      @color = RGBA.new( f )
+    end
+  end
+  
+  def to_xml
+    "<grad_record ratio='#{ratio}' #{color.to_xml_attrib} />"
+  end
+end
+
 class C_XFORM
   attr_reader :red_mult_term, :green_mult_term, :blue_mult_term, 
     :red_add_term, :green_add_term, :blue_add_term
@@ -140,7 +210,7 @@ class Matrix
       @translate_y = SwfMath.parse_signed_int( f.next_n_bits(n_translate_bits) )
     end
 
-    #f.skip_to_next_byte
+    f.skip_to_next_byte
   end
   
   def to_txt
@@ -150,9 +220,8 @@ class Matrix
   
   def to_xml
     "<matrix>
-      <row1 col1='#{scale_x}' col2='#{rotate_skew_0}'/>
-      <row2 col1='#{rotate_skew_1}' col2='#{scale_y}'/>
-      <row3 col1='#{translate_x}' col2='#{translate_y}'/>
+      <row1 col1='#{scale_x}' col2='#{rotate_skew_1}' col3='#{translate_x}'/>
+      <row2 col1='#{rotate_skew_0}' col2='#{scale_y}' col3='#{translate_y}'/>
      </matrix>"
   end
 end
@@ -195,16 +264,33 @@ class RGB
   end
   
   def to_xml
-    "<RGB r='#{r}' g='#{g}' b='#{b}'/>"
+    "<RGB r='#{r}' g='#{g}' b='#{b}' a='255'/>"
   end
   
   def to_xml_attrib
-    "r='#{r}' g='#{g}' b='#{b}'"
+    "r='#{r}' g='#{g}' b='#{b}' a='255'"
   end
 end
 
-class NilClass
+class RGBA
+  attr_reader :r, :g, :b, :a
+  
+  def initialize( f )
+    #f.skip_to_next_byte
+    @r = f.get_u8
+    @g = f.get_u8
+    @b = f.get_u8
+    @a = f.get_u8
+    #puts "RGB: (#{r}, #{g}, #{b})"
+    
+    #f.skip_to_next_byte  
+  end
+  
   def to_xml
-    ""
+    "<RGB r='#{r}' g='#{g}' b='#{b}' a='#{a}'/>"
+  end
+  
+  def to_xml_attrib
+    "r='#{r}' g='#{g}' b='#{b}' a='#{a}'"
   end
 end
