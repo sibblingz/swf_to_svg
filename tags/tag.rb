@@ -92,7 +92,7 @@ class Tag
         @tag_string = "DEFINE SCENE AND FRAME LABEL DATA"
         define_scene_and_frame_label_data( @tag_length, f )
       else
-        @tag_string = ">> ERROR! UNKNOWN TAG! <<"
+        @tag_string = "UNKNOWN TAG"
         skip_tag( @tag_length, f, @tag_code )
       end
     end
