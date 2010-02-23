@@ -63,6 +63,14 @@ class AdvancedFileReader
     @buffer = ''
   end
   
+  def rest
+    buf = ''
+    while !@file_stream.eof?
+      buf = buf + @file_stream.getc.chr
+    end
+    return buf
+  end
+  
   def close
     self.file_stream.close
   end

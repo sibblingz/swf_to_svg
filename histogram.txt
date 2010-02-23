@@ -1,27 +1,13 @@
-DEFINE BITS (not needed?): 4
-SHOW FRAME: 25
-PLACE OBJECT 2: 38
-DEFINE FONT NAME (not implemented): 5
-DEFINE MORPH SHAPE (not implemented): 195
-DEFINE SHAPE 4 (not implemented): 51
-DEFINE SPRITE: 2650
-DEFINE SCALING GRID (not needed?): 4
-CSM TEXT SETTINGS (not implemented): 485
-DEFINE EDIT TEXT (not implemented): 146
-SYMBOL CLASS: 17
-END TAG: 25
-DEFINE TEXT (not implemented): 343
-DEFINE FONT 3 (not implemented): 5
-DEFINE SHAPE 2: 1110
-ENABLE DEBUGGER 2 (not needed): 4
-DEFINE SHAPE 3: 369
-DEFINE SHAPE: 2556
-SET BACKGROUND COLOR: 25
-FILE ATTRIBUTES (not needed): 25
-DEFINE BITS LOSSLESS (not needed?): 2
-DEFINE SCENE AND FRAME LABEL DATA (not implemented): 25
-METADATA (not needed): 25
-JPEG TABLES (not needed?): 2
-DO ABC (not implemented): 17
-DEFINE BUTTON 2 (not implemented): 142
-DEFINE FONT ALIGN ZONES (not implemented): 5
+DEFINE SPRITE: 44
+DEFINE SHAPE: 26
+DEFINE MORPH SHAPE (not implemented): 12
+DO ABC (not implemented): 10
+DEFINE SHAPE 2: 4
+FILE ATTRIBUTES (not needed): 1
+SET BACKGROUND COLOR: 1
+SYMBOL CLASS: 1
+END TAG: 1
+DEFINE SCENE AND FRAME LABEL DATA (not implemented): 1
+METADATA (not needed): 1
+PLACE OBJECT 2: 1
+SHOW FRAME: 1

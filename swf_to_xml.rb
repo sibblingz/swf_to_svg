@@ -10,6 +10,8 @@ require 'tags/tag.rb'
 require 'tags/tag_actions.rb'
 require 'swf_math.rb'
 
+require 'zlib'
+
 DICTIONARY = {}
 
 def get_dictionary
@@ -26,8 +28,10 @@ def read_a_swf_file( filename, histogram )
   signature_2 = f.get_u8
   signature_3 = f.get_u8
 
+  compressed = false
   if signature_1 != 'F'[0]
-    raise "Please Export an Uncompressed SWF file"
+    compressed = true
+    #raise "Please Export an Uncompressed SWF file"
   end
 
   if signature_2 != 'W'[0]
@@ -46,6 +50,22 @@ def read_a_swf_file( filename, histogram )
 
   puts "Num Bytes total: #{num_bytes_total}"
 
+  # HAX
+  buf = ""
+  if( compressed )
+    puts "Decompressing in the most inefficient way possible!"
+    g = File.open("tmp", "w")
+    #while( line = f.gets )
+    buf = Zlib::Inflate.inflate( f.rest )
+    g.write("#{buf}")
+    #end
+    f.close
+    g.close
+    
+    g = File.open( "tmp" , "r")
+    f = AdvancedFileReader.new( g )
+  end
+  
   frame = Rect.new(f)
 
   puts "Frame Size: #{frame.xmax/20} x #{frame.ymax/20}"
@@ -105,6 +125,10 @@ def read_a_swf_file( filename, histogram )
   #     output.close
   #   end
   # end
+  if(compressed)
+    system("rm tmp")
+  end
+  
   return histogram
 end
 
@@ -124,7 +148,11 @@ ARGV.length.times do |i|
   puts""
 end
 
+tag_histogram = tag_histogram.sort{|a,b| a[1]<=>b[1]}.reverse
+
 histogram = File.open("histogram.txt", "w")
-tag_histogram.each_pair{ |k,v| histogram.write("#{k}: #{v}\n")}
+tag_histogram.each do |tag|
+  histogram.write("#{tag[0]}: #{tag[1]}\n")
+ end
 histogram.close
   
