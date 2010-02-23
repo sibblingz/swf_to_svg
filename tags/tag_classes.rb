@@ -99,6 +99,25 @@ class FrameLabelTag
   end
 end
 
+class DefineButton2Tag
+  attr_accessor :id, :track_as_menu, :characters, :actions
+  
+  def to_xml
+    "<button2 button_id='#{id}' track_as_menu='#{track_as_menu}'>
+      #{characters.map{ |c| c.to_xml } }
+      #{actions.map{ |a| a.to_xml } }
+      </button2>"
+  end
+end
+
+class ButtonRecord
+end
+
+class ButtonCondAction
+end
+
+# sprite and shape belong in here... just a minor housekeeping
+
 class NilClass
   def to_xml
     ""

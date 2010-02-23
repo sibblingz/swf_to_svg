@@ -63,51 +63,45 @@ def get_fill_style( f, v )
   
   case fill_style_type
   when 0
-    puts "Solid Fill"
+    #puts "Solid Fill"
     if( v <= 2 )
       color = RGB.new( f )
     else
       color = RGBA.new( f )
     end
     fs.color = color
-    return fs
-  when '10'.to_i(16)
-    puts "Linear Gradient Fill"
+    #return fs
+  when '10'.to_i(16), '12'.to_i(16)
+    #puts "Linear Gradient Fill"
     
     fs.gradient_matrix = Matrix.new( f )
     #puts "got matrix"
     fs.gradient = Gradient.new( f, v )
     #puts "got gradient"
     
-    return fs
+    #return fs
     #raise "un-supported fill type"
-  when '12'.to_i(16)
-    puts "radial gradient fill"
-    raise "un-supported fill type"
+  #when '12'.to_i(16)
+  #  puts "radial gradient fill"
+  #  raise "un-supported fill type"
   when '13'.to_i(16)
     puts "focal radial gradient fill"
     raise "un-supported fill type"
-  when '40'.to_i(16)
-    puts "repeating bitmap fill"
-    raise "un-supported fill type"
-  when '41'.to_i(16)
-    puts "clipped bitmap fill"
-    raise "un-supported fill type"
-  when '42'.to_i(16)
-    puts 'non-smoothed repeating bitmap fill'
-    raise "un-supported fill type"
-  when '43'.to_i(16)
-    puts 'non-smoothed clipped bitmap fill'
-    raise "un-supported fill type"
+  when '40'.to_i(16), '41'.to_i(16), '42'.to_i(16), '43'.to_i(16)
+    fs.bitmap_id = f.get_u16
+    fs.bitmap_matrix = Matrix.new( f )
+    #return fs
   else
     raise "unknown fill type: #{fill_style_type}"
   end
   #f.skip_to_next_byte
+  return fs
+  
 end
 
 def get_fill_style_array( f, v )
   #f.skip_to_next_byte
-  puts "getting fill style array"
+  #puts "getting fill style array"
   fill_style_count = f.get_u8
   
   if fill_style_count == 255
@@ -116,7 +110,7 @@ def get_fill_style_array( f, v )
     #fill_style_count_extended_2 = f.getc
     fill_style_count = f.get_u16 #fill_style_count + 256*fill_style_count_extended_1
   end
-  puts "Num Fill Styles: #{fill_style_count}"
+  #puts "Num Fill Styles: #{fill_style_count}"
   
   fill_styles = []
   fill_style_count.times do
@@ -151,17 +145,17 @@ end
 def get_line_style_array( f, v )
   #f.skip_to_next_byte
   
-  puts "getting line style array"
+  #puts "getting line style array"
   line_style_count = f.get_u8
   
   if line_style_count == 255
-    puts "extended line style count"
+    #puts "extended line style count"
     #line_style_count_extended_1 = f.getc
     #line_style_count_extended_2 = f.getc
     line_style_count = f.get_u16#line_style_count_extended_1 + 256*line_style_count_extended_2
   end
   
-  puts "Num Line Styles: #{line_style_count}"
+  #puts "Num Line Styles: #{line_style_count}"
   
   line_styles = []
   line_style_count.times do
@@ -200,12 +194,12 @@ def get_shape_record( f, num_fill_bits, num_line_bits, v )
     # puts "State Move To Flag: #{state_move_to_flag}"
     
     if (state_new_styles_flag + state_line_style_flag + state_fill_style_1_flag + state_fill_style_0_flag + state_move_to_flag) == "00000"
-      puts "End Shape Record"
+      #puts "End Shape Record"
       shape_record = EndShapeRecord.new
       #f.skip_to_next_byte
     else
       tmp = state_new_styles_flag + state_line_style_flag + state_fill_style_1_flag + state_fill_style_0_flag + state_move_to_flag
-      puts "Style Change Record #{tmp}"
+      #puts "Style Change Record #{tmp}"
       shape_record = StyleChangeRecord.new
       
       if state_move_to_flag == "1"
@@ -247,7 +241,7 @@ def get_shape_record( f, num_fill_bits, num_line_bits, v )
         shape_record.state_line_style = true
         line_style_bit_string = f.next_n_bits(num_line_bits)
         #puts "num line bits: #{num_line_bits}"
-        puts "Line Style Bit String: #{line_style_bit_string}"
+        #puts "Line Style Bit String: #{line_style_bit_string}"
         shape_record.line_style = line_style_bit_string.to_i(2)
         #puts "END STATE LINE STYLE SECTION"
       end
@@ -277,7 +271,7 @@ def get_shape_record( f, num_fill_bits, num_line_bits, v )
     straight_flag = f.next_n_bits(1)
     
     if straight_flag == '1'
-      puts "Straight Edge Record"
+      #puts "Straight Edge Record"
       shape_record = StraightEdgeRecord.new
       
       num_bits_bit_string = f.next_n_bits(4)
@@ -323,7 +317,7 @@ def get_shape_record( f, num_fill_bits, num_line_bits, v )
              shape_record.delta_y = SwfMath.parse_signed_int(delta_y)
            end
     else
-      puts "Curved Edge Record"
+      #puts "Curved Edge Record"
       shape_record = CurvedEdgeRecord.new
       
       num_bits_bit_string = f.next_n_bits(4)
@@ -362,10 +356,10 @@ def get_shape_with_style( f, l, v )
   
   #f.skip_to_next_byte
   num_fill_bits = f.next_n_bits(4).to_i(2)
-  puts "  NUM FILL BITS #{num_fill_bits}"
+  #puts "  NUM FILL BITS #{num_fill_bits}"
   num_line_bits = f.next_n_bits(4).to_i(2)
-  puts "  NUM LINE BITS #{num_line_bits}"
-  puts "  line style array len: #{line_styles.size}"
+  #puts "  NUM LINE BITS #{num_line_bits}"
+  #puts "  line style array len: #{line_styles.size}"
   
   #puts "#{f.buffer}"  
   #f.skip_to_next_byte

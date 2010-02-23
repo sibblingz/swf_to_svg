@@ -36,64 +36,103 @@ class Tag
   private
   
     def handle_tag( f )
-      case @tag_code
+      @tag_string = case @tag_code
       when 0
-        @tag_string = "END TAG"
         end_tag( @tag_length, f )
+        "END TAG"
       when 1
-        @tag_string = "SHOW FRAME"
         show_frame( @tag_length, f )
+        "SHOW FRAME"
       when 2
-        @tag_string = "DEFINE SHAPE"
         define_shape( @tag_length, f, 1 )
+        "DEFINE SHAPE"
       when 4
-        @tag_string = "PLACE OBJECT"
         place_object( @tag_length, f )
-      when 9
-        @tag_string ="SET BACKGROUND COLOR"
-        set_background_color( @tag_length, f )
-      when 22
-        @tag_string = "DEFINE SHAPE 2"
-        define_shape( @tag_length, f, 2 )
-      when 26
-        @tag_string = "PLACE OBJECT 2"
-        place_object_2( @tag_length, f )
-      when 28
-        @tag_string = "REMOVE OBJECT 2"
-        remove_object_2( @tag_length, f )
-      when 32
-        @tag_string = "DEFINE SHAPE 3"
-        define_shape( @tag_length, f, 3 )
-      when 39
-        @tag_string = "DEFINE SPRITE"
-        define_sprite( @tag_length, f )
-      when 43
-        @tag_string = "FRAME LABEL"
-        frame_label( @tag_length, f )
-      when 46
-        @tag_string = "DEFINE MORPH SHAPE"
-        define_morph_shape( @tag_length, f )
-      when 69
-        @tag_string = "FILE ATTRIBUTES"
-        file_attributes( @tag_length, f )
-      when 76
-        @tag_string = "SYMBOL CLASS"
-        symbol_class( @tag_length, f )
-      when 77
-        @tag_string = "METADATA"
-        metadata( @tag_length, f )
-      when 82
-        @tag_string = "DO ABC"
-        do_abc( @tag_length, f )
-      when 83
-        @tag_string = "DEFINE SHAPE 4"
-        define_shape_4( @tag_length, f )
-      when 86
-        @tag_string = "DEFINE SCENE AND FRAME LABEL DATA"
-        define_scene_and_frame_label_data( @tag_length, f )
-      else
-        @tag_string = "UNKNOWN TAG"
+        "PLACE OBJECT (not implemented)"
+      when 6
         skip_tag( @tag_length, f, @tag_code )
+        "DEFINE BITS (not needed?)"
+      when 8
+        skip_tag( @tag_length, f, @tag_code )
+        "JPEG TABLES (not needed?)"
+      when 9
+        set_background_color( @tag_length, f )
+        "SET BACKGROUND COLOR"
+      when 11
+        skip_tag( @tag_length, f, @tag_code )
+        "DEFINE TEXT (not implemented)"
+      when 20
+        skip_tag( @tag_length, f, @tag_code )
+        "DEFINE BITS LOSSLESS (not needed?)"
+      when 22
+        define_shape( @tag_length, f, 2 )
+        "DEFINE SHAPE 2"
+      when 26
+        place_object_2( @tag_length, f )
+        "PLACE OBJECT 2"
+      when 28
+        remove_object_2( @tag_length, f )
+        "REMOVE OBJECT 2"
+      when 32
+        define_shape( @tag_length, f, 3 )
+        "DEFINE SHAPE 3"
+      when 34
+        define_button_2( @tag_length, f )
+        "DEFINE BUTTON 2 (not implemented)"
+      when 37
+        skip_tag( @tag_length, f, @tag_code )
+        "DEFINE EDIT TEXT (not implemented)"
+      when 39
+        define_sprite( @tag_length, f )
+        "DEFINE SPRITE"
+      when 43
+        frame_label( @tag_length, f )
+        "FRAME LABEL"
+      when 46
+        define_morph_shape( @tag_length, f )
+        "DEFINE MORPH SHAPE (not implemented)"
+      when 64
+        skip_tag( @tag_length, f, @tag_code )
+        "ENABLE DEBUGGER 2 (not needed)"
+      when 69
+        file_attributes( @tag_length, f )
+        "FILE ATTRIBUTES (not needed)"
+      when 70
+        place_object_3( @tag_length, f )
+        "PLACE OBJECT 3 (not implemented)"
+      when 73
+        skip_tag( @tag_length, f, @tag_code )
+        "DEFINE FONT ALIGN ZONES (not implemented)"
+      when 74
+        skip_tag( @tag_length, f, @tag_code )
+        "CSM TEXT SETTINGS (not implemented)"
+      when 75
+        define_font_3( @tag_length, f )
+        "DEFINE FONT 3 (not implemented)"
+      when 76
+        symbol_class( @tag_length, f )
+        "SYMBOL CLASS"
+      when 77
+        metadata( @tag_length, f )
+        "METADATA (not needed)"
+      when 78
+        skip_tag( @tag_length, f, @tag_code )
+        "DEFINE SCALING GRID (not needed?)"
+      when 82
+        do_abc( @tag_length, f )
+        "DO ABC (not implemented)"
+      when 83
+        define_shape_4( @tag_length, f )
+        "DEFINE SHAPE 4 (not implemented)"
+      when 86
+        define_scene_and_frame_label_data( @tag_length, f )
+        "DEFINE SCENE AND FRAME LABEL DATA (not implemented)"
+      when 88
+        skip_tag( @tag_length, f, @tag_code )
+        "DEFINE FONT NAME (not implemented)"
+      else
+        skip_tag( @tag_length, f, @tag_code )
+        "UNKNOWN TAG"
       end
     end
     
@@ -134,7 +173,7 @@ class Tag
       when 86
         "DEFINE SCENE AND FRAME LABEL DATA"
       else
-        ">> ERROR! UNKNOWN TAG! <<"
+        "UNKNOWN TAG"
       end
       
       @tag_length.times do

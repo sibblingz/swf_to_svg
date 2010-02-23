@@ -164,6 +164,8 @@ def place_object_2( tag_length, f )
   read = e-before
   remaining = tag_length - read
   #puts "#{remaining}, #{tag_length}"
+  
+  # not implemented
   remaining.times do
     f.getc
   end
@@ -200,6 +202,35 @@ end
 #   end
 # end
 
+# Tag code = 34
+def define_button_2( tag_length, f )
+  
+  puts "Define Button 2 (not implemented!)"
+  
+  tag_length.times do
+    f.getc
+  end
+  
+  # before = f.total_bytes_read
+  #   button = DefineButton2Tag.new
+  #   
+  #   button.id = f.get_u16
+  #   
+  #   reserved_flags = f.next_n_bits(7)
+  #   raise "Error in define button 2 (reserved flags)" unless reserved_flags == '0000000'
+  #   
+  #   button.track_as_menu = f.next_n_bits(1)
+  #   
+  #   action_offset = f.get_u16
+  #   
+  #   characters = []
+  #   actions = []
+  #   
+  #   after = f.total_bytes_read
+  #   raise "DEFINE BUTTON 2 ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
+  
+end
+
 # Tag code = 39
 def define_sprite( tag_length, f )
   before = f.total_bytes_read
@@ -224,7 +255,7 @@ def define_sprite( tag_length, f )
   sprite.control_tags = []
   
   begin 
-#    f.skip_to_next_byte
+#   f.skip_to_next_byte
     tag_code, tag_length = get_tag(f)
     
     tag = Tag.new(tag_code, tag_length, f)
@@ -267,7 +298,25 @@ end
 
 # Tag code = 69
 def file_attributes( tag_length, f )
-  puts "File Attributes Tag"
+  puts "File Attributes Tag (not implemented)"
+  
+  tag_length.times do
+    f.getc
+  end
+end
+
+# Tag code = 70
+def place_object_3( tag_length, f )
+  puts "Place Object 3 (not implemented)"
+  
+  tag_length.times do
+    f.getc
+  end
+end
+
+# Tag code = 75
+def define_font_3( tag_length, f )
+  puts "Define Font 3 (not implemented)"
   
   tag_length.times do
     f.getc
