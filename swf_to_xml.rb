@@ -7,7 +7,6 @@ end
 
 require 'advanced_file_reader.rb'
 require 'tags/tag.rb'
-require 'tags/tag_actions.rb'
 require 'swf_math.rb'
 
 require 'zlib'
@@ -51,19 +50,8 @@ def read_a_swf_file( filename, histogram )
   puts "Num Bytes total: #{num_bytes_total}"
 
   # HAX
-  buf = ""
   if( compressed )
-    puts "Decompressing in the most inefficient way possible!"
-    g = File.open("tmp", "w")
-    #while( line = f.gets )
-    buf = Zlib::Inflate.inflate( f.rest )
-    g.write("#{buf}")
-    #end
-    f.close
-    g.close
-    
-    g = File.open( "tmp" , "r")
-    f = AdvancedFileReader.new( g )
+    f.decompress
   end
   
   frame = Rect.new(f)
@@ -89,11 +77,11 @@ def read_a_swf_file( filename, histogram )
   output.write("<tags>")
   while !f.eof?
     puts "  BEGIN TAG"
-    tag_code, tag_length = get_tag(f)
+    tag_code, tag_length = f.get_tag
   
     puts "tag_len: #{tag_length}, tag code: #{tag_code}"
     
-    tag = Tag.new(tag_code, tag_length, f)
+    tag = Tag.read( tag_code, tag_length, f )
     
     # keep track of the number of the types of tags we have
     if(histogram[tag.tag_string])
@@ -125,9 +113,6 @@ def read_a_swf_file( filename, histogram )
   #     output.close
   #   end
   # end
-  if(compressed)
-    system("rm tmp")
-  end
   
   return histogram
 end

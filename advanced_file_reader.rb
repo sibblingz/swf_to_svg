@@ -1,11 +1,13 @@
 class AdvancedFileReader
   
   attr_accessor :file_stream, :buffer, :total_bytes_read
+  attr_reader :is_compressed
   
   def initialize( file_stream )
     @file_stream = file_stream
     @buffer = ''
     @total_bytes_read = 0
+    @is_compressed = false
   end
   
   def getc()
@@ -63,16 +65,63 @@ class AdvancedFileReader
     @buffer = ''
   end
   
-  def rest
-    buf = ''
-    while !@file_stream.eof?
-      buf = buf + @file_stream.getc.chr
-    end
-    return buf
+  def decompress
+    @is_compressed = true
+    puts "Decompressing in the silliest way possible!"
+    buf = Zlib::Inflate.inflate( @file_stream.read )
+    
+    g = File.open("tmp", "w")
+    g.write("#{buf}")
+    g.close
+    
+    g = File.open( "tmp" , "r")
+    @file_stream = g
   end
   
   def close
+    if(@is_compressed)
+      system("rm tmp")
+    end
     self.file_stream.close
+  end
+  
+  def get_tag
+    skip_to_next_byte # manual byte alignment here
+    tag_1 = next_n_bits( 8 )
+    tag_2 = next_n_bits( 8 )
+    tag_bit_string = tag_2 + tag_1
+
+    #puts "#{tag_bit_string}"
+
+    tag_code = tag_bit_string.slice(0,10).to_i(2)
+    tag_length = tag_bit_string.slice(10,6).to_i(2)
+
+    if tag_length >= 63
+      #puts "long tag!"
+      # tag_length_1 = f.getc
+      # tag_length_2 = f.getc
+      # tag_length_3 = f.getc
+      # tag_length_4 = f.getc
+      #sign = f.next_n_bits( 1 )
+      # this should be signed.
+      tag_length = get_u32 #tag_length_1 + 256*tag_length_2 + 65536*tag_length_3 + 16777216*tag_length_4
+    end
+
+    return [tag_code, tag_length]
+  end
+  
+  def get_string
+    string = ''
+    bytes_read = 0
+    while true
+      next_char = get_u8
+      bytes_read += 1
+
+      break if next_char == 0
+      string += next_char.chr
+    end
+
+    return string, bytes_read
   end
   
 end
