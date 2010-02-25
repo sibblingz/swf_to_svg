@@ -104,51 +104,66 @@ class ShapeTag
   attr_accessor :fill_styles
   attr_accessor :line_styles
   attr_accessor :shape_records
-  attr_accessor :bounds
+  attr_accessor :shape_bounds
   attr_accessor :id
   
+  # for define shape 4
+  attr_accessor :version4
+  attr_accessor :edge_bounds, :uses_fill_winding_rule, :uses_non_scaling_strokes, :uses_scaling_strokes
+  
+  
   def self.read( tag, version )
+    version4 = (version == 4)
     f = tag.f
     tag_length = tag.tag_length
     
     #puts "Define Shape #{version} Tag"
     before = f.total_bytes_read
  
-    if true
-      shape_id = f.get_u16
-      #puts "Shape id: #{shape_id}"
-      #puts "getting a rect!"
-      #puts "buffer: #{f.buffer}"
-      shape_bounds = Rect.read( f )
-      #puts "Shape Bounds: (#{shape_bounds.xmin}, #{shape_bounds.ymin}), (#{shape_bounds.xmax}, #{shape_bounds.ymax})"
- 
-      now = f.total_bytes_read
-      remaining = tag_length - (now-before)
- 
-      # remaining.times do
-      #              f.getc
-      #            end    
- 
-      shape = self.get_shape_with_style( f, remaining, version )
-      #shape = Shape.new
-      shape.bounds = shape_bounds
-      shape.id = shape_id
- 
-      # d = get_dictionary
-      #     d[ shape_id ] = shape
- 
-          #filename = "output/#{shape_id}.svg"
-          #puts "writing file #{filename}"
-          #output = File.open(filename, "w")
-          #output.write shape.to_svg
-          #output.close
-    else
-      tag_length.times do
-        f.getc
-      end
+    shape_id = f.get_u16
+    #puts "Shape id: #{shape_id}"
+    #puts "getting a rect!"
+    #puts "buffer: #{f.buffer}"
+    shape_bounds = Rect.read( f )
+    #puts "Shape Bounds: (#{shape_bounds.xmin}, #{shape_bounds.ymin}), (#{shape_bounds.xmax}, #{shape_bounds.ymax})"
+    if(version4)
+      edge_bounds = Rect.read( f )
+      reserved = f.next_n_bits( 5 )
+      raise "problem with reading define shape 4" unless reserved == "00000"
+      uses_fill_winding_rule = (f.next_n_bits( 1 ) == '1')
+      uses_non_scaling_strokes = (f.next_n_bits( 1 ) == '1')
+      uses_scaling_strokes = (f.next_n_bits( 1 ) == '1' )
     end
- 
- 
+
+    now = f.total_bytes_read
+    remaining = tag_length - (now-before)
+
+    # remaining.times do
+    #              f.getc
+    #            end    
+
+    shape = self.get_shape_with_style( f, remaining, version )
+    #shape = Shape.new
+    shape.shape_bounds = shape_bounds
+    shape.id = shape_id
+    shape.version4 = version4
+    if(version4)
+      shape.edge_bounds = edge_bounds
+      shape.uses_fill_winding_rule = uses_fill_winding_rule
+      shape.uses_non_scaling_strokes = uses_non_scaling_strokes
+      shape.uses_scaling_strokes = uses_scaling_strokes
+    end
+
+    # d = get_dictionary
+    #     d[ shape_id ] = shape
+
+        #filename = "output/#{shape_id}.svg"
+        #puts "writing file #{filename}"
+        #output = File.open(filename, "w")
+        #output.write shape.to_svg
+        #output.close
+
+
     after = f.total_bytes_read
     raise "ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
     #f.skip_to_next_byte
@@ -162,7 +177,7 @@ class ShapeTag
   end
   
   def to_txt
-    path = "SHAPE_ID: #{id} | BOUNDS: (#{bounds.xmin}, #{bounds.ymin}), (#{bounds.xmax}, #{bounds.ymax})\n"
+    path = "SHAPE_ID: #{id} | BOUNDS: (#{shape_bounds.xmin}, #{shape_bounds.ymin}), (#{shape_bounds.xmax}, #{shape_bounds.ymax})\n"
     if(fill_styles.length > 0)
       path += fill_styles.each_with_index.map{|fs, i| "\t[#{i}]" + fs.to_txt}.join("\n")
       path += "\n"
@@ -176,12 +191,21 @@ class ShapeTag
   end
   
   def to_xml
-    "<shape id='#{self.id}'>
-      <bounds>#{self.bounds.to_xml}</bounds>
+    "<shape id='#{self.id}' #{extra_data_xml}>
+      <bounds>#{self.shape_bounds.to_xml}</bounds>
+      #{ version4 ? "<edge_bounds>#{self.edge_bounds.to_xml}</edge_bounds>": ""}
       #{self.line_styles_xml}
       #{self.fill_styles_xml}
       #{self.shape_records_xml}
     </shape>"
+  end
+  
+  def extra_data_xml
+    if version4
+      "uses_fill_winding_rule='#{uses_fill_winding_rule}' uses_non_scaling_strokes='#{uses_non_scaling_strokes}' uses_scaling_strokes='#{uses_scaling_strokes}'"
+    else
+      ""
+    end
   end
   
   def line_styles_xml
@@ -261,7 +285,7 @@ class ShapeTag
       if (v <= 3 )
         line_style = LineStyle.read( f, v )
       else
-        # get line style 2
+        line_style = LineStyle2.read( f )
       end
       line_styles.push( line_style )
     end

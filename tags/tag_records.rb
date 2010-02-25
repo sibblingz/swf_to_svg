@@ -630,6 +630,100 @@ class LineStyle
   end
 end
 
+class LineStyle2
+  attr_accessor :width, :start_cap_style, :join_style, :has_fill_flag
+  attr_accessor :no_h_scale_flag, :no_v_scale_flag, :pixel_hinting_flag, :no_close, :end_cap_style
+  attr_accessor :miter_limit_factor, :color, :fill_type
+  
+  def self.read( f )
+    ls2 = self.new
+
+    
+    ls2.width = f.get_u16 
+    ls2.start_cap_style = f.next_n_bits(2).to_i(2)
+    ls2.join_style = f.next_n_bits(2).to_i(2)
+    ls2.has_fill_flag = (f.next_n_bits(1) == '1')
+    ls2.no_h_scale_flag = (f.next_n_bits(1) == '1')
+    ls2.no_v_scale_flag = (f.next_n_bits(1) == '1')
+    ls2.pixel_hinting_flag = (f.next_n_bits(1) == '1')
+    
+    reserved = f.next_n_bits(5)
+    raise "error reading line style 2" unless reserved == "00000"
+    
+    ls2.no_close = (f.next_n_bits(1) == '1')
+    ls2.end_cap_style = f.next_n_bits(2).to_i(2)
+    
+    if (ls2.join_style == 2)
+      ls2.miter_limit_factor = f.get_u16
+    else
+      ls2.miter_limit_factor = -1 # nothing
+    end
+    
+    if (ls2.has_fill_flag)
+      ls2.fill_type = FillStyle.read( f, 4 )
+      ls2.color = []
+    else
+      ls2.fill_type = []
+      ls2.color = RGBA.read( f )
+    end
+    
+    return ls2
+  end
+  
+  def to_txt
+    path="LINE STYLE :: width #{width/20.0} ; color (#{color.r}, #{color.g}, #{color.b})"
+  end
+  
+  def to_xml
+    p = "<line_style_2 width='#{self.width}' start_cap_style= '#{start_cap_xml}' join_style='#{join_style_xml}' has_fill='#{has_fill_flag}' no_h_scale='#{no_h_scale_flag}' no_v_scale='#{no_v_scale_flag}' pixel_hinting='#{pixel_hinting_flag}' no_close='#{no_close}' end_cap_style='#{end_cap_xml}' "
+    if (self.join_style==2)
+      p+= "miter_limit_factor='#{miter_limit_factor}' "
+    end
+    
+    if(self.has_fill_flag)
+      p+= ">
+      #{fill_style_to_xml}
+      </line_style_2>"
+    else
+      p+= "#{color.to_xml_attrib}/>"
+    end
+    return p
+  end
+  
+  def join_style_xml
+    case self.join_style
+    when 0
+      '0 round join'
+    when 1 
+      '1 bevel join'
+    when 2
+      '2 miter join'
+    end
+  end
+  
+  def start_cap_xml
+    case self.start_cap_style
+    when 0
+      '0 round cap'
+    when 1
+      '1 no cap'
+    when 2
+      '2 square cap'
+    end
+  end
+  
+  def end_cap_xml
+    case self.end_cap_style
+    when 0
+      '0 round cap'
+    when 1
+      '1 no cap'
+    when 2
+      '2 square cap'
+    end
+  end
+end
+
 class FillStyle
   attr_accessor :fill_style_type, :color, :gradient_matrix, :gradient, :bitmap_id, :bitmap_matrix
   
