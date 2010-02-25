@@ -1,24 +1,299 @@
+class Shape
+  attr_accessor :records
+  
+  def self.read( f )
+    shape = self.new
+    
+    num_fill_bits = f.next_n_bits(4).to_i(2)
+    num_line_bits = f.next_n_bits(4).to_i(2)
+    
+    shape.records = []
+    total_len = 0
+    while true
+        before = f.total_bytes_read
+
+        shape_record, num_fill_bits, num_line_bits = self.get_shape_record( f, num_fill_bits, num_line_bits, 1 ) # the version is ignored, really
+
+        after = f.total_bytes_read
+        total_len = total_len + (after - before)
+
+        shape.records.push shape_record
+        break if shape_record.is_a? EndShapeRecord
+     end
+     #puts total_len
+     return shape
+    
+  end
+  
+  # CLEARLY, i need a generic shape record class!
+    def self.get_shape_record( f, num_fill_bits, num_line_bits, v )
+      # puts "getting shape record"
+      #f.skip_to_next_byte   # shape records are byte aligned
+      type_flag = f.next_n_bits(1)
+
+      if type_flag == '0'    
+        state_new_styles_flag = f.next_n_bits(1)
+        # only effective in version 2 and 3
+        # puts "State New Styles Flag: #{state_new_styles_flag}"
+
+        state_line_style_flag = f.next_n_bits(1)
+        # puts "State Line Style Flag: #{state_line_style_flag}"
+
+        state_fill_style_1_flag = f.next_n_bits(1)
+        # puts "State Fill Style 1 Flag: #{state_fill_style_1_flag}"
+
+        state_fill_style_0_flag = f.next_n_bits(1)
+        # puts "State Fill Style 0 Flag: #{state_fill_style_0_flag}"
+
+        state_move_to_flag = f.next_n_bits(1)
+        # puts "State Move To Flag: #{state_move_to_flag}"
+
+        flags = state_new_styles_flag + state_line_style_flag + state_fill_style_1_flag + state_fill_style_0_flag + state_move_to_flag
+
+  #puts flags
+        if flags == "00000"
+          #puts "End Shape Record"
+          shape_record = EndShapeRecord.read( flags, f )
+        else
+          #puts "Style Change Record #{tmp}"
+          shape_record = StyleChangeRecord.read( flags, f, v, num_fill_bits, num_line_bits )
+          num_fill_bits = shape_record.num_fill_bits
+          num_line_bits = shape_record.num_line_bits
+          #puts "#{num_fill_bits}, #{num_line_bits}"
+        end
+
+      else
+
+        straight_flag = f.next_n_bits(1)
+
+        if straight_flag == '1'
+          #puts "Straight Edge Record"
+          shape_record = StraightEdgeRecord.read( f )
+        else
+          #puts "Curved Edge Record"
+          shape_record = CurvedEdgeRecord.read( f )
+        end
+      end
+
+      #f.skip_to_next_byte # shape records are byte aligned
+      return shape_record, num_fill_bits, num_line_bits
+    end
+    
+  def to_xml
+    "<shape>
+    #{records.map{ |r| r.to_xml }.join('')}
+    </shape>"
+  end
+end
+
 class MorphFillStyleArray
   attr_accessor :count, :fill_styles
+
+  def self.read( f )
+    mfsa = self.new
+    
+    mfsa.count = f.get_u8
+    
+    if mfsa.count == 255
+      mfsa.count = f.get_u16
+    end
+        
+    mfsa.fill_styles = []
+    mfsa.count.times do
+      mfsa.fill_styles.push( MorphFillStyle.read( f ) )
+    end
+    
+    return mfsa
+  end
+
+  def to_xml
+    "<morph_fill_style_array>
+      #{fill_styles.map{ |fs| fs.to_xml}.join('')}
+     </morph_fill_style_array>"
+  end
 end
 
 class MorphFillStyle
   attr_accessor :fill_style_type, :start_color, :end_color, :start_grad_matrix, :end_grad_matrix, :gradient
-  attr_accessor :start_bitmap_matrix, :end_bitmap_matrix
+  attr_accessor :bitmap_id, :start_bitmap_matrix, :end_bitmap_matrix
+
+  def self.read( f )
+    # puts "getting fill style"
+    fill_style_type = f.get_u8
+
+    fs = self.new
+    fs.fill_style_type = fill_style_type
+
+    #puts "Fill Style Type: #{fill_style_type}"
+
+    case fill_style_type
+    when 0
+      fs.start_color = RGBA.read( f )
+      fs.end_color = RGBA.read( f )
+    when '10'.to_i(16), '12'.to_i(16)
+      fs.start_grad_matrix = Matrix.read( f )
+      fs.end_grad_matrix = Matrix.read( f )
+      fs.gradient = MorphGradient.read( f )
+    when '13'.to_i(16)
+      puts "focal radial gradient fill"
+      raise "un-supported fill type"
+    when '40'.to_i(16), '41'.to_i(16), '42'.to_i(16), '43'.to_i(16)
+      fs.bitmap_id = f.get_u16
+      fs.start_bitmap_matrix = Matrix.read( f )
+      fs.end_bitmap_matrix = Matrix.read( f )
+    else
+      raise "unknown fill type: #{fill_style_type}"
+    end
+    #f.skip_to_next_byte
+    return fs
+  end
+
+    def to_xml
+      return case self.fill_style_type
+      when 0
+        "<morph_fill_style type='#{self.fill_style_type}' name='#{fill_style_type_txt}'>
+          <start_color #{start_color.to_xml_attrib} />
+          <end_color #{end_color.to_xml_attrib} />
+        </morph_fill_style>"
+      when '10'.to_i(16), '12'.to_i(16)
+  "<morph_fill_style type='#{self.fill_style_type}' name='#{fill_style_type_txt}'>
+    <start_matrix>#{self.start_grad_matrix.to_xml}</start_matrix>
+    <end_matrix>#{self.end_grad_matrix.to_xml}</end_matrix>
+    #{self.gradient.to_xml}
+  </morph_fill_style>"
+      when '40'.to_i(16), '41'.to_i(16), '42'.to_i(16), '43'.to_i(16)
+  "<morph_fill_style type='#{self.fill_style_type}' name='#{fill_style_type_txt}' bitmap_id='#{bitmap_id}'>
+    <start_matrix>#{self.start_bitmap_matrix.to_xml}</start_matrix>
+    <end_matrix>#{self.end_bitmap_matrix.to_xml}</end_matrix>
+  </morph_fill_style>"
+      else
+        "<morph_fill_style type='#{self.fill_style_type}' name='#{fill_style_type_txt}' />"
+      end
+    end
+
+    private
+      def fill_style_type_txt
+        return case self.fill_style_type
+        when 0
+          "solid fill"
+        when '10'.to_i(16)
+          "linear gradient fill"
+        when '12'.to_i(16)
+          "radial gradient fill"
+        when '13'.to_i(16)
+          "focal radial gradient fill (not implemented)"
+        when '40'.to_i(16)
+          "repeating bitmap fill (no bitmap data)"
+        when '41'.to_i(16)
+          "clipped bitmap fill (no bitmap data)"
+         when '42'.to_i(16)
+          'non-smoothed repeating bitmap fill (no bitmap data)'
+         when '43'.to_i(16)
+          'non-smoothed clipped bitmap fill (no bitmap data)'
+        else
+          "unknown fill style"
+        end
+      end
 end
 
 class MorphGradient
   attr_accessor :num_gradients, :gradient_records
+
+  def self.read( f )
+    mg = self.new
+    
+    mg.num_gradients = f.get_u8
+    
+    mg.gradient_records = []
+    mg.num_gradients.times do 
+      mg.gradient_records.push( MorphGradRecord.read( f ) )
+    end
+    
+    return mg
+  end
+
+  def to_xml
+    "<morph_gradient>
+    #{gradient_records.map{ |gr| gr.to_xml }.join('')}
+    </morph_gradient>"
+  end
 end
 
 class MorphGradRecord
   attr_accessor :start_ratio, :start_color, :end_ratio, :end_color
+
+  def self.read( f )
+    mgr = self.new
+    
+    mgr.start_ratio = f.get_u8
+    mgr.start_color = RGBA.read( f )
+    
+    mgr.end_ratio = f.get_u8
+    mgr.end_color = RGBA.read( f )
+    
+    return mgr
+  end
+
+  def to_xml
+    "<morph_gradient_record start_ratio = '#{start_ratio}' end_ratio = '#{end_ratio}'
+    <start_color #{start_color.to_xml_attrib} />
+    <end_color #{end_color.to_xml_attrib} />
+    </morph_gradient_record>"
+  end
+  
 end
 
 class MorphLineStyleArray
+  attr_accessor :morph_line_styles, :count # count may not be useful
+  
+  def self.read( f, version )
+    raise "unsupported version #{version}" unless version == 1
+    
+    mlsa = self.new
+    
+    count = f.get_u8
+    
+    if ( count == 255 )
+      count = f.get_u16
+    end
+    
+    mlsa.count = count
+    
+    mlsa.morph_line_styles = []
+    count.times do
+      mlsa.morph_line_styles.push( MorphLineStyle.read( f ) )
+    end 
+    
+    return mlsa
+  end
+  
+  def to_xml
+    "<morph_line_style_array>
+      #{morph_line_styles.map{ |mls| mls.to_xml }.join('')}
+    </morph_line_style_array>"
+  end
 end
 
 class MorphLineStyle
+  attr_accessor :start_width, :end_width, :start_color, :end_color
+  
+  def self.read( f )
+    mls = self.new
+    
+    mls.start_width = f.get_u16
+    mls.end_width = f.get_u16
+    mls.start_color = RGBA.read( f )
+    mls.end_color = RGBA.read( f )
+    
+    return mls
+  end
+  
+  def to_xml
+    "<morph_line_style start_width='#{start_width}' end_width='#{end_width}'>
+     <start_color #{start_color.to_xml_attrib} />
+     <end_color #{end_color.to_xml_attrib} />
+     </morph_line_style>"
+  end
 end
 
 class Gradient
@@ -111,15 +386,16 @@ class C_XFORM
     nbits = f.next_n_bits(4).to_i(2)
     
     if(has_mult_terms=="1")
-      @red_mult_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
-      @green_mult_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
-      @blue_mult_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
+      @red_mult_term = f.get_si( nbits ) 
+      #SwfMath.parse_signed_int( f.next_n_bits(nbits) )
+      @green_mult_term = f.get_si( nbits )
+      @blue_mult_term = f.get_si( nbits )
     end
     
     if(has_add_terms=="1")
-      @red_add_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
-      @green_add_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
-      @blue_add_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
+      @red_add_term = f.get_si( nbits )
+      @green_add_term = f.get_si( nbits )
+      @blue_add_term = f.get_si( nbits )
     end
     
     #f.skip_to_next_byte
@@ -162,17 +438,17 @@ class C_XFORM_WITH_ALPHA
     nbits = f.next_n_bits(4).to_i(2)
     
     if(has_mult_terms=="1")
-      @red_mult_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
-      @green_mult_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
-      @blue_mult_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
-      @alpha_mult_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
+      @red_mult_term = f.get_si( nbits )
+      @green_mult_term = f.get_si( nbits )
+      @blue_mult_term = f.get_si( nbits )
+      @alpha_mult_term = f.get_si( nbits ) 
     end
     
     if(has_add_terms=="1")
-      @red_add_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
-      @green_add_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
-      @blue_add_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
-      @alpha_add_term = SwfMath.parse_signed_int( f.next_n_bits(nbits) )
+      @red_add_term = f.get_si( nbits ) 
+      @green_add_term = f.get_si( nbits )
+      @blue_add_term = f.get_si( nbits )
+      @alpha_add_term = f.get_si( nbits )
     end
     
       
@@ -199,39 +475,41 @@ class Matrix
   # A = [ c d ]
   #     [ e f ]
   # where a = scale_x, b = rotate_skew_0, c = rotate_skew_1, d = scale_y, e = translate_x, f = translate_y
-  attr_reader :scale_x, :rotate_skew_1, :translate_x, :rotate_skew_0, :scale_y, :translate_y
+  attr_accessor :scale_x, :rotate_skew_1, :translate_x, :rotate_skew_0, :scale_y, :translate_y
   
-  def initialize( f )
+  def self.read( f )
     f.skip_to_next_byte
     
-    @scale_x = 1
-    @rotate_skew_1 = 0
-    @translate_x = 0
-    @rotate_skew_0 = 0
-    @scale_y = 1
-    @translate_y = 0
+    m = self.new
+    m.scale_x = 1
+    m.rotate_skew_1 = 0
+    m.translate_x = 0
+    m.rotate_skew_0 = 0
+    m.scale_y = 1
+    m.translate_y = 0
     
     has_scale = f.next_n_bits(1)
     if(has_scale == "1")
       n_scale_bits = f.next_n_bits(5).to_i(2)
-      @scale_x = SwfMath.parse_fixed_point( f.next_n_bits(n_scale_bits) )
-      @scale_y = SwfMath.parse_fixed_point( f.next_n_bits(n_scale_bits) )
+      m.scale_x = f.get_fp( n_scale_bits )
+      m.scale_y = f.get_fp( n_scale_bits )
     end
     
     has_rotate = f.next_n_bits(1)
     if(has_rotate == "1")
       n_rotate_bits = f.next_n_bits(5).to_i(2)
-      @rotate_skew_0 = SwfMath.parse_fixed_point( f.next_n_bits(n_rotate_bits) )
-      @rotate_skew_1 = SwfMath.parse_fixed_point( f.next_n_bits(n_rotate_bits) )
+      m.rotate_skew_0 = f.get_fp( n_rotate_bits )
+      m.rotate_skew_1 = f.get_fp( n_rotate_bits )
     end
     
     n_translate_bits = f.next_n_bits(5).to_i(2)
     unless n_translate_bits == 0
-      @translate_x = SwfMath.parse_signed_int( f.next_n_bits(n_translate_bits) )
-      @translate_y = SwfMath.parse_signed_int( f.next_n_bits(n_translate_bits) )
+      m.translate_x = f.get_fp(n_translate_bits) 
+      m.translate_y = f.get_fp(n_translate_bits) 
     end
 
     f.skip_to_next_byte
+    return m
   end
   
   def to_txt
@@ -248,21 +526,22 @@ class Matrix
 end
 
 class Rect
-  attr_reader :xmin, :xmax, :ymin, :ymax
+  attr_accessor :xmin, :xmax, :ymin, :ymax
   
-  def initialize( f )    
+  def self.read( f )    
     # rects are byte aligned
-    #f.skip_to_next_byte
+    f.skip_to_next_byte
       #{}"SwfMath".constantize.parse_signed_int()
-
+    r = self.new
     num_bits = f.next_n_bits( 5 ).to_i(2)
-    @xmin = SwfMath.parse_signed_int( f.next_n_bits( num_bits ) )
-    @xmax = SwfMath.parse_signed_int( f.next_n_bits( num_bits ) )
-    @ymin = SwfMath.parse_signed_int( f.next_n_bits( num_bits ) )
-    @ymax = SwfMath.parse_signed_int( f.next_n_bits( num_bits ) )
-
+    r.xmin = f.get_si( num_bits )
+    r.xmax = f.get_si( num_bits )
+    r.ymin = f.get_si( num_bits )
+    r.ymax = f.get_si( num_bits )
+    f.skip_to_next_byte
+    return r
     # byte alignment
-    #f.skip_to_next_byte
+    #
   end
   
   def to_xml
@@ -355,7 +634,7 @@ class FillStyle
   attr_accessor :fill_style_type, :color, :gradient_matrix, :gradient, :bitmap_id, :bitmap_matrix
   
   def self.read( f, v )
-    # puts "getting fill style"
+    #puts "getting fill style"
     fill_style_type = f.get_u8
 
     fs = self.new
@@ -373,14 +652,14 @@ class FillStyle
       end
       fs.color = color
     when '10'.to_i(16), '12'.to_i(16)
-      fs.gradient_matrix = Matrix.new( f )
+      fs.gradient_matrix = Matrix.read( f )
       fs.gradient = Gradient.new( f, v )
     when '13'.to_i(16)
       puts "focal radial gradient fill"
       raise "un-supported fill type"
     when '40'.to_i(16), '41'.to_i(16), '42'.to_i(16), '43'.to_i(16)
       fs.bitmap_id = f.get_u16
-      fs.bitmap_matrix = Matrix.new( f )
+      fs.bitmap_matrix = Matrix.read( f )
     else
       raise "unknown fill type: #{fill_style_type}"
     end
@@ -437,9 +716,11 @@ class FillStyle
 end
 
 class LineStyleArray
+  # TO DO LATER. not a priority now
 end
 
 class FillStyleArray
+  # TO DO LATER. not a priority now
 end
 
 class CurvedEdgeRecord
@@ -455,17 +736,17 @@ class CurvedEdgeRecord
     num_bits_bit_string = f.next_n_bits(4)
     num_bits = num_bits_bit_string.to_i(2) + 2
 
-    control_delta_x = f.next_n_bits( num_bits )
-    control_delta_y = f.next_n_bits( num_bits )
+    #control_delta_x = f.next_n_bits( num_bits )
+    #control_delta_y = f.next_n_bits( num_bits )
     #puts "Control Delta: (#{SwfMath.parse_signed_int(control_delta_x)/20.0}, #{SwfMath.parse_signed_int(control_delta_y)/29.9})"
-    shape_record.control_delta_x = SwfMath.parse_signed_int(control_delta_x)
-    shape_record.control_delta_y = SwfMath.parse_signed_int(control_delta_y)
+    shape_record.control_delta_x = f.get_si( num_bits )
+    shape_record.control_delta_y = f.get_si( num_bits )
 
-    anchor_delta_x = f.next_n_bits( num_bits )
-    anchor_delta_y = f.next_n_bits( num_bits )
+    #anchor_delta_x = f.next_n_bits( num_bits )
+    #anchor_delta_y = f.next_n_bits( num_bits )
     #puts "Anchor Point: (#{SwfMath.parse_signed_int(anchor_delta_x)/20.0}, #{SwfMath.parse_signed_int(anchor_delta_y)/20.0})"
-    shape_record.anchor_delta_x = SwfMath.parse_signed_int(anchor_delta_x)
-    shape_record.anchor_delta_y = SwfMath.parse_signed_int(anchor_delta_y)
+    shape_record.anchor_delta_x = f.get_si( num_bits )
+    shape_record.anchor_delta_y = f.get_si( num_bits )
     
     return shape_record
   end
@@ -547,15 +828,15 @@ class StraightEdgeRecord
     end
 
     if general_line_flag == '1' || vert_line_flag == '0'
-      delta_x = f.next_n_bits(num_bits)
+      #delta_x = f.next_n_bits(num_bits)
        #puts "Delta X: #{SwfMath.parse_signed_int(delta_x)/20.0}"
-       shape_record.delta_x = SwfMath.parse_signed_int(delta_x)
+       shape_record.delta_x = f.get_si( num_bits )#SwfMath.parse_signed_int(delta_x)
     end
 
     if general_line_flag == '1' || vert_line_flag == '1'
-      delta_y = f.next_n_bits(num_bits)
+      #delta_y = f.next_n_bits(num_bits)
       #puts "Delta Y: #{SwfMath.parse_signed_int(delta_y)/20.0}"
-      shape_record.delta_y = SwfMath.parse_signed_int(delta_y)
+      shape_record.delta_y = f.get_si( num_bits )#SwfMath.parse_signed_int(delta_y)
     end
     
     return shape_record
@@ -628,13 +909,13 @@ class StyleChangeRecord
       move_bits = f.next_n_bits(5)
       num_move_bits = move_bits.to_i(2)
 
-      move_delta_x_bit_string = f.next_n_bits(num_move_bits)
+      #move_delta_x_bit_string = f.next_n_bits(num_move_bits)
       #puts "Move Delta X: #{SwfMath.parse_signed_int(move_delta_x_bit_string)}"
-      shape_record.move_delta_x = SwfMath.parse_signed_int( move_delta_x_bit_string )
+      shape_record.move_delta_x = f.get_si( num_move_bits )#SwfMath.parse_signed_int( move_delta_x_bit_string )
 
-      move_delta_y_bit_string = f.next_n_bits(num_move_bits)
+      #move_delta_y_bit_string = f.next_n_bits(num_move_bits)
       #puts "Move Delta Y: #{SwfMath.parse_signed_int(move_delta_y_bit_string)}"
-      shape_record.move_delta_y = SwfMath.parse_signed_int( move_delta_y_bit_string )
+      shape_record.move_delta_y = f.get_si( num_move_bits) #SwfMath.parse_signed_int( move_delta_y_bit_string )
     end
 
     if shape_record.state_fill_style_0
@@ -670,9 +951,11 @@ class StyleChangeRecord
       #puts "NEW LINE STYLES: #{line_styles.inspect}"
 
       shape_record.num_fill_bits = f.next_n_bits(4).to_i(2)
-
+      #puts "inside: #{shape_record.num_fill_bits}"
       #puts "num fill bits: #{new_style_num_fill_bits}"
       shape_record.num_line_bits = f.next_n_bits(4).to_i(2)
+      #puts "inside: #{shape_record.num_line_bits}"
+      
       #puts "num line bits: #{new_style_num_line_bits}"
     end
     

@@ -1,4 +1,3 @@
-require 'swf_math.rb'
 
 class SymbolClassTag
   attr_accessor :num_symbols, :tag_ids, :tag_names
@@ -21,7 +20,7 @@ class SymbolClassTag
       #puts "Tag1: #{tag_1}"
       #total_bytes_remaining = tag_length - 4
 
-      name, bytes_read = SwfMath.parse_ASCII_string( f )
+      name, bytes_read = f.get_string
       puts "#{name}"
       tag_ids.push( tag_id )
       tag_names.push( name )
@@ -100,7 +99,7 @@ class ShowFrameTag
   end
 end
 
-# Tag code = 2, 22, or 39
+# Tag code = 2, 22, or 32
 class ShapeTag
   attr_accessor :fill_styles
   attr_accessor :line_styles
@@ -114,30 +113,30 @@ class ShapeTag
     
     #puts "Define Shape #{version} Tag"
     before = f.total_bytes_read
-
+ 
     if true
       shape_id = f.get_u16
       #puts "Shape id: #{shape_id}"
       #puts "getting a rect!"
       #puts "buffer: #{f.buffer}"
-      shape_bounds = Rect.new( f )
+      shape_bounds = Rect.read( f )
       #puts "Shape Bounds: (#{shape_bounds.xmin}, #{shape_bounds.ymin}), (#{shape_bounds.xmax}, #{shape_bounds.ymax})"
-
+ 
       now = f.total_bytes_read
       remaining = tag_length - (now-before)
-
+ 
       # remaining.times do
-      #       f.getc
-      #     end    
-
+      #              f.getc
+      #            end    
+ 
       shape = self.get_shape_with_style( f, remaining, version )
       #shape = Shape.new
       shape.bounds = shape_bounds
       shape.id = shape_id
-
+ 
       # d = get_dictionary
       #     d[ shape_id ] = shape
-
+ 
           #filename = "output/#{shape_id}.svg"
           #puts "writing file #{filename}"
           #output = File.open(filename, "w")
@@ -148,10 +147,11 @@ class ShapeTag
         f.getc
       end
     end
-
+ 
+ 
     after = f.total_bytes_read
     raise "ERROR! difference is: #{after - before}, it should be #{tag_length}" unless (after-before) == tag_length
-    f.skip_to_next_byte
+    #f.skip_to_next_byte
     
     tag.tag_data.push( shape )
   end
@@ -215,20 +215,20 @@ class ShapeTag
   end
   
   
-
+ 
   def self.get_fill_style_array( f, v )
     #f.skip_to_next_byte
     #puts "getting fill style array"
     fill_style_count = f.get_u8
 
     if fill_style_count == 255
-      puts "extended fill style"
+      #puts "extended fill style"
       #fill_style_count_extended_1 = f.getc
       #fill_style_count_extended_2 = f.getc
       fill_style_count = f.get_u16 #fill_style_count + 256*fill_style_count_extended_1
     end
     #puts "Num Fill Styles: #{fill_style_count}"
-
+ 
     fill_styles = []
     fill_style_count.times do
       fill_style = FillStyle.read( f, v )
@@ -238,24 +238,24 @@ class ShapeTag
     #f.skip_to_next_byte
     return fill_styles
   end
-
-
-
+ 
+ 
+ 
   def self.get_line_style_array( f, v )
     #f.skip_to_next_byte
-
+ 
     #puts "getting line style array"
     line_style_count = f.get_u8
-
+ 
     if line_style_count == 255
       #puts "extended line style count"
       #line_style_count_extended_1 = f.getc
       #line_style_count_extended_2 = f.getc
       line_style_count = f.get_u16#line_style_count_extended_1 + 256*line_style_count_extended_2
     end
-
+ 
     #puts "Num Line Styles: #{line_style_count}"
-
+ 
     line_styles = []
     line_style_count.times do
       if (v <= 3 )
@@ -269,31 +269,31 @@ class ShapeTag
     #f.skip_to_next_byte
     return line_styles
   end
-
+ 
   def self.get_shape_record( f, num_fill_bits, num_line_bits, v )
     # puts "getting shape record"
     #f.skip_to_next_byte   # shape records are byte aligned
     type_flag = f.next_n_bits(1)
-
+ 
     if type_flag == '0'    
       state_new_styles_flag = f.next_n_bits(1)
       # only effective in version 2 and 3
       # puts "State New Styles Flag: #{state_new_styles_flag}"
-
+ 
       state_line_style_flag = f.next_n_bits(1)
       # puts "State Line Style Flag: #{state_line_style_flag}"
-
+ 
       state_fill_style_1_flag = f.next_n_bits(1)
       # puts "State Fill Style 1 Flag: #{state_fill_style_1_flag}"
-
+ 
       state_fill_style_0_flag = f.next_n_bits(1)
       # puts "State Fill Style 0 Flag: #{state_fill_style_0_flag}"
-
+ 
       state_move_to_flag = f.next_n_bits(1)
       # puts "State Move To Flag: #{state_move_to_flag}"
       
       flags = state_new_styles_flag + state_line_style_flag + state_fill_style_1_flag + state_fill_style_0_flag + state_move_to_flag
-
+ 
 #puts flags
       if flags == "00000"
         #puts "End Shape Record"
@@ -301,16 +301,18 @@ class ShapeTag
         #f.skip_to_next_byte
       else
         #puts "Style Change Record #{tmp}"
+        #puts "before: #{num_line_bits}"
         shape_record = StyleChangeRecord.read( flags, f, v, num_fill_bits, num_line_bits )
         num_fill_bits = shape_record.num_fill_bits
         num_line_bits = shape_record.num_line_bits
+        #puts "after: #{num_line_bits}"
         #puts "#{num_fill_bits}, #{num_line_bits}"
       end
     
     else
-
+ 
       straight_flag = f.next_n_bits(1)
-
+ 
       if straight_flag == '1'
         #puts "Straight Edge Record"
         shape_record = StraightEdgeRecord.read( f )
@@ -319,58 +321,58 @@ class ShapeTag
         shape_record = CurvedEdgeRecord.read( f )
       end
     end
-
+ 
     #f.skip_to_next_byte # shape records are byte aligned
     return shape_record, num_fill_bits, num_line_bits
   end
-
+ 
   def self.get_shape_with_style( f, l, v )
     #f.skip_to_next_byte
     before = f.total_bytes_read
     s = self.new
-
+ 
+ #puts "here"
     fill_styles = self.get_fill_style_array( f, v ) 
     s.fill_styles = fill_styles
-
-    #f.skip_to_next_byte
-
+ 
+  #  f.skip_to_next_byte
+ 
     line_styles = self.get_line_style_array( f, v )
     s.line_styles = line_styles
-
+ #puts "here"
     #f.skip_to_next_byte
     num_fill_bits = f.next_n_bits(4).to_i(2)
     num_line_bits = f.next_n_bits(4).to_i(2)
-
+ 
     now = f.total_bytes_read
     remaining = l - (now-before)
-
-
+ 
+ 
     shape_records = []
     total_len = 0
     while true
         before = f.total_bytes_read
-
+ 
         shape_record, num_fill_bits, num_line_bits = self.get_shape_record( f, num_fill_bits, num_line_bits, v )
 
         after = f.total_bytes_read
         total_len = total_len + (after - before)
-
+ 
         shape_records.push shape_record
         break if shape_record.is_a? EndShapeRecord
      end
-
+ 
      raise "total len and remaining are not equal! total #{total_len} rem #{remaining}" unless total_len == remaining
-
-    f.skip_to_next_byte
-
-
+ 
+    #f.skip_to_next_byte
+ 
+ 
     s.shape_records = shape_records
-
+ 
     return s
   end
-
+ 
 end
-
 #Tag code = 9
 class SetBackgroundColorTag
   attr_accessor :color
@@ -469,7 +471,7 @@ class PlaceObject2Tag
     end
 
     if(place_flag_has_matrix == "1")
-       obj2.matrix = Matrix.new(f)
+       obj2.matrix = Matrix.read(f)
     end
 
     if(place_flag_has_color_transform == "1")
@@ -483,7 +485,7 @@ class PlaceObject2Tag
     if(place_flag_has_name == "1")
       # parse as ASCII name
       # spec has UTF-8 encoding....
-      obj2.name = SwfMath.parse_ASCII_string( f )
+      obj2.name = f.get_string
     end
 
     if(place_flag_has_clip_depth == "1")
@@ -634,8 +636,48 @@ class SpriteTag
   end
 end
 
-class DefineMorphShapeTag
+class MorphShapeTag
   attr_accessor :character_id, :start_bounds, :end_bounds, :morph_fill_styles, :morph_line_styles
+  attr_accessor :start_edges, :end_edges
+  
+  def self.read( tag, version )
+    raise "unsupported morph shape version #{version}" unless version == 1
+    before  = tag.f.total_bytes_read
+    f = tag.f
+  
+    mst = self.new
+    
+    mst.character_id = f.get_u16
+    mst.start_bounds = Rect.read( f )
+    mst.end_bounds = Rect.read( f )
+    
+    offset = f.get_u32
+    atoff = f.total_bytes_read
+    #puts "#{f.total_bytes_read-before}"
+        
+    mst.morph_fill_styles = MorphFillStyleArray.read( f )
+    mst.morph_line_styles = MorphLineStyleArray.read( f, version )
+    
+    mst.start_edges = Shape.read( f )
+    f.skip_to_next_byte
+    raise "wrong offset in MORPH SHAPE TAG" unless f.total_bytes_read-atoff == offset
+    mst.end_edges = Shape.read( f )
+    
+    after = tag.f.total_bytes_read
+    raise "error in MORPH SHAPE TAG" unless (after-before) == tag.tag_length
+    tag.tag_data.push( mst )
+  end
+  
+  def to_xml
+    "<morph_shape id = '#{self.character_id}'>
+      <start_bounds> #{self.start_bounds.to_xml} </start_bounds>
+      <end_bounds> #{self.end_bounds.to_xml} </end_bounds>
+      #{morph_fill_styles.to_xml}
+      #{morph_line_styles.to_xml}
+      <start_edges>#{start_edges.to_xml}</start_edges>
+      <end_edges>#{end_edges.to_xml}</end_edges>
+    </morph_shape>"
+  end
 end
 
 

@@ -1,5 +1,7 @@
 require 'tags/tag_classes.rb'
 require 'tags/tag_records.rb'
+require 'zlib'
+
 
 class Tag
   attr_accessor :tag_code, :tag_length, :tag_data, :tag_string, :f
@@ -73,6 +75,7 @@ class Tag
       "DEFINE BITS LOSSLESS (not needed?)"
     when 22
       ShapeTag.read( self, 2 )
+      #skip_tag
       "DEFINE SHAPE 2"
     when 26
       #place_object_2( @tag_length, f )
@@ -99,8 +102,8 @@ class Tag
       "FRAME LABEL"
     when 46
       #define_morph_shape( @tag_length, f )
-      skip_tag
-      "DEFINE MORPH SHAPE (not implemented)"
+      MorphShapeTag.read( self, 1 )
+      "DEFINE MORPH SHAPE"
     when 64
       skip_tag
       "ENABLE DEBUGGER 2 (not needed)"
@@ -110,7 +113,7 @@ class Tag
       "FILE ATTRIBUTES (not needed)"
     when 70
       #place_object_3( @tag_length, @f )
-      skip_Tag
+      skip_tag
       "PLACE OBJECT 3 (not implemented)"
     when 73
       skip_tag

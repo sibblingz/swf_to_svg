@@ -7,9 +7,6 @@ end
 
 require 'advanced_file_reader.rb'
 require 'tags/tag.rb'
-require 'swf_math.rb'
-
-require 'zlib'
 
 DICTIONARY = {}
 
@@ -54,7 +51,7 @@ def read_a_swf_file( filename, histogram )
     f.decompress
   end
   
-  frame = Rect.new(f)
+  frame = Rect.read(f)
 
   puts "Frame Size: #{frame.xmax/20} x #{frame.ymax/20}"
 

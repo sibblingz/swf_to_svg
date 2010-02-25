@@ -46,6 +46,14 @@ class AdvancedFileReader
     return u32
   end
   
+  def get_si( num_bits )
+    return parse_signed_int( self.next_n_bits(num_bits) )
+  end
+  
+  def get_fp( num_bits )
+    return parse_fixed_point( self.next_n_bits(num_bits) ) 
+  end
+  
   def next_n_bits( num_bits )
     while @buffer.size < num_bits
       @buffer += @file_stream.getc.chr.unpack("B8")[0]
@@ -110,6 +118,8 @@ class AdvancedFileReader
     return [tag_code, tag_length]
   end
   
+   
+  
   def get_string
     string = ''
     bytes_read = 0
@@ -123,5 +133,24 @@ class AdvancedFileReader
 
     return string, bytes_read
   end
+  
+  private
+   def parse_signed_int( bitstring ) 
+        remainder = bitstring.slice(1,bitstring.size)
+        negative = (bitstring[0] == '1'[0])
+        if negative
+          # ben's crazy signed integer computation
+          temp_val = remainder.gsub('0','t').gsub('1','0').gsub('t','1').to_i(2)
+          -1*temp_val - 1
+        else
+          remainder.to_i(2)
+        end
+    end
+
+    def parse_fixed_point( bitstring )
+      num = parse_signed_int( bitstring )
+      return num / 65536.0
+      
+    end
   
 end
