@@ -143,7 +143,7 @@ class Tag
       #define_shape_4( @tag_length, @f )
       #skip_tag
       ShapeTag.read( self, 4 )
-      "DEFINE SHAPE 4 (not implemented)"
+      "DEFINE SHAPE 4"
     when 86
       #define_scene_and_frame_label_data( @tag_length, f )
       skip_tag
